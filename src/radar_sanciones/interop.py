@@ -79,3 +79,6 @@ def hub_metrics(rows: Iterable[dict[str, Any]]) -> dict[str, int]:
         "resolved": sum(bool(x.get("entity_id")) for x in data),
         "unresolved": sum(not bool(x.get("entity_id")) for x in data),
     }
+
+
+# Canonical Event/Evidence/Entity exports for Intelligence_Fusion_Layer live in fusion_export.py.
