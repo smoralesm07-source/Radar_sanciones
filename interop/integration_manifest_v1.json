@@ -9,8 +9,11 @@
     "valid_rut_required": true,
     "unresolved_policy": "ENTITY_ID_NULL_CANDIDATE_ONLY",
     "role_is_identity_independent": true,
-    "current_status": "NATIVE_RUT_KEY_COMPATIBLE_WITH_ADAPTER_GAPS",
-    "local_ids_preserved": true
+    "current_status": "ADAPTER_READY",
+    "local_ids_preserved": true,
+    "adapter_module": "src/radar_sanciones/interop.py",
+    "materialized_path": "docs/data/entity_hub_v1.json",
+    "catalog_path": "docs/data/interop_catalog_v1.json"
   },
   "territory": {
     "region_key": "CL-REG-{CODIGO_REGION}",
@@ -37,6 +40,9 @@
     "required_metadata": ["score_name","score_value","score_version","score_scope"]
   },
   "exports": [
+    {"path":"docs/data/entity_hub_v1.json","purpose":"canonical entity interoperability view"},
+    {"path":"docs/data/interop_status_v1.json","purpose":"entity interoperability status"},
+    {"path":"docs/data/interop_catalog_v1.json","purpose":"machine-readable interoperability catalog"},
     {"path":"docs/data/","purpose":"consumer-facing outputs and source health"}
   ],
   "consumer_contract": {
