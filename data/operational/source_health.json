@@ -1,25 +1,25 @@
 [
   {
     "source": "CMF",
-    "checked_at": "2026-08-13T03:45:38+00:00",
+    "checked_at": "2026-08-13T11:15:03+00:00",
     "fetch_status": "ok",
     "parse_status": "ok",
-    "rows_seen": 410,
-    "events_emitted": 637,
+    "rows_seen": 31,
+    "events_emitted": 50,
     "latest_event_date": "2026-08-04",
-    "documents_read": 62,
-    "documents_cache_hit": 1,
+    "documents_read": 0,
+    "documents_cache_hit": 31,
     "documents_failed": 0,
-    "document_entities_emitted": 270,
-    "message": "Agente documental CMF activo: 62 PDF nuevos leídos, 1 desde cache, 0 fallidos; 270 eventos individualizados desde documentos."
+    "document_entities_emitted": 39,
+    "message": "Agente documental CMF activo: 0 PDF nuevos leídos, 31 desde cache, 0 fallidos; 39 eventos individualizados desde documentos."
   },
   {
     "source": "SCJ",
-    "checked_at": "2026-08-13T03:50:08+00:00",
+    "checked_at": "2026-08-13T11:15:04+00:00",
     "fetch_status": "ok",
     "parse_status": "ok",
-    "rows_seen": 29,
-    "events_emitted": 24,
+    "rows_seen": 6,
+    "events_emitted": 3,
     "latest_event_date": "2026-06-30",
     "documents_read": 0,
     "documents_cache_hit": 0,
@@ -29,7 +29,7 @@
   },
   {
     "source": "SP",
-    "checked_at": "2026-08-13T03:50:10+00:00",
+    "checked_at": "2026-08-13T11:15:06+00:00",
     "fetch_status": "ok",
     "parse_status": "degraded",
     "rows_seen": 6,
@@ -43,7 +43,7 @@
   },
   {
     "source": "SUSESO",
-    "checked_at": "2026-08-13T03:50:09+00:00",
+    "checked_at": "2026-08-13T11:15:05+00:00",
     "fetch_status": "ok",
     "parse_status": "degraded",
     "rows_seen": 0,
@@ -57,16 +57,16 @@
   },
   {
     "source": "UAF",
-    "checked_at": "2026-08-13T03:45:37+00:00",
+    "checked_at": "2026-08-13T11:15:01+00:00",
     "fetch_status": "ok",
-    "parse_status": "ok",
-    "rows_seen": 368,
-    "events_emitted": 324,
-    "latest_event_date": "2025-09-25",
+    "parse_status": "degraded",
+    "rows_seen": 0,
+    "events_emitted": 0,
+    "latest_event_date": "",
     "documents_read": 0,
     "documents_cache_hit": 0,
     "documents_failed": 0,
     "document_entities_emitted": 0,
-    "message": ""
+    "message": "La página respondió, pero no se emitieron eventos con el esquema esperado."
   }
 ]
