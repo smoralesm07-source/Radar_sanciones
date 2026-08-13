@@ -22,6 +22,7 @@ def main():
         path.write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
     STATUS.parent.mkdir(parents=True, exist_ok=True)
     STATUS.write_text(json.dumps({"interop_version":"1.0","radar_id":"RADAR_SANCIONES",**hub_metrics(rows)}, ensure_ascii=False, indent=2), encoding="utf-8")
+    # Fusion materialization is intentionally chained here so every radar refresh publishes canonical outputs.
     from fusion_v1 import main as fusion_main
     fusion_main()
     print(json.dumps(hub_metrics(rows), ensure_ascii=False))
