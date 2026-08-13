@@ -1,12 +1,16 @@
 import json
+import sys
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
 
 from radar_sanciones.interop import build_entity_hub, hub_metrics
 
-SOURCE = Path("data/silver/entities.json")
-GOLD = Path("data/gold/entity_hub_v1.json")
-DOCS = Path("docs/data/entity_hub_v1.json")
-STATUS = Path("docs/data/interop_status_v1.json")
+SOURCE = ROOT / "data/silver/entities.json"
+GOLD = ROOT / "data/gold/entity_hub_v1.json"
+DOCS = ROOT / "docs/data/entity_hub_v1.json"
+STATUS = ROOT / "docs/data/interop_status_v1.json"
 
 
 def main():
