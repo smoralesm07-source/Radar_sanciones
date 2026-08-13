@@ -31,7 +31,7 @@ def health_rollup(rows):
 ap=argparse.ArgumentParser();ap.add_argument('--from-year',type=int,default=2026);ap.add_argument('--to-year',type=int,default=2026);ap.add_argument('--sources',default='UAF,CMF,SCJ,SUSESO,SP');ap.add_argument('--bootstrap',action='store_true');a=ap.parse_args()
 old_events=load('data/silver/sanction_events.json',[]);old_entities=load('data/silver/entities.json',[]);old_by={x.get('source_record_id'):x for x in old_events if x.get('source_record_id')};old_ent={x.get('entity_id') or x.get('rut'):x for x in old_entities}
 run('scripts/backfill.py','--from-year',a.from_year,'--to-year',a.to_year,'--sources',a.sources)
-run('scripts/rebuild_entities.py');run('scripts/rebuild_coverage.py')
+run('scripts/rebuild_entities.py');run('scripts/build_interop.py');run('scripts/rebuild_coverage.py')
 events=load('data/silver/sanction_events.json',[]);entities=load('data/silver/entities.json',[]);now=datetime.now(timezone.utc).astimezone().isoformat(timespec='seconds')
 new=[x for x in events if x.get('source_record_id') not in old_by];watch=['estado','monto','unidad','categoria','laft_directo','resumen','resolution_url'];updated=[]
 for x in events:

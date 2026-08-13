@@ -2,6 +2,9 @@ from __future__ import annotations
 import hashlib,re,unicodedata
 
 def norm_rut(value): return re.sub(r'[^0-9Kk]','',str(value or '')).upper()
+def normalizar_nombre(value):
+    n=unicodedata.normalize('NFD',str(value or '')).encode('ascii','ignore').decode().upper()
+    return re.sub(r'[^A-Z0-9]+',' ',n).strip()
 def entity_id(rut='', name=''):
     r=norm_rut(rut)
     if r: return f'ENT-RUT-{r}'
