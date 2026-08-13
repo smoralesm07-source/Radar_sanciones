@@ -1,7 +1,7 @@
 [
   {
     "source": "UAF",
-    "checked_at": "2026-08-13T22:36:34+00:00",
+    "checked_at": "2026-08-13T22:38:01+00:00",
     "url": "https://www.uaf.cl/es-cl/publicaciones-uaf/sanciones-ejecutoriadas",
     "http_status": 200,
     "fetch_status": "ok",
@@ -20,7 +20,7 @@
   },
   {
     "source": "CMF",
-    "checked_at": "2026-08-13T22:36:35+00:00",
+    "checked_at": "2026-08-13T22:38:03+00:00",
     "url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
     "http_status": 200,
     "fetch_status": "ok",
@@ -28,7 +28,7 @@
     "rows_seen": 31,
     "events_emitted": 50,
     "latest_event_date": "2026-08-04",
-    "content_sha256": "f07475a9a7a403b2000cf04103e002775ef7bb9d9b84038c19ba614fe311f332",
+    "content_sha256": "913e4b46a069c87d2902ce19e6830857eef0c914df17a747e35529fcd69d2970",
     "message": "Agente documental CMF activo: 0 PDF nuevos leídos, 31 desde cache, 0 fallidos; 39 eventos individualizados desde documentos.",
     "mode": "live",
     "documents_requested": 31,
@@ -39,7 +39,7 @@
   },
   {
     "source": "SCJ",
-    "checked_at": "2026-08-13T22:36:37+00:00",
+    "checked_at": "2026-08-13T22:38:05+00:00",
     "url": "https://www.scj.gob.cl/proceso-sancionatorio/",
     "http_status": 200,
     "fetch_status": "ok",
@@ -58,7 +58,7 @@
   },
   {
     "source": "SUSESO",
-    "checked_at": "2026-08-13T22:36:38+00:00",
+    "checked_at": "2026-08-13T22:38:05+00:00",
     "url": "https://www.suseso.gob.cl/609/w3-propertyvalue-806511.html",
     "http_status": 200,
     "fetch_status": "ok",
@@ -77,7 +77,7 @@
   },
   {
     "source": "SP",
-    "checked_at": "2026-08-13T22:36:39+00:00",
+    "checked_at": "2026-08-13T22:38:06+00:00",
     "url": "https://www.spensiones.cl/portal/institucional/594/w3-propertyvalue-5901.html",
     "http_status": 200,
     "fetch_status": "ok",
