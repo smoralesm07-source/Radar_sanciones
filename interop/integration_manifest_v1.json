@@ -2,7 +2,7 @@
   "interop_version": "1.0",
   "radar_id": "RADAR_SANCIONES",
   "repository": "smoralesm07-source/Radar_sanciones",
-  "implementation_stage": "ADAPTER_PARTIAL",
+  "implementation_stage": "FUSION_EXPORT_READY",
   "record_domains": ["EVENT","ENTITY","SOURCE","EVIDENCE","SIGNAL"],
   "entity_hub": {
     "global_key": "ENT-RUT-{RUT_NORMALIZADO}",
@@ -13,6 +13,7 @@
     "local_ids_preserved": true,
     "adapter_module": "src/radar_sanciones/interop.py",
     "materialized_path": "docs/data/entity_hub_v1.json",
+    "canonical_entity_path": "docs/data/entities_fusion_v1.jsonl",
     "catalog_path": "docs/data/interop_catalog_v1.json"
   },
   "territory": {
@@ -27,12 +28,15 @@
     "strong_membership_allowed": ["VALIDATED_EXACT","VALIDATED_RULE"]
   },
   "temporal_evidence": {
-    "time_fields": ["observed_from","observed_to","source_published_at","retrieved_at","last_seen_at","last_successful_refresh_at"],
-    "evidence_fields": ["evidence_id","source_id","source_url","ultimate_source_id","source_tier","capture_method","source_run_id","content_sha256","quality_status","schema_version"],
+    "time_fields": ["observed_from","observed_to","source_published_at","retrieved_at","ingested_at","last_seen_at","last_successful_refresh_at"],
+    "evidence_fields": ["evidence_id","producer_id","source_id","source_url","ultimate_source_id","source_tier","capture_method","source_run_id","content_sha256","quality_status","schema_version"],
     "freshness_states": ["CURRENT","DUE","STALE","UNKNOWN"],
     "source_failure_is_zero": false,
     "preserve_last_known_good": true,
-    "current_status": "ADAPTER_PARTIAL"
+    "current_status": "FUSION_EXPORT_READY",
+    "evidence_path": "docs/data/evidence_v1.jsonl",
+    "event_path": "docs/data/events_fusion_v1.jsonl",
+    "builder": "scripts/build_fusion_exports.py"
   },
   "scores": {
     "common_risk_score": false,
@@ -40,13 +44,16 @@
     "required_metadata": ["score_name","score_value","score_version","score_scope"]
   },
   "exports": [
-    {"path":"docs/data/entity_hub_v1.json","purpose":"canonical entity interoperability view"},
-    {"path":"docs/data/interop_status_v1.json","purpose":"entity interoperability status"},
-    {"path":"docs/data/interop_catalog_v1.json","purpose":"machine-readable interoperability catalog"},
-    {"path":"docs/data/","purpose":"consumer-facing outputs and source health"}
+    {"path":"docs/data/entity_hub_v1.json","purpose":"canonical identity bridge"},
+    {"path":"docs/data/entities_fusion_v1.jsonl","purpose":"Fusion Layer Entity objects"},
+    {"path":"docs/data/events_fusion_v1.jsonl","purpose":"Fusion Layer Event objects"},
+    {"path":"docs/data/evidence_v1.jsonl","purpose":"Fusion Layer Evidence objects"},
+    {"path":"docs/data/fusion_interop_status_v1.json","purpose":"materialization status"},
+    {"path":"docs/data/interop_catalog_v1.json","purpose":"machine-readable interoperability catalog"}
   ],
   "consumer_contract": {
     "manifest_path": "interop/integration_manifest_v1.json",
-    "schema_path": "interop/interop_contract_v1.schema.json"
+    "schema_path": "interop/interop_contract_v1.schema.json",
+    "canonical_consumer": "smoralesm07-source/Intelligence_Fusion_Layer"
   }
 }
