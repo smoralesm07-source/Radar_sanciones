@@ -1,0 +1,51 @@
+name: Bootstrap inicial 2020+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        shell: bash
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          try:m=json.load(open('data/gold/metadata.json'))
+          except:m={}
+          print('run='+('true' if m.get('bootstrap_pending',True) else 'false'))
+          PY
+      - if: steps.check.outputs.run == 'true'
+        uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - if: steps.check.outputs.run == 'true'
+        run: pip install -r requirements.txt
+      - if: steps.check.outputs.run == 'true'
+        run: python scripts/run_pipeline.py --from-year 2020 --to-year 2026 --sources UAF,CMF,SCJ,SUSESO,SP --bootstrap
+      - if: steps.check.outputs.run == 'true'
+        run: pytest -q && python scripts/validate_publish.py
+      - if: steps.check.outputs.run == 'true'
+        run: |
+          git config user.name "radar-sanciones-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ docs/data/
+          git diff --cached --quiet || git commit -m "data: bootstrap OSINT sanciones 2020-2026"
+          git push
+      - if: steps.check.outputs.run == 'true'
+        uses: actions/configure-pages@v5
+      - if: steps.check.outputs.run == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with: {path: docs}
+      - if: steps.check.outputs.run == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4

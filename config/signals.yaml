@@ -1,0 +1,19 @@
+signals:
+  SAN-NEW:
+    description: Nuevo evento detectado por el radar.
+    severity: medium
+  SAN-REPEAT:
+    description: Reincidencia regulatoria desde 2020.
+    severity: high
+  SAN-MULTI-AUTH:
+    description: Misma entidad observada por dos o más autoridades.
+    severity: high
+  SAN-ALA-CFT:
+    description: Evento directamente relacionado con ALA/CFT/CFP.
+    severity: high
+  SAN-RECENT-CLUSTER:
+    description: Dos o más eventos dentro de 12 meses.
+    severity: medium
+  SAN-COLLECTIVE:
+    description: Resolución colectiva con varias entidades individualizadas.
+    severity: medium

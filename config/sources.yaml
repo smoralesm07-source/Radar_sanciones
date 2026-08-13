@@ -1,0 +1,34 @@
+target_from_year: 2020
+radar_window_days: 90
+sources:
+  - id: UAF
+    tier: core
+    enabled: true
+    document_agent: true
+    url: https://www.uaf.cl/es-cl/publicaciones-uaf/sanciones-ejecutoriadas
+  - id: CMF
+    tier: core
+    enabled: true
+    document_agent: true
+    url: https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php
+  - id: SP
+    tier: core
+    enabled: true
+    document_agent: true
+  - id: SUSESO
+    tier: core
+    enabled: true
+    document_agent: true
+    url: https://www.suseso.cl/609/w3-propertyvalue-806511.html
+  - id: SCJ
+    tier: core
+    enabled: true
+    document_agent: true
+    url: https://www.scj.gob.cl/proceso-sancionatorio/
+  - id: SMA
+    tier: expansion
+    enabled: false
+    url: https://snifa.sma.gob.cl/RegistroPublico
+  - id: SII
+    tier: enrichment
+    enabled: weekly

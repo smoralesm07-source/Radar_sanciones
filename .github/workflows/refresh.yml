@@ -1,0 +1,35 @@
+name: Refresh diario
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 10 * * 1-5'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - run: python scripts/run_pipeline.py --from-year 2026 --to-year 2026 --sources UAF,CMF,SCJ,SUSESO,SP
+      - run: python scripts/validate_publish.py
+      - run: |
+          git config user.name "radar-sanciones-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ docs/data/
+          git diff --cached --quiet || git commit -m "data: refresh radar sanciones"
+          git push
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: {path: docs}
+      - id: deployment
+        uses: actions/deploy-pages@v4

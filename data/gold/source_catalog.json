@@ -1,0 +1,9 @@
+[
+ {"source_id":"UAF","name":"Unidad de Análisis Financiero","tier":"core","target_from_year":2020,"document_agent":true},
+ {"source_id":"CMF","name":"Comisión para el Mercado Financiero","tier":"core","target_from_year":2020,"document_agent":true},
+ {"source_id":"SP","name":"Superintendencia de Pensiones","tier":"core","target_from_year":2020,"document_agent":true},
+ {"source_id":"SUSESO","name":"Superintendencia de Seguridad Social","tier":"core","target_from_year":2020,"document_agent":true},
+ {"source_id":"SCJ","name":"Superintendencia de Casinos de Juego","tier":"core","target_from_year":2020,"document_agent":true},
+ {"source_id":"SII","name":"Servicio de Impuestos Internos","tier":"enrichment","target_from_year":2020,"document_agent":false},
+ {"source_id":"SMA","name":"Superintendencia del Medio Ambiente / SNIFA","tier":"expansion","target_from_year":2020,"document_agent":false}
+]

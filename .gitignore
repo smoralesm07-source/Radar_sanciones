@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+data/bronze/*/*/raw*
+data/operational/_capture/
+data/operational/_previous/
