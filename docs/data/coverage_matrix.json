@@ -1,1 +1,247 @@
-[]
+[
+  {
+    "source_id": "UAF",
+    "year": 2020,
+    "events_loaded": 85,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "UAF",
+    "year": 2021,
+    "events_loaded": 19,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "UAF",
+    "year": 2022,
+    "events_loaded": 23,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "UAF",
+    "year": 2023,
+    "events_loaded": 73,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "UAF",
+    "year": 2024,
+    "events_loaded": 76,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "UAF",
+    "year": 2025,
+    "events_loaded": 48,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "UAF",
+    "year": 2026,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "CMF",
+    "year": 2020,
+    "events_loaded": 55,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "CMF",
+    "year": 2021,
+    "events_loaded": 61,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "CMF",
+    "year": 2022,
+    "events_loaded": 102,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "CMF",
+    "year": 2023,
+    "events_loaded": 106,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "CMF",
+    "year": 2024,
+    "events_loaded": 145,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "CMF",
+    "year": 2025,
+    "events_loaded": 107,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "CMF",
+    "year": 2026,
+    "events_loaded": 49,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "SP",
+    "year": 2020,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SP",
+    "year": 2021,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SP",
+    "year": 2022,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SP",
+    "year": 2023,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SP",
+    "year": 2024,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SP",
+    "year": 2025,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SP",
+    "year": 2026,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SUSESO",
+    "year": 2020,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SUSESO",
+    "year": 2021,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SUSESO",
+    "year": 2022,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SUSESO",
+    "year": 2023,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SUSESO",
+    "year": 2024,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SUSESO",
+    "year": 2025,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SUSESO",
+    "year": 2026,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SCJ",
+    "year": 2020,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SCJ",
+    "year": 2021,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SCJ",
+    "year": 2022,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SCJ",
+    "year": 2023,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SCJ",
+    "year": 2024,
+    "events_loaded": 0,
+    "status": "pending_backfill",
+    "target": true
+  },
+  {
+    "source_id": "SCJ",
+    "year": 2025,
+    "events_loaded": 21,
+    "status": "loaded_partial",
+    "target": true
+  },
+  {
+    "source_id": "SCJ",
+    "year": 2026,
+    "events_loaded": 3,
+    "status": "loaded_partial",
+    "target": true
+  }
+]

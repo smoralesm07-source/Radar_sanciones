@@ -1,1 +1,72 @@
-[]
+[
+  {
+    "source": "CMF",
+    "checked_at": "2026-08-13T03:45:38+00:00",
+    "fetch_status": "ok",
+    "parse_status": "ok",
+    "rows_seen": 410,
+    "events_emitted": 637,
+    "latest_event_date": "2026-08-04",
+    "documents_read": 62,
+    "documents_cache_hit": 1,
+    "documents_failed": 0,
+    "document_entities_emitted": 270,
+    "message": "Agente documental CMF activo: 62 PDF nuevos leídos, 1 desde cache, 0 fallidos; 270 eventos individualizados desde documentos."
+  },
+  {
+    "source": "SCJ",
+    "checked_at": "2026-08-13T03:50:08+00:00",
+    "fetch_status": "ok",
+    "parse_status": "ok",
+    "rows_seen": 29,
+    "events_emitted": 24,
+    "latest_event_date": "2026-06-30",
+    "documents_read": 0,
+    "documents_cache_hit": 0,
+    "documents_failed": 0,
+    "document_entities_emitted": 0,
+    "message": ""
+  },
+  {
+    "source": "SP",
+    "checked_at": "2026-08-13T03:50:10+00:00",
+    "fetch_status": "ok",
+    "parse_status": "degraded",
+    "rows_seen": 6,
+    "events_emitted": 2,
+    "latest_event_date": "",
+    "documents_read": 0,
+    "documents_cache_hit": 0,
+    "documents_failed": 0,
+    "document_entities_emitted": 0,
+    "message": "Archivo de noticias accesible, pero la desagregación reciente por AFP requiere enriquecer comunicados/resoluciones."
+  },
+  {
+    "source": "SUSESO",
+    "checked_at": "2026-08-13T03:50:09+00:00",
+    "fetch_status": "ok",
+    "parse_status": "degraded",
+    "rows_seen": 0,
+    "events_emitted": 0,
+    "latest_event_date": "",
+    "documents_read": 0,
+    "documents_cache_hit": 0,
+    "documents_failed": 0,
+    "document_entities_emitted": 0,
+    "message": ""
+  },
+  {
+    "source": "UAF",
+    "checked_at": "2026-08-13T03:45:37+00:00",
+    "fetch_status": "ok",
+    "parse_status": "ok",
+    "rows_seen": 368,
+    "events_emitted": 324,
+    "latest_event_date": "2025-09-25",
+    "documents_read": 0,
+    "documents_cache_hit": 0,
+    "documents_failed": 0,
+    "document_entities_emitted": 0,
+    "message": ""
+  }
+]

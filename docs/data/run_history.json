@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "run_at": "2026-08-13T03:50:25+00:00",
+    "status": "bootstrap",
+    "from_year": 2020,
+    "to_year": 2026,
+    "sources": [
+      "UAF",
+      "CMF",
+      "SCJ",
+      "SUSESO",
+      "SP"
+    ],
+    "events_total": 974,
+    "new_events": 974,
+    "updated_events": 0,
+    "source_health": {
+      "CMF": "ok",
+      "SCJ": "ok",
+      "SP": "degraded",
+      "SUSESO": "degraded",
+      "UAF": "ok"
+    }
+  }
+]
