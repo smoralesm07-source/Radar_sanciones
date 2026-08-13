@@ -1,0 +1,10 @@
+{
+  "interop_version": "1.0",
+  "radar_id": "RADAR_SANCIONES",
+  "status": "FUSION_EXPORT_READY",
+  "evidence": 0,
+  "entities": 0,
+  "events": 0,
+  "unresolved_event_entities": 0,
+  "source_failure_is_zero": false
+}

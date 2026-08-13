@@ -1,7 +1,7 @@
 [
   {
     "source": "CMF",
-    "checked_at": "2026-08-13T18:05:45+00:00",
+    "checked_at": "2026-08-13T22:35:00+00:00",
     "fetch_status": "ok",
     "parse_status": "ok",
     "rows_seen": 31,
@@ -15,7 +15,7 @@
   },
   {
     "source": "SCJ",
-    "checked_at": "2026-08-13T18:05:47+00:00",
+    "checked_at": "2026-08-13T22:35:02+00:00",
     "fetch_status": "ok",
     "parse_status": "ok",
     "rows_seen": 6,
@@ -29,7 +29,7 @@
   },
   {
     "source": "SP",
-    "checked_at": "2026-08-13T18:05:48+00:00",
+    "checked_at": "2026-08-13T22:35:04+00:00",
     "fetch_status": "ok",
     "parse_status": "degraded",
     "rows_seen": 6,
@@ -43,7 +43,7 @@
   },
   {
     "source": "SUSESO",
-    "checked_at": "2026-08-13T18:05:47+00:00",
+    "checked_at": "2026-08-13T22:35:03+00:00",
     "fetch_status": "ok",
     "parse_status": "degraded",
     "rows_seen": 0,
@@ -57,7 +57,7 @@
   },
   {
     "source": "UAF",
-    "checked_at": "2026-08-13T18:05:43+00:00",
+    "checked_at": "2026-08-13T22:34:59+00:00",
     "fetch_status": "ok",
     "parse_status": "degraded",
     "rows_seen": 0,
