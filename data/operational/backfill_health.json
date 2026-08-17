@@ -1,7 +1,7 @@
 [
   {
     "source": "UAF",
-    "checked_at": "2026-08-14T11:12:37+00:00",
+    "checked_at": "2026-08-17T10:54:12+00:00",
     "url": "https://www.uaf.cl/es-cl/publicaciones-uaf/sanciones-ejecutoriadas",
     "http_status": 200,
     "fetch_status": "ok",
@@ -20,7 +20,7 @@
   },
   {
     "source": "CMF",
-    "checked_at": "2026-08-14T11:12:38+00:00",
+    "checked_at": "2026-08-17T10:54:13+00:00",
     "url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
     "http_status": 200,
     "fetch_status": "ok",
@@ -28,7 +28,7 @@
     "rows_seen": 31,
     "events_emitted": 50,
     "latest_event_date": "2026-08-04",
-    "content_sha256": "7c256ea52ac0a27687c74ee271cd585d543b5902b839b74a812a2917cb6b3422",
+    "content_sha256": "4a4fae58a54ec96972e13c1bf3f12a20d142bbb0621060ae0368e368924a9be0",
     "message": "Agente documental CMF activo: 0 PDF nuevos leídos, 31 desde cache, 0 fallidos; 39 eventos individualizados desde documentos.",
     "mode": "live",
     "documents_requested": 31,
@@ -39,7 +39,7 @@
   },
   {
     "source": "SCJ",
-    "checked_at": "2026-08-14T11:12:40+00:00",
+    "checked_at": "2026-08-17T10:54:15+00:00",
     "url": "https://www.scj.gob.cl/proceso-sancionatorio/",
     "http_status": 200,
     "fetch_status": "ok",
@@ -47,7 +47,7 @@
     "rows_seen": 6,
     "events_emitted": 3,
     "latest_event_date": "2026-06-30",
-    "content_sha256": "7703af81f0e0cfd419ab3b59521629707d1d3bb975d776374800069de3ad7106",
+    "content_sha256": "f83f1e6b34726227752adcdbeffa07f015d9190b02a88ebe9eae65f258623f46",
     "message": "",
     "mode": "live",
     "documents_requested": 0,
@@ -58,7 +58,7 @@
   },
   {
     "source": "SUSESO",
-    "checked_at": "2026-08-14T11:12:41+00:00",
+    "checked_at": "2026-08-17T10:54:16+00:00",
     "url": "https://www.suseso.gob.cl/609/w3-propertyvalue-806511.html",
     "http_status": 200,
     "fetch_status": "ok",
@@ -77,7 +77,7 @@
   },
   {
     "source": "SP",
-    "checked_at": "2026-08-14T11:12:41+00:00",
+    "checked_at": "2026-08-17T10:54:17+00:00",
     "url": "https://www.spensiones.cl/portal/institucional/594/w3-propertyvalue-5901.html",
     "http_status": 200,
     "fetch_status": "ok",
