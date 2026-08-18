@@ -1,0 +1,1393 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radar Sanciones · Perímetro UAF</title>
+<style>
+:root{
+  --bg:#070d1a;--s1:#0c1525;--s2:#101c30;--s3:#162540;--s4:#1b2e4d;
+  --bd:rgba(255,255,255,.07);--bds:#1e3050;
+  --tx:#ddeafc;--tx2:#7090bc;--txm:#3d5a85;
+  --ac:#3b82f6;--acg:linear-gradient(135deg,#1d4ed8,#3b82f6);
+  --n1:#a78bfa;--n1b:rgba(167,139,250,.14);
+  --n2:#10b981;--n2b:rgba(16,185,129,.14);
+  --n0:#64748b;--n0b:rgba(100,116,139,.14);
+  --cr:#ef4444;--crb:rgba(239,68,68,.13);
+  --ch:#f97316;--chb:rgba(249,115,22,.13);
+  --cm:#eab308;--cmb:rgba(234,179,8,.13);
+  --cl:#22c55e;--clb:rgba(34,197,94,.13);
+  --san:#818cf8;--sii:#10b981;--uaf:#a78bfa;
+  --sid:236px;--top:52px;--rad:10px;--rad-sm:7px;
+  --shadow:0 18px 44px rgba(0,0,0,.5);
+}
+@media(prefers-color-scheme:light){:root:not([data-theme=dark]){
+  --bg:#eef3fb;--s1:#fff;--s2:#f6f9fe;--s3:#e9f0fa;--s4:#dde7f6;
+  --bd:rgba(10,30,60,.09);--bds:#cddaec;
+  --tx:#0c1c36;--tx2:#41597e;--txm:#8ba2be;
+  --ac:#1d4ed8;--n1:#7c3aed;--n1b:rgba(124,58,237,.1);
+  --n2:#059669;--n2b:rgba(5,150,105,.1);
+  --n0:#64748b;--n0b:rgba(100,116,139,.1);
+  --cr:#dc2626;--crb:rgba(220,38,38,.1);--ch:#ea580c;--chb:rgba(234,88,12,.1);
+  --cm:#ca8a04;--cmb:rgba(202,138,4,.1);--cl:#16a34a;--clb:rgba(22,163,74,.1);
+  --san:#4338ca;--sii:#047857;--uaf:#6d28d9;
+  --shadow:0 18px 44px rgba(20,40,80,.16);
+}}
+:root[data-theme=light]{
+  --bg:#eef3fb;--s1:#fff;--s2:#f6f9fe;--s3:#e9f0fa;--s4:#dde7f6;
+  --bd:rgba(10,30,60,.09);--bds:#cddaec;
+  --tx:#0c1c36;--tx2:#41597e;--txm:#8ba2be;
+  --ac:#1d4ed8;--n1:#7c3aed;--n1b:rgba(124,58,237,.1);
+  --n2:#059669;--n2b:rgba(5,150,105,.1);
+  --n0:#64748b;--n0b:rgba(100,116,139,.1);
+  --cr:#dc2626;--crb:rgba(220,38,38,.1);--ch:#ea580c;--chb:rgba(234,88,12,.1);
+  --cm:#ca8a04;--cmb:rgba(202,138,4,.1);--cl:#16a34a;--clb:rgba(22,163,74,.1);
+  --san:#4338ca;--sii:#047857;--uaf:#6d28d9;
+  --shadow:0 18px 44px rgba(20,40,80,.16);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--tx);font-size:13px;line-height:1.5;display:flex;overflow:hidden}
+::-webkit-scrollbar{width:9px;height:9px}::-webkit-scrollbar-thumb{background:var(--bds);border-radius:6px}
+::-webkit-scrollbar-track{background:transparent}
+button,input,select{font-family:inherit}
+
+/* ---------- shell ---------- */
+#sb{width:var(--sid);background:var(--s1);border-right:1px solid var(--bd);display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto;z-index:40}
+.brand{padding:18px 16px 14px;border-bottom:1px solid var(--bd)}
+.brand-tag{font-size:9px;letter-spacing:2.6px;color:var(--san);font-weight:800;text-transform:uppercase;margin-bottom:6px}
+.brand-name{font-size:15.5px;font-weight:800;letter-spacing:-.03em;line-height:1.15}
+.brand-ver{font-size:10px;color:var(--txm);margin-top:5px;font-variant-numeric:tabular-nums}
+.nav-lbl{padding:12px 16px 4px;font-size:9px;font-weight:700;letter-spacing:1.4px;color:var(--txm);text-transform:uppercase}
+.ni{display:flex;align-items:center;gap:9px;padding:8px 14px 8px 12px;cursor:pointer;border:0;background:0 0;color:var(--tx2);width:100%;text-align:left;font-size:12.5px;font-weight:500;border-left:3px solid transparent;transition:.12s}
+.ni:hover{background:rgba(59,130,246,.07);color:var(--tx)}
+.ni.on{background:rgba(59,130,246,.11);color:var(--ac);border-left-color:var(--ac)}
+.ni-ic{width:18px;text-align:center;font-size:13.5px;flex-shrink:0}
+.ni-bd{margin-left:auto;font-size:9.5px;font-weight:800;padding:1px 6px;border-radius:99px;background:var(--s3);color:var(--tx2);font-variant-numeric:tabular-nums}
+.sb-foot{margin-top:auto;padding:14px 16px;border-top:1px solid var(--bd);font-size:10px;color:var(--txm);line-height:1.5}
+
+#main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+#tb{height:var(--top);background:var(--s1);border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:8px;padding:0 16px;flex-shrink:0;flex-wrap:nowrap;overflow-x:auto}
+#tb-title{font-size:13.5px;font-weight:700;white-space:nowrap}
+.chipset{display:flex;gap:5px;align-items:center}
+.chip{border:1px solid var(--bd);border-radius:99px;padding:4px 10px;font-size:11px;cursor:pointer;background:var(--s2);color:var(--tx2);font-weight:600;transition:.12s;white-space:nowrap}
+.chip:hover{border-color:rgba(59,130,246,.35);color:var(--ac)}
+.chip.on{background:rgba(59,130,246,.13);border-color:rgba(59,130,246,.4);color:var(--ac)}
+.sinp{border:1px solid var(--bd);border-radius:7px;padding:5px 11px;font-size:12px;color:var(--tx);background:var(--s2);width:210px}
+.sinp:focus{outline:0;border-color:rgba(59,130,246,.5);box-shadow:0 0 0 3px rgba(59,130,246,.11)}
+.tb-r{margin-left:auto;display:flex;gap:6px;align-items:center}
+.iconbtn{width:30px;height:28px;border:1px solid var(--bd);border-radius:7px;background:var(--s2);color:var(--tx2);cursor:pointer;font-size:13px}
+.iconbtn:hover{color:var(--ac);border-color:rgba(59,130,246,.35)}
+#ct{flex:1;overflow-y:auto;padding:20px}
+#fbar{padding:9px 16px;border-bottom:1px solid var(--bd);background:var(--s2);display:flex;gap:10px;align-items:center;flex-wrap:wrap;flex-shrink:0}
+.fgrp{display:flex;align-items:center;gap:6px}
+.flbl{font-size:9.5px;font-weight:700;letter-spacing:1px;color:var(--txm);text-transform:uppercase}
+.rng{accent-color:var(--ac);width:132px}
+
+/* ---------- primitives ---------- */
+.mh{margin-bottom:18px;max-width:940px}
+.mh h1{font-size:21px;font-weight:800;letter-spacing:-.03em;line-height:1.15}
+.mh p{font-size:12.5px;color:var(--tx2);margin-top:6px}
+.grid{display:grid;gap:14px}
+.card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--rad);padding:15px}
+.card-h{display:flex;align-items:baseline;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.card-t{font-size:12.5px;font-weight:700;letter-spacing:-.01em}
+.card-s{font-size:10.5px;color:var(--txm)}
+.card-a{margin-left:auto;display:flex;gap:5px}
+.kpi{background:var(--s1);border:1px solid var(--bd);border-radius:var(--rad);padding:13px 14px;position:relative;overflow:hidden}
+.kpi::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc,var(--ac))}
+.kpi-l{font-size:9.5px;font-weight:700;letter-spacing:1.1px;color:var(--txm);text-transform:uppercase}
+.kpi-v{font-size:25px;font-weight:800;letter-spacing:-.04em;margin:4px 0 2px;font-variant-numeric:tabular-nums;line-height:1}
+.kpi-d{font-size:10.5px;color:var(--tx2);line-height:1.4}
+.bd{display:inline-block;padding:2px 7px;border-radius:5px;font-size:9.5px;font-weight:700;letter-spacing:.2px;white-space:nowrap}
+.bd-n1{background:var(--n1b);color:var(--n1)}.bd-n2{background:var(--n2b);color:var(--n2)}
+.bd-n0{background:var(--n0b);color:var(--n0)}
+.bd-cr{background:var(--crb);color:var(--cr)}.bd-hi{background:var(--chb);color:var(--ch)}
+.bd-md{background:var(--cmb);color:var(--cm)}.bd-lo{background:var(--clb);color:var(--cl)}
+.bd-nt{background:var(--s3);color:var(--tx2)}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{text-align:left;font-size:9.5px;font-weight:700;letter-spacing:.9px;color:var(--txm);text-transform:uppercase;padding:7px 9px;border-bottom:1px solid var(--bds);white-space:nowrap;cursor:pointer;user-select:none}
+th:hover{color:var(--ac)}
+th.num,td.num{text-align:right;font-variant-numeric:tabular-nums}
+td{padding:8px 9px;border-bottom:1px solid var(--bd);vertical-align:middle}
+tbody tr{cursor:pointer;transition:.1s}
+tbody tr:hover{background:rgba(59,130,246,.06)}
+.mono{font-variant-numeric:tabular-nums;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px}
+.trunc{max-width:290px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.empty{padding:34px;text-align:center;color:var(--txm);font-size:12px}
+.note{font-size:11px;color:var(--tx2);background:var(--s2);border-left:2px solid var(--ac);padding:9px 12px;border-radius:0 6px 6px 0;line-height:1.55}
+.scroll-x{overflow-x:auto}
+.legend{display:flex;flex-wrap:wrap;gap:11px;font-size:10.5px;color:var(--tx2);margin-top:8px}
+.legend i{width:9px;height:9px;border-radius:2px;display:inline-block;margin-right:5px;vertical-align:-1px}
+.bar-t{height:6px;border-radius:99px;background:var(--s3);overflow:hidden;min-width:56px}
+.bar-t>span{display:block;height:100%;border-radius:99px}
+
+/* ---------- ficha (drawer) ---------- */
+#ov{position:fixed;inset:0;background:rgba(3,8,18,.62);backdrop-filter:blur(2px);opacity:0;pointer-events:none;transition:.18s;z-index:80}
+#ov.on{opacity:1;pointer-events:auto}
+#fic{position:fixed;top:0;right:0;bottom:0;width:min(560px,94vw);background:var(--s1);border-left:1px solid var(--bds);box-shadow:var(--shadow);transform:translateX(100%);transition:transform .22s cubic-bezier(.4,0,.2,1);z-index:90;display:flex;flex-direction:column}
+#fic.on{transform:none}
+.fic-h{padding:16px 18px;border-bottom:1px solid var(--bd);flex-shrink:0}
+.fic-b{padding:16px 18px;overflow-y:auto;flex:1}
+.fic-x{position:absolute;top:13px;right:14px;width:26px;height:26px;border:1px solid var(--bd);border-radius:6px;background:var(--s2);color:var(--tx2);cursor:pointer;font-size:14px;line-height:1}
+.sect{margin-bottom:18px}
+.sect-t{font-size:9.5px;font-weight:700;letter-spacing:1.2px;color:var(--txm);text-transform:uppercase;margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--bd)}
+.kv{display:grid;grid-template-columns:118px 1fr;gap:5px 10px;font-size:11.5px}
+.kv dt{color:var(--txm)}.kv dd{color:var(--tx)}
+.tl{position:relative;padding-left:16px}
+.tl::before{content:'';position:absolute;left:4px;top:5px;bottom:5px;width:1px;background:var(--bds)}
+.tl-i{position:relative;padding:0 0 13px 4px}
+.tl-i::before{content:'';position:absolute;left:-16px;top:4px;width:8px;height:8px;border-radius:50%;background:var(--ac);border:2px solid var(--s1)}
+.tl-d{font-size:10px;color:var(--txm);font-variant-numeric:tabular-nums}
+.tl-t{font-size:12px;font-weight:600;margin:1px 0 3px}
+.tl-x{font-size:11px;color:var(--tx2);line-height:1.5}
+.wf-row{display:grid;grid-template-columns:135px 1fr 42px;gap:8px;align-items:center;margin-bottom:7px;font-size:11px}
+.wf-bar{height:9px;background:var(--s3);border-radius:99px;overflow:hidden}
+.wf-bar>span{display:block;height:100%;border-radius:99px;background:var(--acg)}
+a.lnk{color:var(--ac);text-decoration:none;font-size:11.5px}
+a.lnk:hover{text-decoration:underline}
+.pill{display:inline-block;padding:2px 8px;border-radius:99px;font-size:10px;background:var(--s3);color:var(--tx2);margin:0 4px 4px 0}
+
+/* ---------- graph ---------- */
+#gwrap{position:relative;background:var(--s1);border:1px solid var(--bd);border-radius:var(--rad);overflow:hidden}
+#gsvg{display:block;width:100%;cursor:grab;touch-action:none}
+#gsvg.drag{cursor:grabbing}
+.gnode{cursor:pointer}
+.gnode:hover circle{stroke-width:2.5}
+#gtip{position:absolute;pointer-events:none;background:var(--s3);border:1px solid var(--bds);border-radius:7px;padding:7px 10px;font-size:11px;box-shadow:var(--shadow);opacity:0;transition:.1s;max-width:260px;z-index:5}
+#gtip.on{opacity:1}
+.gctl{position:absolute;top:11px;left:11px;display:flex;flex-direction:column;gap:6px;background:var(--s2);border:1px solid var(--bds);border-radius:8px;padding:9px 11px;box-shadow:var(--shadow);z-index:4;opacity:.96}
+.gctl-r{display:flex;gap:5px;align-items:center;font-size:10.5px;color:var(--tx2)}
+svg text{font-family:inherit}
+@media(max-width:900px){
+  body{overflow:auto}
+  #sb{position:fixed;left:0;top:0;bottom:0;transform:translateX(-100%);transition:.2s}
+  #sb.on{transform:none}
+  #ct{padding:14px}
+}
+</style>
+</head>
+<body>
+
+<aside id="sb">
+  <div class="brand">
+    <div class="brand-tag">Módulo acoplable</div>
+    <div class="brand-name">Radar Sanciones<br>↔ Perímetro UAF</div>
+    <div class="brand-ver" id="brandver">—</div>
+  </div>
+  <nav id="nav"></nav>
+  <div class="sb-foot" id="sbfoot"></div>
+</aside>
+
+<div id="main">
+  <header id="tb">
+    <button class="iconbtn" id="btn-sb" title="Menú">☰</button>
+    <span id="tb-title">Panorama</span>
+    <div class="tb-r">
+      <input class="sinp" id="q" type="search" placeholder="Buscar entidad, RUT, resolución…" autocomplete="off">
+      <button class="iconbtn" id="btn-theme" title="Tema">◐</button>
+    </div>
+  </header>
+  <div id="fbar"></div>
+  <main id="ct"></main>
+</div>
+
+<div id="ov"></div>
+<aside id="fic">
+  <div class="fic-h"><button class="fic-x" id="fic-x">×</button><div id="fic-head"></div></div>
+  <div class="fic-b" id="fic-body"></div>
+</aside>
+
+<script>
+const BUNDLE = /*__BUNDLE__*/null;
+
+/* =====================================================================
+   Radar Sanciones ↔ UAF — capa de presentación
+   Punto de acoplamiento: RadarSancionesUAF.mount(elemento, bundle)
+   ===================================================================== */
+window.RadarSancionesUAF = (function(){
+"use strict";
+
+/* ---------- utilidades ---------- */
+const NF = new Intl.NumberFormat('es-CL');
+const fmt = n => NF.format(Math.round(n||0));
+const fmt1 = n => (n==null||isNaN(n)) ? '—' : NF.format(Math.round((n||0)*10)/10);
+const pct = (v,d=1) => (v==null||isNaN(v)) ? '—' : (v*100).toFixed(d).replace('.',',')+'%';
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid = (()=>{let i=0;return()=>'u'+(++i)})();
+const bandCls = s => s>=70?'cr':s>=50?'hi':s>=30?'md':'lo';
+const HIP_LABEL = {
+  CONFIRMADO_SII:'Confirmado por ACTECO SII', INFERIDO_SECTOR:'Sector declarado en la resolución',
+  INFERIDO_MATERIA_LAFT:'Materia ALA/CFT sancionada', INFERIDO_RAZON_SOCIAL:'Firma en la razón social',
+  INFERIDO_SUPERVISOR:'Supervisor de competencia exclusiva', SIN_HIPOTESIS:'Sin hipótesis', NO_APLICA:'—'
+};
+/** Verde para la confirmación documental, ámbar y gris según baja la fuerza. */
+const HIP_COLOR = k => {
+  const f = (B.hypothesis_strength||{})[k];
+  return f>=1?cssv('--n2') : f>=.75?cssv('--cl') : f>=.6?cssv('--cm') : f>=.5?cssv('--ch') : cssv('--n0');
+};
+const nivelCls = n => n==='N1_SO_SANCIONADO'?'n1':n==='N2_POTENCIAL_SO'?'n2':'n0';
+const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const sortBy = (arr,key,dir=-1) => arr.slice().sort((a,b)=>{
+  const x=a[key], y=b[key];
+  if(x==null&&y==null) return 0; if(x==null) return 1; if(y==null) return -1;
+  if(typeof x==='number'&&typeof y==='number') return (x-y)*dir;
+  return String(x).localeCompare(String(y),'es')*dir;
+});
+
+let B=null, HOST=null, ST=null, IERMAP=null;
+/** Racional de un factor del IER: viaja una sola vez en el bundle. */
+const IERS = k => {
+  if(!IERMAP) IERMAP = new Map((B.ier_schema||[]).map(f=>[f.key,f]));
+  return IERMAP.get(k) || {key:k,label:k,max:0,why:''};
+};
+
+/* =====================================================================
+   ESTADO Y DERIVACIÓN — todo se recalcula, nada está precocido
+   ===================================================================== */
+function initState(){
+  const years = B.events.map(e=>e.anio).filter(Boolean);
+  const y0 = years.length?Math.min(...years):2020, y1 = years.length?Math.max(...years):2026;
+  ST = {
+    view:'panorama',
+    sup:new Set(), nivel:new Set(), hip:new Set(), sector:null,
+    y0, y1, ymin:y0, ymax:y1,
+    q:'', minIer:0, laft:false,
+    sort:{n1:['ier',-1], n2:['ier',-1], sec:['irni',-1], triage:['ier',-1]},
+    gDensity:120, gKinds:new Set(['co_resolucion','mencion','perimetro']),
+    sel:null
+  };
+}
+
+/** Subconjunto vivo bajo los filtros actuales. */
+function derive(){
+  const q = ST.q.trim().toLowerCase();
+  const evOk = e => {
+    if(e.anio && (e.anio<ST.y0 || e.anio>ST.y1)) return false;
+    if(ST.sup.size && !ST.sup.has(e.supervisor)) return false;
+    if(ST.laft && !(e.laft_directo || /ALA\/CFT|reportabilidad/i.test(e.categoria||''))) return false;
+    return true;
+  };
+  const events = B.events.filter(evOk);
+  const bySubj = new Map();
+  events.forEach(e=>{ if(!e.subject_id) return; (bySubj.get(e.subject_id) || bySubj.set(e.subject_id,[]).get(e.subject_id)).push(e); });
+
+  const subjects = [];
+  for(const s of B.subjects){
+    const evs = bySubj.get(s.subject_id);
+    if(!evs || !evs.length) continue;
+    if(ST.nivel.size && !ST.nivel.has(s.nivel)) continue;
+    if(ST.hip.size && !ST.hip.has(s.hipotesis)) continue;
+    if(ST.sector && (s.sector_analitico||'Sin sector')!==ST.sector) continue;
+    if(s.ier < ST.minIer) continue;
+    if(q){
+      const hay = (s.nombre+' '+(s.rut||'')+' '+(s.sector_analitico||'')+' '+(s.uaf_razon_social||'')+' '+
+        evs.map(e=>e.resolucion||'').join(' ')).toLowerCase();
+      if(!hay.includes(q)) continue;
+    }
+    subjects.push(Object.assign({}, s, {_ev:evs, _n:evs.length}));
+  }
+  const ids = new Set(subjects.map(s=>s.subject_id));
+  const evFiltered = events.filter(e=>ids.has(e.subject_id));
+
+  return {events:evFiltered, subjects, byLevel:g=>subjects.filter(s=>s.nivel===g),
+          full: !ST.sup.size && !ST.nivel.size && !ST.hip.size && !ST.sector && !ST.q && !ST.laft &&
+                ST.y0===ST.ymin && ST.y1===ST.ymax && ST.minIer===0};
+}
+
+/** Recalcula la matriz sectorial con el subconjunto vivo (denominadores del registro UAF). */
+function sectorView(D){
+  const base = new Map(B.sectors.map(r=>[r.sector,r]));
+  const acc = new Map();
+  D.subjects.forEach(s=>{
+    const k = s.sector_analitico || 'Sin sector';
+    let a = acc.get(k);
+    if(!a){ a={sector:k,n1:0,n2:0,ev1:0,ev2:0,ier:[],laft:0}; acc.set(k,a); }
+    if(s.nivel==='N1_SO_SANCIONADO'){ a.n1++; a.ev1+=s._n; }
+    else if(s.nivel==='N2_POTENCIAL_SO'){ a.n2++; a.ev2+=s._n; }
+    a.ier.push(s.ier);
+    a.laft += s._ev.filter(e=>e.laft_directo).length;
+  });
+  const rows=[];
+  const totalIns = B.kpis.inscritos_uaf||1;
+  const totalSan = D.byLevel('N1_SO_SANCIONADO').length;
+  const gRate = totalSan/totalIns;
+  acc.forEach((a,k)=>{
+    const b = base.get(k) || {};
+    const ins = b.inscritos_uaf||0;
+    const tasa = ins ? a.n1/ins : 0;
+    const w = wilson(a.n1, ins);
+    rows.push({
+      sector:k, inscritos_uaf:ins, sancionados_n1:a.n1, potenciales_n2:a.n2,
+      eventos_n1:a.ev1, eventos_n2:a.ev2, eventos_laft:a.laft,
+      tasa_penetracion:tasa, wilson_low:w[0], wilson_high:w[1],
+      lift: (ins && gRate) ? tasa/gRate : null,
+      universo_candidato_sii:b.universo_candidato_sii||0,
+      brecha_registral: b.brecha_registral!=null ? b.brecha_registral : (ins||b.universo_candidato_sii ? 1-(ins/(ins+(b.universo_candidato_sii||0))) : null),
+      cobertura_registral:b.cobertura_registral,
+      prioridad_screening:b.prioridad_screening||'—', prioridad_rank:b.prioridad_rank||0,
+      codigos_gatillantes:b.codigos_gatillantes||[],
+      irni: b.irni||0,
+      ier_max: a.ier.length?Math.max(...a.ier):0,
+      ier_medio: a.ier.length? a.ier.reduce((x,y)=>x+y,0)/a.ier.length : 0
+    });
+  });
+  // sectores con brecha SII pero sin sanciones en el filtro: se conservan para el Nivel 2
+  B.sectors.forEach(b=>{
+    if(!acc.has(b.sector) && (b.universo_candidato_sii||0)>0)
+      rows.push(Object.assign({}, b, {sancionados_n1:0,potenciales_n2:0,eventos_n1:0,eventos_n2:0,eventos_laft:0,
+        tasa_penetracion:0,wilson_low:0,wilson_high:0,lift:0,ier_max:0,ier_medio:0}));
+  });
+  return rows;
+}
+
+function wilson(h,n,z=1.96){
+  if(!n) return [0,0];
+  const p=h/n, d=1+z*z/n, c=p+z*z/(2*n);
+  const m=z*Math.sqrt((p*(1-p)+z*z/(4*n))/n);
+  return [Math.max(0,(c-m)/d), Math.min(1,(c+m)/d)];
+}
+
+/* =====================================================================
+   GRÁFICOS — SVG puro, sin dependencias externas
+   ===================================================================== */
+function donut(segs,size,label,sub){
+  const total = segs.reduce((a,s)=>a+s.v,0) || 1;
+  const cx=size/2, cy=size/2, r=size/2-6, ri=r*.6, gap=.05;
+  let ang=-Math.PI/2, p='', lg='';
+  segs.forEach(s=>{
+    const sl=(s.v/total)*(2*Math.PI-gap*segs.length);
+    const a1=ang+gap/2, a2=a1+sl, big=sl>Math.PI?1:0;
+    const P=(rad,a)=>[(cx+rad*Math.cos(a)).toFixed(1),(cy+rad*Math.sin(a)).toFixed(1)];
+    const [x1,y1]=P(r,a1),[x2,y2]=P(r,a2),[x3,y3]=P(ri,a2),[x4,y4]=P(ri,a1);
+    p+=`<path d="M${x1},${y1} A${r},${r} 0 ${big},1 ${x2},${y2} L${x3},${y3} A${ri},${ri} 0 ${big},0 ${x4},${y4} Z" fill="${s.c}"><title>${esc(s.l)}: ${fmt(s.v)} (${pct(s.v/total)})</title></path>`;
+    ang+=sl+gap;
+    lg+=`<span><i style="background:${s.c}"></i>${esc(s.l)} · <b>${fmt(s.v)}</b></span>`;
+  });
+  return `<div style="display:flex;flex-direction:column;align-items:center">
+    <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">${p}
+      <text x="${cx}" y="${cy-2}" text-anchor="middle" font-size="21" font-weight="800" fill="var(--tx)">${fmt(label)}</text>
+      <text x="${cx}" y="${cy+15}" text-anchor="middle" font-size="9.5" fill="var(--tx2)">${esc(sub||'')}</text>
+    </svg><div class="legend" style="justify-content:center">${lg}</div></div>`;
+}
+
+function hbar(data,w,h,opt={}){
+  if(!data.length) return `<div class="empty">Sin datos bajo los filtros activos.</div>`;
+  const lw = opt.lw||168, rw = opt.rw||58;
+  const max = Math.max(...data.map(d=>d.v))||1;
+  const rh = Math.max(19, h/data.length);
+  let s='';
+  data.forEach((d,i)=>{
+    const y=i*rh, bw=Math.max(2,(d.v/max)*(w-lw-rw)), by=y+rh*.22, bh=rh*.52;
+    s+=`<text x="0" y="${(y+rh*.68).toFixed(1)}" font-size="11" fill="var(--tx2)">${esc(String(d.l).slice(0,Math.floor(lw/5.6)))}</text>`;
+    s+=`<rect x="${lw}" y="${by.toFixed(1)}" width="${bw.toFixed(1)}" height="${bh.toFixed(1)}" rx="3" fill="${d.c||'var(--ac)'}"><title>${esc(d.l)}: ${esc(d.t||fmt(d.v))}</title></rect>`;
+    s+=`<text x="${(lw+bw+6).toFixed(1)}" y="${(y+rh*.68).toFixed(1)}" font-size="10.5" font-weight="700" fill="var(--tx)">${esc(d.t||fmt(d.v))}</text>`;
+  });
+  return `<svg width="${w}" height="${data.length*rh}" viewBox="0 0 ${w} ${data.length*rh}" style="max-width:100%;overflow:visible">${s}</svg>`;
+}
+
+/** Barra de tasa con intervalo de Wilson dibujado como bigote. */
+function wilsonChart(rows,w,h){
+  if(!rows.length) return `<div class="empty">Ningún sector con inscritos bajo los filtros.</div>`;
+  const lw=232, rw=88, iw=w-lw-rw;
+  const max = Math.max(...rows.map(r=>r.wilson_high))||0.01;
+  const rh=25; let s='';
+  const gRate = (B.kpis.n1_tasa)||0;
+  const gx = lw + (gRate/max)*iw;
+  s+=`<line x1="${gx.toFixed(1)}" y1="0" x2="${gx.toFixed(1)}" y2="${rows.length*rh}" stroke="var(--ac)" stroke-dasharray="3,4" stroke-width="1"/>`;
+  s+=`<text x="${(gx+4).toFixed(1)}" y="9" font-size="8.5" fill="var(--ac)">tasa global ${pct(gRate,2)}</text>`;
+  rows.forEach((r,i)=>{
+    const y=i*rh+rh/2;
+    const x=lw+(r.tasa_penetracion/max)*iw, xl=lw+(r.wilson_low/max)*iw, xh=lw+(r.wilson_high/max)*iw;
+    const col = r.wilson_low>gRate ? 'var(--cr)' : r.tasa_penetracion>gRate ? 'var(--ch)' : 'var(--n1)';
+    s+=`<text x="0" y="${(y+3.5).toFixed(1)}" font-size="11" fill="var(--tx2)">${esc(r.sector.slice(0,40))}</text>`;
+    s+=`<line x1="${xl.toFixed(1)}" y1="${y.toFixed(1)}" x2="${xh.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${col}" stroke-opacity=".33" stroke-width="7" stroke-linecap="round"/>`;
+    s+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.5" fill="${col}"><title>${esc(r.sector)}\n${r.sancionados_n1} de ${r.inscritos_uaf} inscritos = ${pct(r.tasa_penetracion,2)}\nIC95% Wilson: ${pct(r.wilson_low,2)} – ${pct(r.wilson_high,2)}</title></circle>`;
+    s+=`<text x="${w-rw+6}" y="${(y+3.5).toFixed(1)}" font-size="10.5" font-weight="700" fill="var(--tx)">${pct(r.tasa_penetracion,1)}</text>`;
+    s+=`<text x="${w-rw+6}" y="${(y+13).toFixed(1)}" font-size="8.5" fill="var(--txm)">${r.sancionados_n1}/${fmt(r.inscritos_uaf)}</text>`;
+  });
+  return `<svg width="${w}" height="${rows.length*rh+8}" viewBox="0 0 ${w} ${rows.length*rh+8}" style="max-width:100%;overflow:visible">${s}</svg>`;
+}
+
+/** Matriz de priorización: brecha registral × presión sancionatoria × universo candidato. */
+function bubble(rows,w,h){
+  const pl=52,pr=34,pt=14,pb=38, iw=w-pl-pr, ih=h-pt-pb;
+  const pts = rows.filter(r=>r.brecha_registral!=null && r.inscritos_uaf>0);
+  if(!pts.length) return `<div class="empty">Sin sectores con brecha calculable.</div>`;
+  const maxY = Math.min(1, Math.max(...pts.map(r=>r.tasa_penetracion))*1.15) || .01;
+  const R = u=>Math.max(4, Math.min(24, Math.sqrt(Math.log10((u||0)+10))*10));
+  // El área de trazado se encoge por el radio máximo para que ninguna burbuja
+  // se corte contra los bordes.
+  const pad = Math.max(...pts.map(r=>R(r.universo_candidato_sii)));
+  const X = v=>pl+pad+v*(iw-pad*2), Y = v=>pt+pad*.5+(ih-pad)-(v/maxY)*(ih-pad);
+  let s='';
+  [0,.25,.5,.75,1].forEach(f=>{
+    s+=`<line x1="${X(f)}" y1="${pt}" x2="${X(f)}" y2="${pt+ih}" stroke="var(--bd)" stroke-width="1"/>`;
+    s+=`<text x="${X(f)}" y="${pt+ih+15}" text-anchor="middle" font-size="9" fill="var(--txm)">${(f*100).toFixed(0)}%</text>`;
+  });
+  [.25,.5,.75,1].forEach(f=>{
+    s+=`<line x1="${pl}" y1="${Y(maxY*f)}" x2="${pl+iw}" y2="${Y(maxY*f)}" stroke="var(--bd)" stroke-dasharray="3,4"/>`;
+    s+=`<text x="${pl-6}" y="${Y(maxY*f)+3.5}" text-anchor="end" font-size="9" fill="var(--txm)">${pct(maxY*f,1)}</text>`;
+  });
+  // cuadrante crítico
+  s+=`<rect x="${X(.5)}" y="${pt}" width="${iw*.5}" height="${ih*.5}" fill="var(--cr)" opacity=".05"/>`;
+  s+=`<text x="${X(.52)}" y="${pt+13}" font-size="9" fill="var(--cr)" font-weight="700">FOCO: brecha alta + presión alta</text>`;
+  const colP = {5:'var(--cr)',4:'var(--cr)',3:'var(--ch)',2:'var(--cm)',1:'var(--n0)',0:'var(--n0)'};
+  sortBy(pts,'universo_candidato_sii',-1).forEach(r=>{
+    const c = colP[r.prioridad_rank]||'var(--n0)';
+    s+=`<circle class="bub" data-sector="${esc(r.sector)}" cx="${X(r.brecha_registral).toFixed(1)}" cy="${Y(r.tasa_penetracion).toFixed(1)}" r="${R(r.universo_candidato_sii).toFixed(1)}"
+      fill="${c}" fill-opacity=".26" stroke="${c}" stroke-width="1.6" style="cursor:pointer">
+      <title>${esc(r.sector)}\nBrecha registral: ${pct(r.brecha_registral)}\nPenetración sancionatoria: ${pct(r.tasa_penetracion,2)} (${r.sancionados_n1}/${fmt(r.inscritos_uaf)})\nUniverso candidato SII: ${fmt(r.universo_candidato_sii)}\nPrioridad screening: ${esc(r.prioridad_screening)}\nIRNI: ${fmt1(r.irni)}</title></circle>`;
+  });
+  // Las etiquetas se voltean hacia adentro cuando la burbuja queda contra el borde.
+  sortBy(pts,'irni',-1).slice(0,7).forEach(r=>{
+    const cx=X(r.brecha_registral), cy=Y(r.tasa_penetracion), rad=R(r.universo_candidato_sii);
+    const flip = cx > pl+iw*0.62;
+    s+=`<text x="${(flip?cx-rad-5:cx+rad+5).toFixed(1)}" y="${(cy+3).toFixed(1)}" text-anchor="${flip?'end':'start'}"
+      font-size="9.5" font-weight="600" fill="var(--tx2)" paint-order="stroke" stroke="var(--s1)" stroke-width="3">${esc(r.sector.slice(0,26))}</text>`;
+  });
+  s+=`<text x="${pl+iw/2}" y="${h-4}" text-anchor="middle" font-size="9.5" fill="var(--txm)">Brecha registral → % del universo con actividad gatillante que no está inscrito</text>`;
+  s+=`<text transform="translate(11,${pt+ih/2}) rotate(-90)" text-anchor="middle" font-size="9.5" fill="var(--txm)">Penetración sancionatoria</text>`;
+  return `<svg viewBox="0 0 ${w} ${h}" width="100%" height="${h}" preserveAspectRatio="xMidYMid meet" style="display:block">${s}</svg>`;
+}
+
+function lines(series,labels,w,h,opt={}){
+  const pl=34,pr=10,pt=12,pb=24, iw=w-pl-pr, ih=h-pt-pb;
+  const all = series.flatMap(d=>d.data);
+  const max = Math.max(...all,1)*1.12;
+  const n = labels.length||1;
+  const X = i=>pl+(n===1?iw/2:(i/(n-1))*iw), Y = v=>pt+ih-(v/max)*ih;
+  let s='';
+  [.25,.5,.75,1].forEach(f=>{
+    s+=`<line x1="${pl}" y1="${Y(max*f)}" x2="${pl+iw}" y2="${Y(max*f)}" stroke="var(--bd)" stroke-dasharray="3,4"/>`;
+    s+=`<text x="${pl-5}" y="${Y(max*f)+3.5}" text-anchor="end" font-size="8.5" fill="var(--txm)">${Math.round(max*f)}</text>`;
+  });
+  series.forEach(d=>{
+    const pts=d.data.map((v,i)=>[X(i),Y(v)]);
+    const line=pts.map((p,i)=>`${i?'L':'M'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+    const gid=uid();
+    s+=`<defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${d.c}" stop-opacity=".22"/><stop offset="100%" stop-color="${d.c}" stop-opacity="0"/></linearGradient></defs>`;
+    s+=`<path d="${line} L${X(n-1).toFixed(1)},${(pt+ih).toFixed(1)} L${X(0).toFixed(1)},${(pt+ih).toFixed(1)} Z" fill="url(#${gid})"/>`;
+    s+=`<path d="${line}" stroke="${d.c}" stroke-width="2" fill="none" stroke-linejoin="round"/>`;
+    pts.forEach((p,i)=>{ s+=`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="2.6" fill="${d.c}"><title>${esc(d.l)} · ${esc(labels[i])}: ${d.data[i]}</title></circle>`; });
+  });
+  const step = Math.ceil(n/(opt.ticks||8));
+  labels.forEach((l,i)=>{ if(i%step===0||i===n-1) s+=`<text x="${X(i).toFixed(1)}" y="${h-6}" text-anchor="middle" font-size="8.5" fill="var(--txm)">${esc(l)}</text>`; });
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="max-width:100%">${s}</svg>`;
+}
+
+function heatmap(hm,w){
+  if(!hm.sectors.length) return `<div class="empty">Sin datos.</div>`;
+  const lw=190, ch=Math.max(18,(w-lw-14)/Math.max(1,hm.years.length)), rh=22;
+  const max = Math.max(...hm.values.flat(),1);
+  let s='';
+  hm.years.forEach((y,j)=> s+=`<text x="${(lw+j*ch+ch/2).toFixed(1)}" y="10" text-anchor="middle" font-size="9" fill="var(--txm)">${y}</text>`);
+  hm.sectors.forEach((sec,i)=>{
+    s+=`<text x="0" y="${(18+i*rh+rh*.66).toFixed(1)}" font-size="10.5" fill="var(--tx2)">${esc(sec.slice(0,32))}</text>`;
+    hm.years.forEach((y,j)=>{
+      const v=hm.values[i][j], o=v?(.14+.78*Math.pow(v/max,.6)):0;
+      s+=`<rect x="${(lw+j*ch+1).toFixed(1)}" y="${(18+i*rh+2).toFixed(1)}" width="${(ch-2).toFixed(1)}" height="${rh-4}" rx="3" fill="var(--san)" fill-opacity="${o.toFixed(3)}" stroke="var(--bd)"><title>${esc(sec)} · ${y}: ${v} evento(s)</title></rect>`;
+      if(v) s+=`<text x="${(lw+j*ch+ch/2).toFixed(1)}" y="${(18+i*rh+rh*.66).toFixed(1)}" text-anchor="middle" font-size="9" font-weight="700" fill="${o>.5?'#fff':'var(--tx2)'}">${v}</text>`;
+    });
+  });
+  return `<svg width="${w}" height="${22+hm.sectors.length*rh}" viewBox="0 0 ${w} ${22+hm.sectors.length*rh}" style="max-width:100%">${s}</svg>`;
+}
+
+function vbars(data,w,h){
+  if(!data.length) return `<div class="empty">Sin datos.</div>`;
+  const pl=26,pb=26,pt=14, iw=w-pl-8, ih=h-pb-pt;
+  const max=Math.max(...data.map(d=>d.v),1)*1.1, bw=Math.min(46,iw/data.length-8);
+  let s='';
+  data.forEach((d,i)=>{
+    const x=pl+i*(iw/data.length)+(iw/data.length-bw)/2, bh=Math.max(2,(d.v/max)*ih), y=pt+ih-bh;
+    s+=`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${bh.toFixed(1)}" rx="4" fill="${d.c||'var(--ac)'}" fill-opacity=".85"><title>${esc(d.l)}: ${fmt(d.v)}</title></rect>`;
+    s+=`<text x="${(x+bw/2).toFixed(1)}" y="${(y-4).toFixed(1)}" text-anchor="middle" font-size="9.5" font-weight="700" fill="var(--tx)">${fmt(d.v)}</text>`;
+    s+=`<text x="${(x+bw/2).toFixed(1)}" y="${(pt+ih+15).toFixed(1)}" text-anchor="middle" font-size="9" fill="var(--txm)">${esc(d.l)}</text>`;
+  });
+  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="max-width:100%">${s}</svg>`;
+}
+
+/* =====================================================================
+   VISTAS
+   ===================================================================== */
+const VIEWS = [
+  {id:'panorama', ic:'🎯', label:'Panorama', grp:'Lectura general'},
+  {id:'n1',       ic:'🛡',  label:'Nivel 1 · Inscritos', grp:'Lectura general'},
+  {id:'n2',       ic:'🕳',  label:'Nivel 2 · Brecha', grp:'Lectura general'},
+  {id:'grafo',    ic:'🔗', label:'Grafo de vínculos', grp:'Análisis'},
+  {id:'sectores', ic:'📊', label:'Matriz sectorial', grp:'Análisis'},
+  {id:'triage',   ic:'⚠️', label:'Cola de revisión', grp:'Análisis'},
+  {id:'metodo',   ic:'📋', label:'Método y trazabilidad', grp:'Gobernanza'}
+];
+
+function vPanorama(D){
+  const k=B.kpis, n1=D.byLevel('N1_SO_SANCIONADO'), n2=D.byLevel('N2_POTENCIAL_SO'), n0=D.byLevel('N0_FUERA_PERIMETRO');
+  const secs = sectorView(D);
+  const kpis = [
+    {l:'Sujetos obligados inscritos', v:fmt(k.inscritos_uaf), d:`Registro UAF vigente · ${B.traceability.sectores_uaf_indexados} sectores`, c:'var(--uaf)'},
+    {l:'Nivel 1 · inscritos sancionados', v:fmt(n1.length), d:`${pct(n1.length/(k.inscritos_uaf||1),2)} del registro · IC95% ${pct(k.n1_tasa_ic[0],2)}–${pct(k.n1_tasa_ic[1],2)}`, c:'var(--n1)'},
+    {l:'Nivel 2 · potenciales no inscritos', v:fmt(n2.length), d:`${fmt(n2.filter(s=>s.hipotesis==='CONFIRMADO_SII').length)} confirmados por ACTECO SII`, c:'var(--n2)'},
+    {l:'Universo candidato SII (prior. A)', v:fmt(k.universo_candidato_prioridad_a), d:`RUT vigentes con actividad gatillante sin inscripción`, c:'var(--sii)'},
+    {l:'Sancionados por UAF sin inscripción', v:fmt(n2.filter(s=>s.supervisores.includes('UAF')).length), d:'Baja del registro o identidad por revisar', c:'var(--cr)'},
+    {l:'Sujetos en banda crítica/alta', v:fmt(D.subjects.filter(s=>s.ier>=50).length), d:`IER ≥ 50 sobre ${fmt(D.subjects.length)} sujetos del filtro`, c:'var(--ch)'}
+  ];
+  const serie = B.series;
+  const yIdx = serie.years.map((y,i)=>i).filter(i=>serie.years[i]>=ST.y0 && serie.years[i]<=ST.y1);
+  const sl = k2 => yIdx.map(i=>serie.by_year[k2][i]);
+
+  return `
+  <div class="mh">
+    <h1>¿El perímetro de sujetos obligados aparece en las sanciones?</h1>
+    <p>Dos preguntas, una sola cadena de identidad. <b>Nivel 1</b>: quién, estando inscrito en la UAF, figura sancionado por un supervisor prudencial. <b>Nivel 2</b>: quién, teniendo actividad económica vigente propia de un sector obligado, no está inscrito y ya arrastra una marca de sanción. Todo lo que sigue responde a los filtros activos.</p>
+  </div>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(215px,1fr));margin-bottom:14px">
+    ${kpis.map(x=>`<div class="kpi" style="--acc:${x.c}"><div class="kpi-l">${esc(x.l)}</div><div class="kpi-v">${x.v}</div><div class="kpi-d">${x.d}</div></div>`).join('')}
+  </div>
+
+  <div class="grid" style="grid-template-columns:1.55fr 1fr;margin-bottom:14px">
+    <div class="card">
+      <div class="card-h"><span class="card-t">Matriz de priorización sectorial</span>
+        <span class="card-s">eje X brecha registral · eje Y penetración sancionatoria · área universo candidato SII · color prioridad de screening</span></div>
+      <div id="bub-host">${bubble(secs, 660, 340)}</div>
+      <div class="legend" style="justify-content:center">
+        <span><i style="background:var(--cr);border-radius:50%"></i>Prioridad A · gatillante respaldado</span>
+        <span><i style="background:var(--ch);border-radius:50%"></i>Prioridad B</span>
+        <span><i style="background:var(--cm);border-radius:50%"></i>Prioridad C</span>
+        <span><i style="background:var(--n0);border-radius:50%"></i>Prioridad D · sólo contexto</span>
+      </div>
+      <div class="note" style="margin-top:10px">El cuadrante superior derecho concentra sectores donde <b>mucha entidad queda fuera del registro</b> y, a la vez, <b>la que sí está dentro ya se sanciona por sobre el promedio</b>. Es donde una acción de fiscalización rinde más por unidad de esfuerzo. Haga clic en una burbuja para filtrar el módulo completo por ese sector.</div>
+    </div>
+    <div class="card">
+      <div class="card-h"><span class="card-t">Clasificación de perímetro</span></div>
+      ${donut([
+        {l:'N1 · Inscrito sancionado', v:n1.length, c:cssv('--n1')},
+        {l:'N2 · Potencial no inscrito', v:n2.length, c:cssv('--n2')},
+        {l:'N0 · Fuera de perímetro', v:n0.length, c:cssv('--n0')}
+      ], 190, D.subjects.length, 'sujetos sancionados')}
+      <div style="margin-top:14px" class="card-h"><span class="card-t">Fuerza de la hipótesis · Nivel 2</span>
+        <span class="card-s">de confirmación documental a inferencia</span></div>
+      ${hbar(Object.entries(n2.reduce((a,s)=>(a[s.hipotesis]=(a[s.hipotesis]||0)+1,a),{}))
+        .map(([kk,v])=>({l:HIP_LABEL[kk]||kk, v, c:HIP_COLOR(kk)}))
+        .sort((a,b)=>b.v-a.v), 320, 0, {lw:172,rw:36})}
+      <div class="note" style="margin-top:9px">${esc(B.hypothesis_states.CONFIRMADO_SII)} Conectar el puerto RUT↔ACTECO del Radar SII convierte las inferencias en confirmaciones.</div>
+    </div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:1fr 1fr;margin-bottom:14px">
+    <div class="card">
+      <div class="card-h"><span class="card-t">Eventos por año y nivel de perímetro</span><span class="card-s">${ST.y0}–${ST.y1}</span></div>
+      ${lines([
+        {l:'N1 inscritos', c:cssv('--n1'), data:sl('N1_SO_SANCIONADO')},
+        {l:'N2 potenciales', c:cssv('--n2'), data:sl('N2_POTENCIAL_SO')},
+        {l:'N0 fuera', c:cssv('--n0'), data:sl('N0_FUERA_PERIMETRO')}
+      ], yIdx.map(i=>serie.years[i]), 460, 220)}
+      <div class="legend"><span><i style="background:var(--n1)"></i>Inscrito sancionado</span><span><i style="background:var(--n2)"></i>Potencial no inscrito</span><span><i style="background:var(--n0)"></i>Fuera de perímetro</span></div>
+    </div>
+    <div class="card">
+      <div class="card-h"><span class="card-t">Concentración de la presión sancionatoria</span><span class="card-s">sector × año, eventos dentro del perímetro</span></div>
+      <div class="scroll-x">${heatmap(B.heatmap, 470)}</div>
+    </div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:1fr 1fr 1fr">
+    <div class="card">
+      <div class="card-h"><span class="card-t">Supervisor × nivel</span></div>
+      <div class="scroll-x"><table><thead><tr><th>Supervisor</th><th class="num">N1</th><th class="num">N2</th><th class="num">N0</th><th class="num">Total</th></tr></thead><tbody>
+      ${supervisorRows(D).map(r=>`<tr data-sup="${esc(r.sup)}" class="rowsup"><td><b>${esc(r.sup)}</b><div style="font-size:10px;color:var(--txm)">${esc((B.supervisor_domain[r.sup]||{}).label||'')}</div></td>
+        <td class="num"><span class="bd bd-n1">${r.n1}</span></td><td class="num"><span class="bd bd-n2">${r.n2}</span></td>
+        <td class="num"><span class="bd bd-n0">${r.n0}</span></td><td class="num mono"><b>${fmt(r.t)}</b></td></tr>`).join('')}
+      </tbody></table></div>
+      <div class="note" style="margin-top:9px">Clic en una fila para filtrar por ese supervisor.</div>
+    </div>
+    <div class="card">
+      <div class="card-h"><span class="card-t">Reincidencia</span><span class="card-s">sujetos por número de sanciones</span></div>
+      ${vbars(B.recurrence.distribucion.map(d=>({l:String(d.eventos), v:d.sujetos, c:cssv('--san')})), 300, 190)}
+      <dl class="kv" style="margin-top:10px">
+        <dt>Reincidentes</dt><dd><b>${fmt(B.recurrence.reincidentes)}</b> sujetos con 2 o más sanciones</dd>
+        <dt>Intervalo mediano</dt><dd>${B.recurrence.gap_mediano_dias!=null?fmt(B.recurrence.gap_mediano_dias)+' días entre sanciones consecutivas':'—'}</dd>
+        <dt>Rango intercuartil</dt><dd>${B.recurrence.gap_p25!=null?fmt(B.recurrence.gap_p25)+' – '+fmt(B.recurrence.gap_p75)+' días':'—'}</dd>
+        <dt>Concentración</dt><dd>HHI normalizado ${fmt1(B.recurrence.hhi_normalizado*100)}/100 · el decil superior concentra ${pct(B.recurrence.top_share_10)} de los eventos</dd>
+      </dl>
+    </div>
+    <div class="card">
+      <div class="card-h"><span class="card-t">Anomalías sectoriales</span><span class="card-s">z-score sobre la tasa de penetración</span></div>
+      ${B.anomalies.length ? B.anomalies.map(a=>`
+        <div style="display:flex;gap:9px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--bd);cursor:pointer" class="anom" data-sector="${esc(a.sector)}">
+          <span class="bd ${a.z>0?'bd-cr':'bd-lo'}" style="min-width:44px;text-align:center">z ${a.z>0?'+':''}${a.z}</span>
+          <div><div style="font-size:11.5px;font-weight:600">${esc(a.sector)}</div>
+          <div style="font-size:10.5px;color:var(--tx2)">${esc(a.lectura)} · ${a.sancionados}/${fmt(a.inscritos)} = ${pct(a.tasa,2)}</div></div>
+        </div>`).join('') : '<div class="empty">Sin desviaciones ≥1,5σ.</div>'}
+    </div>
+  </div>`;
+}
+
+function supervisorRows(D){
+  const m = new Map();
+  D.subjects.forEach(s=>s.supervisores.forEach(sup=>{
+    let r=m.get(sup); if(!r){r={sup,n1:0,n2:0,n0:0,t:0};m.set(sup,r);}
+    if(s.nivel==='N1_SO_SANCIONADO')r.n1++; else if(s.nivel==='N2_POTENCIAL_SO')r.n2++; else r.n0++;
+    r.t+=s._n;
+  }));
+  return sortBy([...m.values()],'t',-1);
+}
+
+function vN1(D){
+  const rows = D.byLevel('N1_SO_SANCIONADO');
+  const secs = sortBy(sectorView(D).filter(r=>r.inscritos_uaf>0 && r.sancionados_n1>0),'tasa_penetracion',-1).slice(0,16);
+  const [sk,sd] = ST.sort.n1;
+  const sorted = sortBy(rows, sk, sd);
+  return `
+  <div class="mh">
+    <h1>Nivel 1 · Sujetos obligados inscritos que figuran en sanciones</h1>
+    <p>El cruce se resuelve por RUT cuando la resolución lo publica y, si no, por razón social normalizada dentro del sector. Cada fila declara el método y la confianza con que se afirmó la coincidencia — abra la ficha para ver la evidencia del vínculo antes de usarla.</p>
+  </div>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:14px">
+    <div class="kpi" style="--acc:var(--n1)"><div class="kpi-l">Inscritos sancionados</div><div class="kpi-v">${fmt(rows.length)}</div><div class="kpi-d">de ${fmt(B.kpis.inscritos_uaf)} inscritos = ${pct(rows.length/(B.kpis.inscritos_uaf||1),2)}</div></div>
+    <div class="kpi" style="--acc:var(--ac)"><div class="kpi-l">Eventos asociados</div><div class="kpi-v">${fmt(rows.reduce((a,s)=>a+s._n,0))}</div><div class="kpi-d">${fmt(rows.reduce((a,s)=>a+s._ev.filter(e=>e.laft_directo).length,0))} con materia ALA/CFT directa</div></div>
+    <div class="kpi" style="--acc:var(--ch)"><div class="kpi-l">Reincidentes</div><div class="kpi-v">${fmt(rows.filter(s=>s._n>1).length)}</div><div class="kpi-d">con 2 o más sanciones en el período filtrado</div></div>
+    <div class="kpi" style="--acc:var(--cr)"><div class="kpi-l">Convergencia supervisora</div><div class="kpi-v">${fmt(rows.filter(s=>s.supervisores.length>1).length)}</div><div class="kpi-d">observados por más de un supervisor</div></div>
+    <div class="kpi" style="--acc:var(--uaf)"><div class="kpi-l">Multa acumulada conocida</div><div class="kpi-v">${fmt(rows.reduce((a,s)=>a+(s.monto_uf||0),0))}</div><div class="kpi-d">UF publicadas en las resoluciones capturadas</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:14px">
+    <div class="card-h"><span class="card-t">Penetración sancionatoria por sector, con intervalo de confianza</span>
+      <span class="card-s">Wilson 95% — indispensable cuando un sector tiene 14 inscritos y otro 2.800</span></div>
+    <div class="scroll-x">${wilsonChart(secs, 700, 0)}</div>
+    <div class="note" style="margin-top:10px">Un sector sólo se considera <b>estadísticamente por sobre el promedio</b> cuando el extremo inferior de su intervalo supera la tasa global (punto rojo). Con denominadores pequeños, la tasa puntual engaña; el intervalo evita perseguir ruido.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><span class="card-t">Entidades inscritas con sanción</span><span class="card-s">${fmt(sorted.length)} sujetos · clic para abrir la ficha</span>
+      <span class="card-a"><button class="chip" id="exp-n1">Exportar CSV</button></span></div>
+    <div class="scroll-x">${subjTable(sorted,'n1',['Entidad','RUT','Sector UAF','Sanciones','Supervisores','Último','Vínculo','IER'])}</div>
+  </div>`;
+}
+
+function subjTable(rows, key, heads){
+  const cols = [
+    {k:'nombre', h:'Entidad'}, {k:'rut', h:'RUT'}, {k:'sector_analitico', h:'Sector'},
+    {k:'_n', h:'Sanciones', n:1}, {k:'supervisores', h:'Supervisores'},
+    {k:'ultimo_evento', h:'Último'}, {k:'identity_confidence', h:'Vínculo', n:1}, {k:'ier', h:'IER', n:1}
+  ];
+  if(!rows.length) return '<div class="empty">Ningún sujeto cumple los filtros activos. Ajuste el rango de años, el supervisor o el umbral de IER.</div>';
+  return `<table><thead><tr>${cols.map(c=>`<th class="${c.n?'num':''}" data-sort="${c.k}" data-tbl="${key}">${esc(c.h)}${ST.sort[key][0]===c.k?(ST.sort[key][1]<0?' ▾':' ▴'):''}</th>`).join('')}</tr></thead><tbody>
+  ${rows.slice(0,320).map(s=>`<tr class="rowsubj" data-id="${s.subject_id}">
+    <td><div class="trunc" style="font-weight:600">${esc(s.nombre)}</div>
+      <div style="font-size:10px;color:var(--txm)" class="trunc">${esc(s.uaf_razon_social||s.sector_declarado||'')}</div></td>
+    <td class="mono">${esc(s.rut||'—')}</td>
+    <td><span class="bd bd-nt">${esc((s.sector_analitico||'—').slice(0,26))}</span></td>
+    <td class="num"><b>${s._n}</b></td>
+    <td>${s.supervisores.map(x=>`<span class="pill">${esc(x)}</span>`).join('')}</td>
+    <td class="mono">${esc(s.ultimo_evento||'—')}</td>
+    <td class="num" title="${esc(s.identity_method)}"><div class="bar-t"><span style="width:${Math.round(s.identity_confidence*100)}%;background:${s.identity_confidence>=.88?'var(--cl)':s.identity_confidence>=.7?'var(--cm)':'var(--ch)'}"></span></div>
+      <span style="font-size:9px;color:var(--txm)">${esc(s.identity_method.replace(/_/g,' ').toLowerCase())}</span></td>
+    <td class="num"><span class="bd bd-${bandCls(s.ier)}">${fmt1(s.ier)}</span></td></tr>`).join('')}
+  </tbody></table>${rows.length>320?`<div class="note" style="margin-top:9px">Mostrando 320 de ${fmt(rows.length)} sujetos. Afine los filtros o exporte el CSV para el listado completo.</div>`:''}`;
+}
+
+function vN2(D){
+  const rows = D.byLevel('N2_POTENCIAL_SO');
+  const secs = sortBy(sectorView(D).filter(r=>(r.universo_candidato_sii||0)>0),'irni',-1).slice(0,18);
+  const [sk,sd] = ST.sort.n2;
+  const uafSin = rows.filter(s=>s.supervisores.includes('UAF'));
+  return `
+  <div class="mh">
+    <h1>Nivel 2 · Potenciales sujetos obligados con marca de sanción</h1>
+    <p>Aquí no se afirma que alguien deba inscribirse: se ordena la <b>hipótesis de screening</b>. Un sancionado que no está en el registro UAF y cuya actividad económica vigente en el SII coincide con un código gatillante del sector es un candidato a revisión — nunca una determinación jurídica. La política de homologación ACTECO↔sector proviene de Radar SII y viaja con su propia lectura legal.</p>
+  </div>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(205px,1fr));margin-bottom:14px">
+    <div class="kpi" style="--acc:var(--n2)"><div class="kpi-l">Sancionados no inscritos</div><div class="kpi-v">${fmt(rows.length)}</div><div class="kpi-d">con hipótesis de obligación vigente</div></div>
+    <div class="kpi" style="--acc:var(--sii)"><div class="kpi-l">Confirmados por ACTECO SII</div><div class="kpi-v">${fmt(rows.filter(s=>s.hipotesis==='CONFIRMADO_SII').length)}</div><div class="kpi-d">${B.traceability.port_status.find(p=>p.port_id==='PORT_SII_ACTECO_RUT').status==='OK'?'nómina RUT↔ACTECO conectada':'requiere puerto RUT↔ACTECO — hoy inferido'}</div></div>
+    <div class="kpi" style="--acc:var(--cr)"><div class="kpi-l">Sancionados por la propia UAF</div><div class="kpi-v">${fmt(uafSin.length)}</div><div class="kpi-d">la UAF sólo sanciona sujetos obligados: baja del registro o identidad por revisar</div></div>
+    <div class="kpi" style="--acc:var(--ch)"><div class="kpi-l">Universo candidato SII</div><div class="kpi-v">${fmt(B.kpis.universo_candidato_prioridad_a)}</div><div class="kpi-d">RUT vigentes con ACTECO gatillante prioridad A sin inscripción</div></div>
+    <div class="kpi" style="--acc:var(--cm)"><div class="kpi-l">Sectores con brecha &gt; 50%</div><div class="kpi-v">${fmt(B.kpis.sectores_con_brecha)}</div><div class="kpi-d">más de la mitad del universo gatillante fuera del registro</div></div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:1.1fr 1fr;margin-bottom:14px">
+    <div class="card">
+      <div class="card-h"><span class="card-t">Índice de Riesgo de No Inscripción (IRNI)</span><span class="card-s">brecha registral + presión sancionatoria + marcas observadas + solidez del gatillante</span></div>
+      ${hbar(secs.map(r=>({l:r.sector, v:r.irni, t:fmt1(r.irni),
+        c:r.irni>=70?cssv('--cr'):r.irni>=50?cssv('--ch'):r.irni>=30?cssv('--cm'):cssv('--n0')})), 560, 0, {lw:210,rw:46})}
+      <div class="note" style="margin-top:10px">El IRNI no mide culpabilidad: mide <b>dónde el registro tiene menos cobertura y más señales</b>. Un sector con brecha grande pero sin ninguna marca de sanción puntúa menos que uno con brecha media y varias marcas.</div>
+    </div>
+    <div class="card">
+      <div class="card-h"><span class="card-t">Cobertura registral por sector</span><span class="card-s">inscritos UAF vs universo candidato SII</span></div>
+      <div class="scroll-x"><table><thead><tr><th>Sector</th><th class="num">Inscritos</th><th class="num">Candidatos SII</th><th class="num">Brecha</th><th>Prioridad</th></tr></thead><tbody>
+      ${secs.map(r=>`<tr class="rowsector" data-sector="${esc(r.sector)}">
+        <td class="trunc" style="max-width:200px">${esc(r.sector)}</td>
+        <td class="num mono">${fmt(r.inscritos_uaf)}</td>
+        <td class="num mono">${fmt(r.universo_candidato_sii)}</td>
+        <td class="num"><div class="bar-t"><span style="width:${Math.round((r.brecha_registral||0)*100)}%;background:${(r.brecha_registral||0)>.8?'var(--cr)':(r.brecha_registral||0)>.5?'var(--ch)':'var(--cm)'}"></span></div>
+          <span style="font-size:9.5px">${pct(r.brecha_registral)}</span></td>
+        <td><span class="bd ${r.prioridad_rank>=4?'bd-cr':r.prioridad_rank===3?'bd-hi':'bd-nt'}">${esc(r.prioridad_screening)}</span></td></tr>`).join('')}
+      </tbody></table></div>
+      <div class="note" style="margin-top:9px">«Candidatos SII» es el universo bruto de RUT con actividad gatillante que no figuran inscritos en ningún sector UAF. No equivale a incumplimiento: incluye entidades que ejercen la actividad de forma incidental.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><span class="card-t">Sancionados fuera del registro, ordenados por exposición</span>
+      <span class="card-s">${fmt(rows.length)} sujetos · clic para abrir la ficha con la hipótesis y su fundamento</span>
+      <span class="card-a"><button class="chip" id="exp-n2">Exportar CSV</button></span></div>
+    <div class="scroll-x">${n2Table(sortBy(rows,sk,sd))}</div>
+  </div>`;
+}
+
+function n2Table(rows){
+  if(!rows.length) return '<div class="empty">Ningún sujeto de Nivel 2 bajo los filtros activos.</div>';
+  const cols=[{k:'nombre',h:'Entidad'},{k:'rut',h:'RUT'},{k:'sector_analitico',h:'Sector hipotético'},
+    {k:'hipotesis',h:'Hipótesis'},{k:'_n',h:'Sanciones',n:1},{k:'supervisores',h:'Supervisores'},
+    {k:'ultimo_evento',h:'Último'},{k:'ier',h:'IER',n:1}];
+  return `<table><thead><tr>${cols.map(c=>`<th class="${c.n?'num':''}" data-sort="${c.k}" data-tbl="n2">${esc(c.h)}${ST.sort.n2[0]===c.k?(ST.sort.n2[1]<0?' ▾':' ▴'):''}</th>`).join('')}</tr></thead><tbody>
+  ${rows.slice(0,320).map(s=>`<tr class="rowsubj" data-id="${s.subject_id}">
+    <td><div class="trunc" style="font-weight:600">${esc(s.nombre)}</div><div style="font-size:10px;color:var(--txm)" class="trunc">${esc(s.hipotesis_detalle||'').slice(0,84)}</div></td>
+    <td class="mono">${esc(s.rut||'—')}</td>
+    <td><span class="bd bd-nt">${esc((s.sector_analitico||'—').slice(0,26))}</span></td>
+    <td><span class="bd bd-nt" style="border-left:3px solid ${HIP_COLOR(s.hipotesis)}">${esc(HIP_LABEL[s.hipotesis]||s.hipotesis)}</span></td>
+    <td class="num"><b>${s._n}</b></td>
+    <td>${s.supervisores.map(x=>`<span class="pill">${esc(x)}</span>`).join('')}</td>
+    <td class="mono">${esc(s.ultimo_evento||'—')}</td>
+    <td class="num"><span class="bd bd-${bandCls(s.ier)}">${fmt1(s.ier)}</span></td></tr>`).join('')}
+  </tbody></table>`;
+}
+
+function vSectores(D){
+  const rows = sortBy(sectorView(D), ST.sort.sec[0], ST.sort.sec[1]);
+  const cols=[{k:'sector',h:'Sector UAF'},{k:'inscritos_uaf',h:'Inscritos',n:1},{k:'sancionados_n1',h:'N1',n:1},
+    {k:'tasa_penetracion',h:'Penetración',n:1},{k:'lift',h:'Lift',n:1},{k:'potenciales_n2',h:'N2',n:1},
+    {k:'universo_candidato_sii',h:'Candidatos SII',n:1},{k:'brecha_registral',h:'Brecha',n:1},
+    {k:'prioridad_rank',h:'Prior.',n:1},{k:'irni',h:'IRNI',n:1}];
+  return `
+  <div class="mh">
+    <h1>Matriz sectorial completa</h1>
+    <p>Una fila por sector UAF con las dos caras del problema: cuánto del perímetro <em>inscrito</em> está siendo sancionado y cuánto del perímetro <em>probable</em> ni siquiera está inscrito. Ordene por cualquier columna; abra un sector para ver los códigos ACTECO que lo gatillan y su lectura legal.</p>
+  </div>
+  <div class="card">
+    <div class="card-h"><span class="card-t">${fmt(rows.length)} sectores</span>
+      <span class="card-s">lift = tasa del sector ÷ tasa global · IRNI = índice de riesgo de no inscripción</span>
+      <span class="card-a"><button class="chip" id="exp-sec">Exportar CSV</button></span></div>
+    <div class="scroll-x"><table><thead><tr>${cols.map(c=>`<th class="${c.n?'num':''}" data-sort="${c.k}" data-tbl="sec">${esc(c.h)}${ST.sort.sec[0]===c.k?(ST.sort.sec[1]<0?' ▾':' ▴'):''}</th>`).join('')}</tr></thead><tbody>
+    ${rows.map(r=>`<tr class="rowsectordet" data-sector="${esc(r.sector)}">
+      <td class="trunc" style="max-width:250px;font-weight:600">${esc(r.sector)}</td>
+      <td class="num mono">${fmt(r.inscritos_uaf)}</td>
+      <td class="num"><span class="bd bd-n1">${r.sancionados_n1}</span></td>
+      <td class="num mono">${r.inscritos_uaf?pct(r.tasa_penetracion,2):'—'}</td>
+      <td class="num"><span class="bd ${(r.lift||0)>=2?'bd-cr':(r.lift||0)>=1?'bd-md':'bd-nt'}">${r.lift!=null&&r.inscritos_uaf?fmt1(r.lift)+'×':'—'}</span></td>
+      <td class="num"><span class="bd bd-n2">${r.potenciales_n2}</span></td>
+      <td class="num mono">${fmt(r.universo_candidato_sii)}</td>
+      <td class="num">${r.brecha_registral!=null?`<div class="bar-t"><span style="width:${Math.round(r.brecha_registral*100)}%;background:var(--ch)"></span></div><span style="font-size:9.5px">${pct(r.brecha_registral)}</span>`:'—'}</td>
+      <td class="num"><span class="bd ${r.prioridad_rank>=4?'bd-cr':r.prioridad_rank===3?'bd-hi':'bd-nt'}">${esc(r.prioridad_screening)}</span></td>
+      <td class="num"><span class="bd bd-${bandCls(r.irni)}">${fmt1(r.irni)}</span></td></tr>`).join('')}
+    </tbody></table></div>
+  </div>`;
+}
+
+function vTriage(D){
+  const rows = sortBy(D.subjects.filter(s=>s.nivel!=='N0_FUERA_PERIMETRO'), 'ier', -1).slice(0,60);
+  return `
+  <div class="mh">
+    <h1>Cola de revisión priorizada</h1>
+    <p>El <b>Índice de Exposición Regulatoria (IER)</b> ordena el trabajo, no juzga a la entidad. Se compone de siete factores acotados y cada tarjeta muestra el aporte exacto de cada uno: si un caso sube por recencia y no por severidad, se ve. Ningún factor puede dominar el índice por sí solo.</p>
+  </div>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin-bottom:14px">
+    ${[['Crítico',70,'cr'],['Alto',50,'ch'],['Medio',30,'cm'],['Bajo',0,'cl']].map(([l,mn,c],i,arr)=>{
+      const mx = i===0?101:arr[i-1][1];
+      const n = D.subjects.filter(s=>s.ier>=mn&&s.ier<mx).length;
+      return `<div class="kpi" style="--acc:var(--${c})"><div class="kpi-l">Banda ${l}</div><div class="kpi-v">${fmt(n)}</div><div class="kpi-d">IER ${mn}${i===0?'+':'–'+(mx-1)}</div></div>`;
+    }).join('')}
+  </div>
+  <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr))">
+    ${rows.length?rows.map(s=>`
+    <div class="card rowsubj" data-id="${s.subject_id}" style="cursor:pointer">
+      <div class="card-h" style="margin-bottom:8px">
+        <span class="bd bd-${nivelCls(s.nivel)}">${esc(B.classes[s.nivel].short)}</span>
+        <span class="card-a"><span class="bd bd-${bandCls(s.ier)}">IER ${fmt1(s.ier)}</span></span></div>
+      <div style="font-size:13px;font-weight:700;letter-spacing:-.01em;line-height:1.25">${esc(s.nombre)}</div>
+      <div style="font-size:10.5px;color:var(--txm);margin:3px 0 10px" class="mono">${esc(s.rut||'sin RUT publicado')} · ${esc(s.sector_analitico||'—')}</div>
+      ${s.ier_factores.filter(f=>f.points>0).map(f=>`
+        <div class="wf-row"><span style="color:var(--tx2)">${esc(IERS(f.key).label)}</span>
+          <div class="wf-bar"><span style="width:${Math.round(f.points/f.max*100)}%"></span></div>
+          <span class="mono" style="text-align:right">+${fmt1(f.points)}</span></div>`).join('')}
+      <div style="font-size:10.5px;color:var(--tx2);margin-top:9px;border-top:1px solid var(--bd);padding-top:8px">${esc(s.hipotesis_detalle||'').slice(0,140)}</div>
+    </div>`).join(''):'<div class="empty">Sin sujetos priorizables bajo los filtros activos.</div>'}
+  </div>`;
+}
+
+function vMetodo(D){
+  const t = B.traceability;
+  const stCls = s=>s==='OK'?'bd-lo':s==='DEGRADED'?'bd-md':'bd-cr';
+  return `
+  <div class="mh">
+    <h1>Método, contratos y límites</h1>
+    <p>Este módulo es acoplable: no conoce rutas ni repositorios, sólo cuatro <b>puertos</b>. Cada puerto declara qué necesita y qué ocurre si falta — la degradación es explícita y queda a la vista, nunca silenciosa.</p>
+  </div>
+  <div class="card" style="margin-bottom:14px">
+    <div class="card-h"><span class="card-t">Puertos de entrada</span><span class="card-s">estado observado en esta materialización</span></div>
+    <div class="scroll-x"><table><thead><tr><th>Puerto</th><th>Proveedor</th><th>Estado</th><th class="num">Registros</th><th>Detalle</th></tr></thead><tbody>
+    ${t.port_status.map(p=>{
+      const spec = t.ports.find(x=>x.port_id===p.port_id)||{};
+      return `<tr><td><b>${esc(p.title)}</b><div style="font-size:10px;color:var(--txm)" class="mono">${esc(p.port_id)}</div></td>
+      <td><span class="pill">${esc(p.provider)}</span></td>
+      <td><span class="bd ${stCls(p.status)}">${esc(p.status)}</span></td>
+      <td class="num mono">${fmt(p.records)}</td>
+      <td style="font-size:11px;color:var(--tx2);max-width:420px">${esc(p.detail)}<div style="font-size:10px;color:var(--txm);margin-top:3px">${esc(spec.purpose||'')}</div></td></tr>`;
+    }).join('')}
+    </tbody></table></div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:1fr 1fr;margin-bottom:14px">
+    <div class="card">
+      <div class="card-h"><span class="card-t">Cobertura de la resolución de identidad</span></div>
+      ${hbar(t.cobertura_identidad.por_metodo.map(m=>({l:m.metodo.replace(/_/g,' ').toLowerCase(), v:m.sujetos,
+        c:m.metodo.startsWith('RUT')?cssv('--cl'):m.metodo.startsWith('NAME')?cssv('--cm'):cssv('--n0')})), 420, 0, {lw:170,rw:44})}
+      <dl class="kv" style="margin-top:12px">
+        <dt>Con RUT publicado</dt><dd>${fmt(t.cobertura_identidad.con_rut_publicado)} sujetos</dd>
+        <dt>Sin RUT publicado</dt><dd>${fmt(t.cobertura_identidad.sin_rut_publicado)} sujetos — el supervisor no lo individualiza</dd>
+        <dt>Resueltos por nombre</dt><dd>${fmt(t.cobertura_identidad.resueltos_por_nombre)} — requieren validación documental</dd>
+        <dt>Confianza media N1</dt><dd>${fmt1(t.cobertura_identidad.confianza_media*100)} / 100</dd>
+      </dl>
+      <div class="note" style="margin-top:11px">Cuando la resolución no publica RUT, el módulo intenta recuperarlo del texto y, si no lo consigue, compara razones sociales normalizadas <b>dentro del sector declarado</b>. Toda coincidencia por nombre viaja etiquetada y con confianza reducida: no debe usarse como prueba.</div>
+    </div>
+    <div class="card">
+      <div class="card-h"><span class="card-t">Escala del Índice de Exposición Regulatoria</span></div>
+      <div class="scroll-x"><table><thead><tr><th>Factor</th><th class="num">Tope</th><th>Racional</th></tr></thead><tbody>
+      ${(B.ier_schema||[]).map(f=>`<tr><td><b>${esc(f.label)}</b></td><td class="num mono">${f.max}</td>
+        <td style="font-size:11px;color:var(--tx2)">${esc(f.why)}</td></tr>`).join('')}
+      </tbody></table></div>
+    </div>
+  </div>
+
+  <div class="grid" style="grid-template-columns:1fr 1fr;margin-bottom:14px">
+    <div class="card">
+      <div class="card-h"><span class="card-t">Taxonomía de clasificación</span></div>
+      ${Object.entries(B.classes).map(([k,c])=>`<div style="padding:9px 0;border-bottom:1px solid var(--bd)">
+        <span class="bd bd-${nivelCls(k)}">${esc(c.short)}</span>
+        <div style="font-size:11.5px;color:var(--tx2);margin-top:5px;line-height:1.55">${esc(c.definition)}</div></div>`).join('')}
+    </div>
+    <div class="card">
+      <div class="card-h"><span class="card-t">Dominio regulado por supervisor</span><span class="card-s">base de la hipótesis cuando no hay ACTECO por RUT</span></div>
+      ${Object.entries(B.supervisor_domain).map(([k,d])=>`<div style="padding:8px 0;border-bottom:1px solid var(--bd)">
+        <div style="display:flex;gap:7px;align-items:center"><span class="bd bd-nt">${esc(k)}</span><b style="font-size:11.5px">${esc(d.label)}</b>
+        <span class="bd ${d.strength==='ALTA'?'bd-cr':d.strength==='NULA'?'bd-nt':'bd-md'}" style="margin-left:auto">${esc(d.strength)}</span></div>
+        <div style="font-size:11px;color:var(--tx2);margin-top:4px">${esc(d.nota)}</div></div>`).join('')}
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-h"><span class="card-t">Procedencia de los datos</span></div>
+    <div class="scroll-x"><pre style="font-size:11px;color:var(--tx2);white-space:pre-wrap;line-height:1.6">${esc(JSON.stringify(B.traceability.provenance,null,1))}</pre></div>
+    <div class="note" style="margin-top:12px;border-left-color:var(--cr)"><b>Límite de uso.</b> ${esc(B.disclaimer)}</div>
+  </div>`;
+}
+
+/* =====================================================================
+   GRAFO DE VÍNCULOS — simulación dirigida por fuerzas
+   ===================================================================== */
+let SIM = null;
+function vGrafo(D){
+  return `
+  <div class="mh">
+    <h1>Grafo de vínculos</h1>
+    <p>Cada arista es un hecho de la fuente: quién sanciona a quién, a qué perímetro pertenece cada sujeto y qué entidades fueron individualizadas <b>en la misma resolución</b>. Esa última relación es la que revela estructura — administradora y fondo, matriz y filial, la persona natural junto a la sociedad. Arrastre para reordenar, rueda para acercar, clic para abrir la ficha.</p>
+  </div>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(175px,1fr));margin-bottom:12px">
+    <div class="kpi" style="--acc:var(--ac)"><div class="kpi-l">Nodos en el grafo</div><div class="kpi-v" id="g-n">—</div><div class="kpi-d">sujetos, sectores, supervisores y entidades vinculadas</div></div>
+    <div class="kpi" style="--acc:var(--san)"><div class="kpi-l">Co-resoluciones</div><div class="kpi-v">${fmt(B.graph.stats.co_resoluciones)}</div><div class="kpi-d">pares sancionados en la misma resolución</div></div>
+    <div class="kpi" style="--acc:var(--n2)"><div class="kpi-l">Menciones</div><div class="kpi-v">${fmt(B.graph.stats.menciones)}</div><div class="kpi-d">entidades individualizadas sin sanción propia</div></div>
+    <div class="kpi" style="--acc:var(--ch)"><div class="kpi-l">Componentes conexos</div><div class="kpi-v">${fmt(B.graph.stats.componentes)}</div><div class="kpi-d">grupos aislados por vinculación documental</div></div>
+  </div>
+  <div id="gwrap" style="height:min(72vh,660px)">
+    <svg id="gsvg"></svg>
+    <div id="gtip"></div>
+    <div class="gctl">
+      <div class="gctl-r"><b style="font-size:10px;letter-spacing:.6px;color:var(--txm)">DENSIDAD</b></div>
+      <div class="gctl-r"><input class="rng" type="range" id="g-den" min="40" max="420" step="20" value="${ST.gDensity}"><span id="g-den-v" class="mono">${ST.gDensity}</span></div>
+      <div class="gctl-r" style="flex-wrap:wrap;gap:4px">
+        ${[['co_resolucion','co-resolución'],['mencion','mención'],['perimetro','perímetro'],['sancion','supervisor']]
+          .map(([k,l])=>`<button class="chip gk ${ST.gKinds.has(k)?'on':''}" data-kind="${k}">${l}</button>`).join('')}
+      </div>
+      <div class="gctl-r"><button class="chip" id="g-reset">Reordenar</button></div>
+    </div>
+  </div>
+  <div class="legend" style="margin-top:10px">
+    <span><i style="background:var(--n1)"></i>N1 inscrito sancionado</span>
+    <span><i style="background:var(--n2)"></i>N2 potencial no inscrito</span>
+    <span><i style="background:var(--n0)"></i>N0 fuera de perímetro</span>
+    <span><i style="background:var(--ac);border-radius:50%"></i>Sector UAF</span>
+    <span><i style="background:var(--ch);border-radius:50%"></i>Supervisor</span>
+    <span><i style="background:var(--txm);border-radius:50%"></i>Entidad vinculada (sin sanción propia)</span>
+    <span style="margin-left:14px;color:var(--txm)">Aristas —</span>
+    <span><i style="background:var(--san);height:2px;border-radius:0"></i>co-resolución</span>
+    <span><i style="background:var(--txm);height:2px;border-radius:0"></i>mención</span>
+    <span><i style="background:var(--ac);height:2px;border-radius:0"></i>perímetro sectorial</span>
+  </div>
+  <div class="note" style="margin-top:10px">Pase el cursor sobre un nodo para aislar su vecindad. La <b>densidad</b> conserva primero a los sujetos con más vínculos documentales, no a los de mayor puntaje: el grafo existe para mostrar estructura, no ranking.</div>`;
+}
+
+function mountGraph(D){
+  const svg = document.getElementById('gsvg');
+  const wrap = document.getElementById('gwrap');
+  const tip = document.getElementById('gtip');
+  if(!svg) return;
+  const W = wrap.clientWidth, H = wrap.clientHeight;
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`); svg.setAttribute('width',W); svg.setAttribute('height',H);
+
+  const live = new Set(D.subjects.map(s=>'S::'+s.subject_id));
+  // La densidad conserva primero a los sujetos con vínculos documentales —son el
+  // objeto del grafo— y desempata por exposición.
+  const ranked = D.subjects.slice().sort((a,b)=>
+    (b.grado_vinculacion||0)-(a.grado_vinculacion||0) || b.ier-a.ier);
+  const keep = new Set(ranked.slice(0,ST.gDensity).map(s=>'S::'+s.subject_id));
+  const nodeMap = new Map(B.graph.nodes.map(n=>[n.id,n]));
+  const edges = B.graph.edges.filter(e=>{
+    if(!ST.gKinds.has(e.kind)) return false;
+    const a=nodeMap.get(e.source), b=nodeMap.get(e.target);
+    if(!a||!b) return false;
+    const okA = a.type==='sujeto' ? keep.has(a.id) : true;
+    const okB = b.type==='sujeto' ? keep.has(b.id) : true;
+    if(a.type==='sujeto' && !live.has(a.id)) return false;
+    if(b.type==='sujeto' && !live.has(b.id)) return false;
+    return okA && okB;
+  });
+  const used = new Set();
+  edges.forEach(e=>{used.add(e.source);used.add(e.target)});
+  const nodes = B.graph.nodes.filter(n=>used.has(n.id)).map(n=>Object.assign({},n,{
+    x:W/2+(Math.random()-.5)*W*.8, y:H/2+(Math.random()-.5)*H*.8, vx:0, vy:0,
+    r: n.type==='sujeto' ? Math.max(4.5, Math.min(15, 4+Math.sqrt(n.eventos||1)*2.4))
+      : n.type==='sector' ? 9 : n.type==='supervisor' ? 12 : 4
+  }));
+  const idx = new Map(nodes.map((n,i)=>[n.id,i]));
+  const links = edges.filter(e=>idx.has(e.source)&&idx.has(e.target))
+    .map(e=>({s:idx.get(e.source), t:idx.get(e.target), kind:e.kind, label:e.label, w:e.weight}));
+  const gn = document.getElementById('g-n'); if(gn) gn.textContent = fmt(nodes.length);
+  if(!nodes.length){ svg.innerHTML = `<text x="${W/2}" y="${H/2}" text-anchor="middle" fill="var(--txm)" font-size="12">Sin vínculos bajo los filtros activos.</text>`; return; }
+
+  const colOf = n => n.type==='sujeto' ? (n.nivel==='N1_SO_SANCIONADO'?cssv('--n1'):n.nivel==='N2_POTENCIAL_SO'?cssv('--n2'):cssv('--n0'))
+    : n.type==='sector' ? cssv('--ac') : n.type==='supervisor' ? cssv('--ch') : cssv('--txm');
+  const kindCol = {co_resolucion:cssv('--san'), mencion:cssv('--txm'), perimetro:cssv('--ac'), sancion:cssv('--ch')};
+  const kindOp  = {co_resolucion:.28, mencion:.22, perimetro:.13, sancion:.1};
+
+  let view={k:1,x:0,y:0};
+  const gEdges = mk('g'), gNodes = mk('g'), root = mk('g');
+  root.appendChild(gEdges); root.appendChild(gNodes);
+  svg.innerHTML=''; svg.appendChild(root);
+  function mk(t){return document.createElementNS('http://www.w3.org/2000/svg',t)}
+
+  // Adyacencia: permite atenuar todo lo que no toca el nodo bajo el cursor.
+  const adj = nodes.map(()=>new Set());
+  links.forEach((l,i)=>{ adj[l.s].add(i); adj[l.t].add(i); });
+  nodes.forEach((n,i)=>{ n.charge = 480 + 120*Math.sqrt(adj[i].size); });
+  const neighbours = nodes.map((_,i)=>{
+    const set = new Set([i]);
+    adj[i].forEach(li=>{ set.add(links[li].s); set.add(links[li].t); });
+    return set;
+  });
+
+  const lineEls = links.map(l=>{
+    const el = mk('line');
+    el.setAttribute('stroke', kindCol[l.kind]||cssv('--bds'));
+    el.setAttribute('stroke-opacity', kindOp[l.kind]||.15);
+    el.setAttribute('stroke-width', l.kind==='co_resolucion'?1.4:1);
+    if(l.kind==='mencion') el.setAttribute('stroke-dasharray','2,3');
+    gEdges.appendChild(el); return el;
+  });
+
+  /** Enfoca la vecindad de un nodo; sin argumento restituye la vista completa. */
+  function focus(i){
+    if(i==null){
+      nodeEls.forEach(el=>el.style.opacity='');
+      lineEls.forEach((el,k)=>{ el.setAttribute('stroke-opacity', kindOp[links[k].kind]||.15);
+        el.setAttribute('stroke-width', links[k].kind==='co_resolucion'?1.4:1); });
+      return;
+    }
+    const near = neighbours[i];
+    nodeEls.forEach((el,k)=> el.style.opacity = near.has(k)?'1':'.12');
+    lineEls.forEach((el,k)=>{
+      const on = links[k].s===i || links[k].t===i;
+      el.setAttribute('stroke-opacity', on?.85:.04);
+      el.setAttribute('stroke-width', on?2.2:1);
+    });
+  }
+  const nodeEls = nodes.map((n,ni)=>{
+    const g = mk('g'); g.setAttribute('class','gnode');
+    const c = mk('circle');
+    c.setAttribute('r', n.r); c.setAttribute('fill', colOf(n));
+    c.setAttribute('fill-opacity', n.type==='sujeto'?.9:.32);
+    c.setAttribute('stroke', colOf(n)); c.setAttribute('stroke-width', 1.4);
+    g.appendChild(c);
+    if(n.type!=='sujeto'||n.r>10){
+      const t = mk('text');
+      t.setAttribute('font-size', n.type==='supervisor'?10.5:9);
+      t.setAttribute('fill','var(--tx2)'); t.setAttribute('text-anchor','middle');
+      t.setAttribute('dy', -n.r-4);
+      t.textContent = String(n.label||'').slice(0,26);
+      g.appendChild(t);
+    }
+    g.addEventListener('mouseenter', ()=>focus(ni));
+    g.addEventListener('mousemove', ev=>{
+      const rect = wrap.getBoundingClientRect();
+      tip.style.left = Math.min(rect.width-250, ev.clientX-rect.left+13)+'px';
+      tip.style.top = (ev.clientY-rect.top+13)+'px';
+      tip.classList.add('on');
+      tip.innerHTML = n.type==='sujeto'
+        ? `<b>${esc(n.label)}</b><br><span style="color:var(--tx2)">${esc(n.rut||'sin RUT')} · ${esc(n.sector||'—')}</span><br>
+           <span class="bd bd-${nivelCls(n.nivel)}">${esc(B.classes[n.nivel].short)}</span>
+           <span class="bd bd-${bandCls(n.ier)}">IER ${fmt1(n.ier)}</span><br>
+           <span style="color:var(--txm);font-size:10px">${n.eventos} sanción(es) · ${n.grado_vinculacion||0} vínculo(s)</span>`
+        : `<b>${esc(n.label)}</b><br><span style="color:var(--tx2);font-size:10.5px">${n.type==='sector'?'Sector UAF':n.type==='supervisor'?'Supervisor':'Entidad vinculada sin sanción propia'}</span>`;
+    });
+    g.addEventListener('mouseleave', ()=>{ tip.classList.remove('on'); focus(null); });
+    g.addEventListener('click', ev=>{ ev.stopPropagation(); if(n.type==='sujeto') openFicha(n.subject_id);
+      else if(n.type==='sector'){ ST.sector = ST.sector===n.label?null:n.label; render(); } });
+    let drag=null;
+    g.addEventListener('pointerdown', ev=>{ ev.stopPropagation(); drag={id:ev.pointerId}; g.setPointerCapture(ev.pointerId); n.fixed=true; });
+    g.addEventListener('pointermove', ev=>{ if(!drag) return;
+      const p = toLocal(ev); n.x=p.x; n.y=p.y; n.vx=n.vy=0; });
+    g.addEventListener('pointerup', ev=>{ drag=null; n.fixed=false; });
+    gNodes.appendChild(g); return g;
+  });
+
+  function toLocal(ev){
+    const r = svg.getBoundingClientRect();
+    return {x:((ev.clientX-r.left)/r.width*W - view.x)/view.k, y:((ev.clientY-r.top)/r.height*H - view.y)/view.k};
+  }
+
+  // --- simulación: repulsión con grilla espacial + resortes + centrado ---
+  if(SIM) cancelAnimationFrame(SIM);
+  let alpha=1, ticks=0;
+  const CELL=64;
+  function step(){
+    ticks++; alpha = Math.max(.006, alpha*0.985);
+    const grid = new Map();
+    nodes.forEach((n,i)=>{
+      const k = ((n.x/CELL)|0)+':'+((n.y/CELL)|0);
+      (grid.get(k)||grid.set(k,[]).get(k)).push(i);
+    });
+    nodes.forEach((n,i)=>{
+      const cx=(n.x/CELL)|0, cy=(n.y/CELL)|0;
+      for(let a=-1;a<=1;a++) for(let b=-1;b<=1;b++){
+        const cell = grid.get((cx+a)+':'+(cy+b)); if(!cell) continue;
+        for(const j of cell){
+          if(j===i) continue;
+          const m=nodes[j]; let dx=n.x-m.x, dy=n.y-m.y;
+          let d2=dx*dx+dy*dy; if(d2<1e-4){dx=Math.random()-.5;dy=Math.random()-.5;d2=.5}
+          if(d2>CELL*CELL*4) continue;
+          // Los nodos muy conectados empujan más: evita que los cúmulos de
+          // co-resolución se colapsen en una madeja ilegible.
+          const f = ((n.charge+m.charge)*0.5*alpha)/d2;
+          n.vx+=dx*f; n.vy+=dy*f;
+        }
+      }
+    });
+    links.forEach(l=>{
+      const a=nodes[l.s], b=nodes[l.t];
+      const rest = l.kind==='co_resolucion'?58: l.kind==='mencion'?46: l.kind==='perimetro'?110:150;
+      let dx=b.x-a.x, dy=b.y-a.y; const d=Math.sqrt(dx*dx+dy*dy)||1;
+      const f = ((d-rest)/d) * 0.045 * alpha * (l.kind==='sancion'?.45:1);
+      a.vx+=dx*f; a.vy+=dy*f; b.vx-=dx*f; b.vy-=dy*f;
+    });
+    nodes.forEach(n=>{
+      n.vx += (W/2-n.x)*0.0016*alpha; n.vy += (H/2-n.y)*0.0016*alpha;
+      if(!n.fixed){ n.x+=(n.vx*=0.82); n.y+=(n.vy*=0.82); }
+      n.x=Math.max(n.r+4,Math.min(W-n.r-4,n.x)); n.y=Math.max(n.r+12,Math.min(H-n.r-4,n.y));
+    });
+    lineEls.forEach((el,i)=>{
+      const l=links[i], a=nodes[l.s], b=nodes[l.t];
+      el.setAttribute('x1',a.x.toFixed(1)); el.setAttribute('y1',a.y.toFixed(1));
+      el.setAttribute('x2',b.x.toFixed(1)); el.setAttribute('y2',b.y.toFixed(1));
+    });
+    nodeEls.forEach((el,i)=> el.setAttribute('transform',`translate(${nodes[i].x.toFixed(1)},${nodes[i].y.toFixed(1)})`));
+    if(ticks<1400) SIM = requestAnimationFrame(step);
+  }
+  step();
+
+  // --- zoom y paneo ---
+  function applyView(){ root.setAttribute('transform',`translate(${view.x},${view.y}) scale(${view.k})`) }
+  svg.addEventListener('wheel', ev=>{
+    ev.preventDefault();
+    const r = svg.getBoundingClientRect();
+    const mx=(ev.clientX-r.left)/r.width*W, my=(ev.clientY-r.top)/r.height*H;
+    const k2 = Math.max(.35, Math.min(4, view.k * (ev.deltaY<0?1.14:1/1.14)));
+    view.x = mx-(mx-view.x)*(k2/view.k); view.y = my-(my-view.y)*(k2/view.k); view.k=k2;
+    applyView();
+  },{passive:false});
+  let pan=null;
+  svg.addEventListener('pointerdown', ev=>{ pan={x:ev.clientX,y:ev.clientY,vx:view.x,vy:view.y}; svg.classList.add('drag') });
+  svg.addEventListener('pointermove', ev=>{ if(!pan) return;
+    const r=svg.getBoundingClientRect();
+    view.x = pan.vx+(ev.clientX-pan.x)/r.width*W; view.y = pan.vy+(ev.clientY-pan.y)/r.height*H; applyView(); });
+  ['pointerup','pointerleave'].forEach(e=>svg.addEventListener(e,()=>{pan=null;svg.classList.remove('drag')}));
+
+  const den = document.getElementById('g-den');
+  if(den) den.addEventListener('change', e=>{ ST.gDensity = +e.target.value; render(); });
+  const dv = document.getElementById('g-den-v');
+  if(den&&dv) den.addEventListener('input', e=>dv.textContent=e.target.value);
+  const rst = document.getElementById('g-reset');
+  if(rst) rst.addEventListener('click', ()=>{ alpha=1; ticks=0; if(SIM)cancelAnimationFrame(SIM); step(); });
+  HOST.querySelectorAll('.gk').forEach(b=>b.addEventListener('click',()=>{
+    const k=b.dataset.kind; ST.gKinds.has(k)?ST.gKinds.delete(k):ST.gKinds.add(k); render();
+  }));
+}
+
+/* =====================================================================
+   FICHA DE ENTIDAD (popup lateral)
+   ===================================================================== */
+function openFicha(id){
+  const s = B.subjects.find(x=>x.subject_id===id);
+  if(!s) return;
+  const evs = B.events.filter(e=>e.subject_id===id).sort((a,b)=>String(b.fecha).localeCompare(String(a.fecha)));
+  const sec = B.sectors.find(r=>r.sector===s.sector_analitico);
+  const vinc = B.graph.edges.filter(e=>(e.source==='S::'+id||e.target==='S::'+id)&&(e.kind==='co_resolucion'||e.kind==='mencion'))
+    .map(e=>{ const other = e.source==='S::'+id?e.target:e.source;
+      const n = B.graph.nodes.find(x=>x.id===other); return n?{n,e}:null }).filter(Boolean);
+
+  document.getElementById('fic-head').innerHTML = `
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:7px">
+      <span class="bd bd-${nivelCls(s.nivel)}">${esc(B.classes[s.nivel].short)}</span>
+      <span class="bd bd-${bandCls(s.ier)}">IER ${fmt1(s.ier)} · ${esc(s.ier_banda)}</span>
+      ${s.supervisores.map(x=>`<span class="bd bd-nt">${esc(x)}</span>`).join('')}
+    </div>
+    <div style="font-size:16px;font-weight:800;letter-spacing:-.03em;line-height:1.2;padding-right:30px">${esc(s.nombre)}</div>
+    <div class="mono" style="font-size:11px;color:var(--txm);margin-top:4px">${esc(s.rut||'RUT no publicado en la resolución')}${s.rut?(s.rut_valido?' · dígito verificador válido':' · DV no valida'):''}</div>`;
+
+  document.getElementById('fic-body').innerHTML = `
+    <div class="sect">
+      <div class="sect-t">Perímetro y vínculo de identidad</div>
+      <dl class="kv">
+        <dt>Clasificación</dt><dd>${esc(B.classes[s.nivel].label)}</dd>
+        <dt>Sector analítico</dt><dd>${esc(s.sector_analitico||'—')}</dd>
+        ${s.inscrito_uaf?`<dt>Razón social UAF</dt><dd>${esc(s.uaf_razon_social||'—')}</dd>
+        <dt>RUT en registro</dt><dd class="mono">${esc(s.uaf_rut||'—')}</dd>`:''}
+        <dt>Método de vínculo</dt><dd><span class="bd ${s.identity_confidence>=.88?'bd-lo':s.identity_confidence>=.7?'bd-md':'bd-hi'}">${esc(s.identity_method.replace(/_/g,' ').toLowerCase())}</span> · confianza ${fmt1(s.identity_confidence*100)}/100</dd>
+        ${s.identity_evidence?`<dt>Evidencia</dt><dd>${esc(s.identity_evidence)}</dd>`:''}
+        <dt>Hipótesis</dt><dd>${esc(s.hipotesis_detalle||'—')}</dd>
+        ${s.nombres_alternativos&&s.nombres_alternativos.length?`<dt>Otras grafías</dt><dd>${s.nombres_alternativos.map(n=>`<div>${esc(n)}</div>`).join('')}</dd>`:''}
+      </dl>
+    </div>
+
+    ${sec?`<div class="sect">
+      <div class="sect-t">Contexto del sector «${esc(sec.sector)}»</div>
+      <dl class="kv">
+        <dt>Inscritos UAF</dt><dd>${fmt(sec.inscritos_uaf)}</dd>
+        <dt>Penetración</dt><dd>${sec.inscritos_uaf?`${sec.sancionados_n1} sancionados = ${pct(sec.tasa_penetracion,2)} · IC95% ${pct(sec.wilson_low,2)}–${pct(sec.wilson_high,2)}`:'—'}</dd>
+        <dt>Universo SII</dt><dd>${fmt(sec.universo_candidato_sii)} RUT candidatos · brecha ${pct(sec.brecha_registral)}</dd>
+        <dt>IRNI</dt><dd><span class="bd bd-${bandCls(sec.irni)}">${fmt1(sec.irni)}</span> · prioridad screening ${esc(sec.prioridad_screening)}</dd>
+      </dl>
+      ${sec.codigos_gatillantes&&sec.codigos_gatillantes.length?`<div style="margin-top:9px">
+        <div style="font-size:10px;color:var(--txm);margin-bottom:5px">CÓDIGOS ACTECO GATILLANTES</div>
+        ${sec.codigos_gatillantes.slice(0,4).map(c=>`<div style="padding:6px 0;border-bottom:1px solid var(--bd)">
+          <span class="mono" style="font-size:10.5px">${esc(c.acteco)}</span> <span class="bd bd-nt">${esc(c.prioridad||'—')}</span>
+          <div style="font-size:10.5px;color:var(--tx2)">${esc(c.glosa||'')}</div>
+          ${c.lectura_legal?`<div style="font-size:10px;color:var(--txm);margin-top:2px">${esc(c.lectura_legal)}</div>`:''}</div>`).join('')}
+      </div>`:''}
+    </div>`:''}
+
+    <div class="sect">
+      <div class="sect-t">Composición del IER · ${fmt1(s.ier)} puntos</div>
+      ${s.ier_factores.map(f=>`<div class="wf-row" title="${esc(IERS(f.key).why)}">
+        <span style="color:var(--tx2)">${esc(IERS(f.key).label)}</span>
+        <div class="wf-bar"><span style="width:${Math.round(f.points/f.max*100)}%;${f.points===0?'background:var(--s4)':''}"></span></div>
+        <span class="mono" style="text-align:right">${f.points>0?'+':''}${fmt1(f.points)}</span></div>
+        <div style="font-size:10px;color:var(--txm);margin:-3px 0 8px 0">${esc(f.value)}</div>`).join('')}
+    </div>
+
+    ${vinc.length?`<div class="sect">
+      <div class="sect-t">Entidades vinculadas · ${vinc.length}</div>
+      ${vinc.slice(0,12).map(v=>`<div style="padding:7px 0;border-bottom:1px solid var(--bd);${v.n.type==='sujeto'?'cursor:pointer':''}" ${v.n.type==='sujeto'?`class="ficlink" data-id="${v.n.subject_id}"`:''}>
+        <div style="font-size:11.5px;font-weight:600">${esc(v.n.label)}${v.n.type==='sujeto'?' ↗':''}</div>
+        <div style="font-size:10.5px;color:var(--tx2)">${esc(v.e.label)} · <span class="bd bd-nt">${v.e.kind==='co_resolucion'?'ambas sancionadas':'mencionada sin sanción propia'}</span></div>
+      </div>`).join('')}
+    </div>`:''}
+
+    <div class="sect">
+      <div class="sect-t">Historial sancionatorio · ${evs.length} evento(s)</div>
+      <div class="tl">
+      ${evs.map(e=>`<div class="tl-i">
+        <div class="tl-d">${esc(e.fecha||'—')} · ${esc(e.supervisor||'')} ${e.resolucion?'· Res. '+esc(e.resolucion):''}</div>
+        <div class="tl-t">${esc(e.tipo_evento||'Evento')}${e.monto?` — ${fmt(e.monto)} ${esc(e.unidad||'')}`:(e.unidad==='Censura'?' — censura':'')}</div>
+        <div style="margin:3px 0 4px">
+          ${e.categoria?`<span class="bd ${e.laft_directo?'bd-cr':'bd-nt'}">${esc(e.categoria)}</span>`:''}
+          ${e.estado?`<span class="bd bd-nt">${esc(e.estado)}</span>`:''}</div>
+        <div class="tl-x">${esc(e.resumen||'')}</div>
+        <div style="margin-top:5px;display:flex;gap:10px">
+          ${e.resolution_url?`<a class="lnk" href="${esc(e.resolution_url)}" target="_blank" rel="noopener">Resolución ↗</a>`:''}
+          ${e.source_url?`<a class="lnk" href="${esc(e.source_url)}" target="_blank" rel="noopener">Fuente ↗</a>`:''}</div>
+      </div>`).join('')}
+      </div>
+    </div>
+
+    <div class="note" style="border-left-color:var(--cr)">${esc(B.disclaimer)}</div>`;
+
+  document.getElementById('fic').classList.add('on');
+  document.getElementById('ov').classList.add('on');
+  document.querySelectorAll('.ficlink').forEach(el=>el.addEventListener('click',()=>openFicha(el.dataset.id)));
+}
+function closeFicha(){
+  document.getElementById('fic').classList.remove('on');
+  document.getElementById('ov').classList.remove('on');
+}
+
+/* =====================================================================
+   CSV
+   ===================================================================== */
+function toCSV(rows, cols){
+  const head = cols.map(c=>c.h).join(';');
+  const body = rows.map(r=>cols.map(c=>{
+    let v = typeof c.k==='function'?c.k(r):r[c.k];
+    if(Array.isArray(v)) v=v.join(' | ');
+    if(v==null) v='';
+    v=String(v).replace(/"/g,'""');
+    return /[;"\n]/.test(v)?`"${v}"`:v;
+  }).join(';')).join('\n');
+  return '﻿'+head+'\n'+body;
+}
+function download(name, text){
+  const blob = new Blob([text],{type:'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click();
+  setTimeout(()=>{URL.revokeObjectURL(a.href); a.remove()},400);
+}
+
+/* =====================================================================
+   BARRA DE FILTROS Y RENDER
+   ===================================================================== */
+function filterBar(D){
+  const sups = [...new Set(B.events.map(e=>e.supervisor).filter(Boolean))].sort();
+  const niveles = Object.keys(B.classes);
+  return `
+    <div class="fgrp"><span class="flbl">Supervisor</span>
+      <div class="chipset">${sups.map(s=>`<button class="chip fsup ${ST.sup.has(s)?'on':''}" data-v="${esc(s)}">${esc(s)}</button>`).join('')}</div></div>
+    <div class="fgrp"><span class="flbl">Nivel</span>
+      <div class="chipset">${niveles.map(n=>`<button class="chip fniv ${ST.nivel.has(n)?'on':''}" data-v="${n}">${esc(B.classes[n].short)}</button>`).join('')}</div></div>
+    <div class="fgrp"><span class="flbl">Años</span>
+      <input class="rng" type="range" id="fy0" min="${ST.ymin}" max="${ST.ymax}" value="${ST.y0}">
+      <span class="mono" style="font-size:11px">${ST.y0}</span>
+      <input class="rng" type="range" id="fy1" min="${ST.ymin}" max="${ST.ymax}" value="${ST.y1}">
+      <span class="mono" style="font-size:11px">${ST.y1}</span></div>
+    <div class="fgrp"><span class="flbl">IER ≥</span>
+      <input class="rng" type="range" id="fier" min="0" max="80" step="5" value="${ST.minIer}">
+      <span class="mono" style="font-size:11px">${ST.minIer}</span></div>
+    <button class="chip flaft ${ST.laft?'on':''}" id="flaft">Sólo materia ALA/CFT</button>
+    ${ST.sector?`<button class="chip on" id="fsector">Sector: ${esc(ST.sector)} ×</button>`:''}
+    <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+      <span style="font-size:11px;color:var(--txm)" class="mono">${fmt(D.subjects.length)} sujetos · ${fmt(D.events.length)} eventos</span>
+      ${!D.full?`<button class="chip" id="freset">Limpiar filtros</button>`:''}
+    </div>`;
+}
+
+function render(){
+  const D = derive();
+  // navegación
+  const grps = [...new Set(VIEWS.map(v=>v.grp))];
+  document.getElementById('nav').innerHTML = grps.map(g=>`<div class="nav-lbl">${esc(g)}</div>`+
+    VIEWS.filter(v=>v.grp===g).map(v=>{
+      const badge = v.id==='n1'?D.byLevel('N1_SO_SANCIONADO').length
+        : v.id==='n2'?D.byLevel('N2_POTENCIAL_SO').length
+        : v.id==='triage'?D.subjects.filter(s=>s.ier>=50).length
+        : v.id==='sectores'?B.sectors.length : null;
+      return `<button class="ni ${ST.view===v.id?'on':''}" data-view="${v.id}"><span class="ni-ic">${v.ic}</span>${esc(v.label)}${badge!=null?`<span class="ni-bd">${fmt(badge)}</span>`:''}</button>`;
+    }).join('')).join('');
+  document.getElementById('brandver')
+    .textContent = `${B.module_version} · datos al ${B.as_of}`;
+  document.getElementById('sbfoot').innerHTML =
+    `<b style="color:var(--tx2)">Fuentes</b><br>Radar Sanciones · Radar UAF · Radar SII<br>
+     <span style="color:var(--tx2)">${fmt(B.kpis.eventos_totales)} eventos · ${fmt(B.kpis.inscritos_uaf)} inscritos</span><br>
+     <span style="opacity:.8">Generado ${esc((B.generated_at||'').replace('T',' ').slice(0,16))}</span>`;
+  document.getElementById('tb-title').textContent = (VIEWS.find(v=>v.id===ST.view)||{}).label||'';
+  document.getElementById('fbar').innerHTML = filterBar(D);
+
+  const view = {panorama:vPanorama, n1:vN1, n2:vN2, grafo:vGrafo, sectores:vSectores, triage:vTriage, metodo:vMetodo}[ST.view];
+  const ct = document.getElementById('ct');
+  ct.innerHTML = view(D);
+  ct.scrollTop = 0;
+  if(ST.view==='grafo') requestAnimationFrame(()=>mountGraph(D));
+  bind(D);
+}
+
+function bind(D){
+  const $$ = s=>Array.from(HOST.querySelectorAll(s));
+  $$('[data-view]').forEach(b=>b.addEventListener('click',()=>{ST.view=b.dataset.view;render()}));
+  $$('.fsup').forEach(b=>b.addEventListener('click',()=>{const v=b.dataset.v;ST.sup.has(v)?ST.sup.delete(v):ST.sup.add(v);render()}));
+  $$('.fniv').forEach(b=>b.addEventListener('click',()=>{const v=b.dataset.v;ST.nivel.has(v)?ST.nivel.delete(v):ST.nivel.add(v);render()}));
+  const y0=HOST.querySelector('#fy0'), y1=HOST.querySelector('#fy1');
+  if(y0) y0.addEventListener('change',e=>{ST.y0=Math.min(+e.target.value,ST.y1);render()});
+  if(y1) y1.addEventListener('change',e=>{ST.y1=Math.max(+e.target.value,ST.y0);render()});
+  const fier=HOST.querySelector('#fier');
+  if(fier) fier.addEventListener('change',e=>{ST.minIer=+e.target.value;render()});
+  const flaft=HOST.querySelector('#flaft');
+  if(flaft) flaft.addEventListener('click',()=>{ST.laft=!ST.laft;render()});
+  const fsec=HOST.querySelector('#fsector');
+  if(fsec) fsec.addEventListener('click',()=>{ST.sector=null;render()});
+  const fr=HOST.querySelector('#freset');
+  if(fr) fr.addEventListener('click',()=>{const v=ST.view;initState();ST.view=v;
+    const q=document.getElementById('q'); if(q)q.value=''; render()});
+
+  $$('.rowsubj').forEach(r=>r.addEventListener('click',()=>openFicha(r.dataset.id)));
+  $$('.rowsup').forEach(r=>r.addEventListener('click',()=>{const v=r.dataset.sup;ST.sup.has(v)?ST.sup.delete(v):ST.sup.add(v);render()}));
+  $$('.rowsector,.anom,.bub').forEach(r=>r.addEventListener('click',()=>{
+    const v=r.dataset.sector; ST.sector = ST.sector===v?null:v; ST.view = ST.view==='panorama'?'n2':ST.view; render()}));
+  $$('.rowsectordet').forEach(r=>r.addEventListener('click',()=>{ST.sector=r.dataset.sector;ST.view='n2';render()}));
+  $$('th[data-sort]').forEach(th=>th.addEventListener('click',()=>{
+    const t=th.dataset.tbl, k=th.dataset.sort;
+    ST.sort[t] = ST.sort[t][0]===k ? [k,-ST.sort[t][1]] : [k,-1];
+    render();
+  }));
+
+  const expCols = [
+    {h:'subject_id',k:'subject_id'},{h:'nombre',k:'nombre'},{h:'rut',k:'rut'},
+    {h:'nivel',k:'nivel'},{h:'sector_analitico',k:'sector_analitico'},
+    {h:'inscrito_uaf',k:'inscrito_uaf'},{h:'uaf_razon_social',k:'uaf_razon_social'},
+    {h:'metodo_identidad',k:'identity_method'},{h:'confianza_identidad',k:'identity_confidence'},
+    {h:'hipotesis',k:'hipotesis'},{h:'hipotesis_detalle',k:'hipotesis_detalle'},
+    {h:'sanciones',k:'_n'},{h:'supervisores',k:'supervisores'},
+    {h:'primer_evento',k:'primer_evento'},{h:'ultimo_evento',k:'ultimo_evento'},
+    {h:'monto_uf',k:'monto_uf'},{h:'ier',k:'ier'},{h:'ier_banda',k:'ier_banda'}
+  ];
+  const e1=HOST.querySelector('#exp-n1');
+  if(e1) e1.addEventListener('click',()=>download('nivel1_inscritos_sancionados.csv',toCSV(D.byLevel('N1_SO_SANCIONADO'),expCols)));
+  const e2=HOST.querySelector('#exp-n2');
+  if(e2) e2.addEventListener('click',()=>download('nivel2_potenciales_no_inscritos.csv',toCSV(D.byLevel('N2_POTENCIAL_SO'),expCols)));
+  const es=HOST.querySelector('#exp-sec');
+  if(es) es.addEventListener('click',()=>download('matriz_sectorial.csv',toCSV(sectorView(D),[
+    {h:'sector',k:'sector'},{h:'inscritos_uaf',k:'inscritos_uaf'},{h:'sancionados_n1',k:'sancionados_n1'},
+    {h:'tasa_penetracion',k:'tasa_penetracion'},{h:'wilson_low',k:'wilson_low'},{h:'wilson_high',k:'wilson_high'},
+    {h:'lift',k:'lift'},{h:'potenciales_n2',k:'potenciales_n2'},{h:'universo_candidato_sii',k:'universo_candidato_sii'},
+    {h:'brecha_registral',k:'brecha_registral'},{h:'prioridad_screening',k:'prioridad_screening'},{h:'irni',k:'irni'}])));
+}
+
+/* =====================================================================
+   MONTAJE
+   ===================================================================== */
+function mount(hostEl, bundle){
+  B = bundle; HOST = hostEl || document;
+  if(!B || !B.subjects){ document.getElementById('ct').innerHTML =
+    '<div class="empty">No se recibió un bundle válido (esquema sanciones_uaf.bundle/v1).</div>'; return; }
+  initState();
+
+  let t=null;
+  document.getElementById('q').addEventListener('input', e=>{
+    clearTimeout(t); t=setTimeout(()=>{ST.q=e.target.value;render()},220);
+  });
+  document.getElementById('btn-theme').addEventListener('click',()=>{
+    const cur = document.documentElement.getAttribute('data-theme');
+    const dark = cur ? cur==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', dark?'light':'dark');
+    render();
+  });
+  document.getElementById('btn-sb').addEventListener('click',()=>document.getElementById('sb').classList.toggle('on'));
+  document.getElementById('fic-x').addEventListener('click',closeFicha);
+  document.getElementById('ov').addEventListener('click',closeFicha);
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeFicha(); });
+  addEventListener('resize',()=>{ if(ST.view==='grafo'){ clearTimeout(t); t=setTimeout(render,260); } });
+
+  render();
+}
+
+return {mount, get bundle(){return B}, get state(){return ST}};
+})();
+
+if(BUNDLE) window.RadarSancionesUAF.mount(document.body, BUNDLE);
+</script>
+</body>
+</html>
