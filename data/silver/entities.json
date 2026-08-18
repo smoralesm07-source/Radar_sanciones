@@ -1,5 +1,26 @@
 [
   {
+    "entity_id": "ENT-RUT-773422060",
+    "rut": "77342206-0",
+    "nombre_uaf": "UNIDAD MUTUOS HIPOTECARIOS S.A",
+    "actividad_uaf": "",
+    "n_eventos": 1,
+    "supervisores": "CMF",
+    "n_supervisores": 1,
+    "fecha_ultimo_evento": "2026-08-11",
+    "eventos_laft_directo": 0,
+    "uf_conocidas": 0,
+    "utm_conocidas": 0,
+    "senal_inicial": "",
+    "categorias": "Cumplimiento regulatorio",
+    "sii_estado_enriquecimiento": "Pendiente carga masiva TXT SII",
+    "sii_actividades_vigentes": [],
+    "sii_nombre_raw": [],
+    "sii_empresas_raw": [],
+    "prioridad_provisional": 0,
+    "banda_prioridad": "Baja"
+  },
+  {
     "entity_id": "ENT-RUT-969211300",
     "rut": "96921130-0",
     "nombre_uaf": "MBI Corredores de Bolsa S.A",

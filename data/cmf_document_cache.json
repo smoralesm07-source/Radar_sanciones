@@ -5455,5 +5455,37 @@
       "subjects": [],
       "pdf_sha256": "041a39a376203a9effe3aa452d1701a8ed2d018523f466c9217a1bd9b10ba7e4"
     }
+  },
+  "8401": {
+    "resolution": "8401",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d8f6d2664faa8016bb7a7d0202ac7e12VFdwQmVVNXFRVFJOUkZWNVRYcEZNMDVuUFQwPQ==&secuencia=-1&t=1787050354",
+    "checked_at": "2026-08-18T10:52:38+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "partial",
+      "page_count": 14,
+      "subject_count": 1,
+      "legal_entity_count": 1,
+      "confidence": 0.65,
+      "subjects": [
+        {
+          "name": "UNIDAD MUTUOS HIPOTECARIOS S.A",
+          "rut": "77342206-0",
+          "page_entity": 1,
+          "subject_kind": "legal_entity",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "",
+          "page_infraction": null,
+          "category": "Cumplimiento regulatorio",
+          "laft_directo": false,
+          "confidence": 0.65
+        }
+      ],
+      "pdf_sha256": "452e86789983ae12462f6b2eccfd15eead5de3698321536f41a1e1d740b41522"
+    }
   }
 }
