@@ -5996,5 +5996,69 @@
       ],
       "pdf_sha256": "9eee046b2e6f5a42a2d7afb4d9efd9226331a24aa3d533972e9d1092fbb24824"
     }
+  },
+  "8941": {
+    "resolution": "8941",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=447e7983068e87151a1aafea66f4a272VFdwQmVVNXFRVFJOUkZVd1RucEJlRTlSUFQwPQ==&secuencia=-1&t=1788197979",
+    "checked_at": "2026-08-31T17:39:42+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "partial",
+      "page_count": 12,
+      "subject_count": 1,
+      "legal_entity_count": 1,
+      "confidence": 0.65,
+      "subjects": [
+        {
+          "name": "Durante los meses de mayo, junio y septiembre, todos d e 2024 , Banco de Chile",
+          "rut": "97004000-5",
+          "page_entity": 4,
+          "subject_kind": "legal_entity",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "",
+          "page_infraction": null,
+          "category": "Cumplimiento regulatorio",
+          "laft_directo": false,
+          "confidence": 0.65
+        }
+      ],
+      "pdf_sha256": "5fd95d9d54f9813305ee21cc7333910d631212b812cb3ea1941ca635e3c7f912"
+    }
+  },
+  "8942": {
+    "resolution": "8942",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=ec8635d2bd2e86ce15fbd6676f413143VFdwQmVVNXFRVFJOUkZVd1RucEJlVTFSUFQwPQ==&secuencia=-1&t=1788197979",
+    "checked_at": "2026-08-31T17:39:45+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "partial",
+      "page_count": 12,
+      "subject_count": 1,
+      "legal_entity_count": 1,
+      "confidence": 0.65,
+      "subjects": [
+        {
+          "name": "Entre los meses de mayo y octubre de 2024 , Banco Santander-Chile",
+          "rut": "97036000-K",
+          "page_entity": 3,
+          "subject_kind": "legal_entity",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "",
+          "page_infraction": null,
+          "category": "Cumplimiento regulatorio",
+          "laft_directo": false,
+          "confidence": 0.65
+        }
+      ],
+      "pdf_sha256": "978e64036b5ed64b2123e24419be70cdaab1000841245a38b2f704826aefaab1"
+    }
   }
 }

@@ -412,5 +412,28 @@
       "SUSESO": "degraded",
       "UAF": "degraded"
     }
+  },
+  {
+    "run_at": "2026-08-31T17:39:53+00:00",
+    "status": "changed",
+    "from_year": 2026,
+    "to_year": 2026,
+    "sources": [
+      "UAF",
+      "CMF",
+      "SCJ",
+      "SUSESO",
+      "SP"
+    ],
+    "events_total": 987,
+    "new_events": 2,
+    "updated_events": 59,
+    "source_health": {
+      "CMF": "ok",
+      "SCJ": "ok",
+      "SP": "degraded",
+      "SUSESO": "degraded",
+      "UAF": "degraded"
+    }
   }
 ]
