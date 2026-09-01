@@ -1,21 +1,21 @@
 [
   {
     "source": "CMF",
-    "checked_at": "2026-08-31T17:39:38+00:00",
+    "checked_at": "2026-09-01T15:00:01+00:00",
     "fetch_status": "ok",
     "parse_status": "ok",
     "rows_seen": 38,
     "events_emitted": 62,
     "latest_event_date": "2026-08-25",
-    "documents_read": 2,
-    "documents_cache_hit": 36,
+    "documents_read": 0,
+    "documents_cache_hit": 38,
     "documents_failed": 0,
     "document_entities_emitted": 48,
-    "message": "Agente documental CMF activo: 2 PDF nuevos leídos, 36 desde cache, 0 fallidos; 48 eventos individualizados desde documentos."
+    "message": "Agente documental CMF activo: 0 PDF nuevos leídos, 38 desde cache, 0 fallidos; 48 eventos individualizados desde documentos."
   },
   {
     "source": "SCJ",
-    "checked_at": "2026-08-31T17:39:46+00:00",
+    "checked_at": "2026-09-01T15:00:02+00:00",
     "fetch_status": "ok",
     "parse_status": "ok",
     "rows_seen": 6,
@@ -29,7 +29,7 @@
   },
   {
     "source": "SP",
-    "checked_at": "2026-08-31T17:39:47+00:00",
+    "checked_at": "2026-09-01T15:00:06+00:00",
     "fetch_status": "ok",
     "parse_status": "degraded",
     "rows_seen": 6,
@@ -43,7 +43,7 @@
   },
   {
     "source": "SUSESO",
-    "checked_at": "2026-08-31T17:39:46+00:00",
+    "checked_at": "2026-09-01T15:00:05+00:00",
     "fetch_status": "ok",
     "parse_status": "degraded",
     "rows_seen": 0,
@@ -57,7 +57,7 @@
   },
   {
     "source": "UAF",
-    "checked_at": "2026-08-31T17:39:37+00:00",
+    "checked_at": "2026-09-01T15:00:00+00:00",
     "fetch_status": "ok",
     "parse_status": "degraded",
     "rows_seen": 0,

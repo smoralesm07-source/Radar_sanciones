@@ -1,7 +1,7 @@
 [
   {
     "source": "UAF",
-    "checked_at": "2026-08-31T17:39:37+00:00",
+    "checked_at": "2026-09-01T15:00:00+00:00",
     "url": "https://www.uaf.cl/es-cl/publicaciones-uaf/sanciones-ejecutoriadas",
     "http_status": 200,
     "fetch_status": "ok",
@@ -20,7 +20,7 @@
   },
   {
     "source": "CMF",
-    "checked_at": "2026-08-31T17:39:38+00:00",
+    "checked_at": "2026-09-01T15:00:01+00:00",
     "url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
     "http_status": 200,
     "fetch_status": "ok",
@@ -28,18 +28,18 @@
     "rows_seen": 38,
     "events_emitted": 62,
     "latest_event_date": "2026-08-25",
-    "content_sha256": "9dc4ace6b99c246bdef3fd57e079a45550f4ba116ff3fe0d3829459cc9ca5bab",
-    "message": "Agente documental CMF activo: 2 PDF nuevos leídos, 36 desde cache, 0 fallidos; 48 eventos individualizados desde documentos.",
+    "content_sha256": "d6552f5539c338e05895b6166a72326b466e64acb0cf552e2c7d4f41e123b127",
+    "message": "Agente documental CMF activo: 0 PDF nuevos leídos, 38 desde cache, 0 fallidos; 48 eventos individualizados desde documentos.",
     "mode": "live",
     "documents_requested": 38,
-    "documents_read": 2,
-    "documents_cache_hit": 36,
+    "documents_read": 0,
+    "documents_cache_hit": 38,
     "documents_failed": 0,
     "document_entities_emitted": 48
   },
   {
     "source": "SCJ",
-    "checked_at": "2026-08-31T17:39:46+00:00",
+    "checked_at": "2026-09-01T15:00:02+00:00",
     "url": "https://www.scj.gob.cl/proceso-sancionatorio/",
     "http_status": 200,
     "fetch_status": "ok",
@@ -47,7 +47,7 @@
     "rows_seen": 6,
     "events_emitted": 4,
     "latest_event_date": "2026-07-31",
-    "content_sha256": "cea2b80762a492886a1ae91779f2768baafe6c5ec6ae962e0fd274cd89ee11ea",
+    "content_sha256": "5beeb2914efcee40bd7c27841df15a8d5e644625e5fa47e0d98088f6733fd871",
     "message": "",
     "mode": "live",
     "documents_requested": 0,
@@ -58,7 +58,7 @@
   },
   {
     "source": "SUSESO",
-    "checked_at": "2026-08-31T17:39:46+00:00",
+    "checked_at": "2026-09-01T15:00:05+00:00",
     "url": "https://www.suseso.gob.cl/609/w3-propertyvalue-806511.html",
     "http_status": 200,
     "fetch_status": "ok",
@@ -77,7 +77,7 @@
   },
   {
     "source": "SP",
-    "checked_at": "2026-08-31T17:39:47+00:00",
+    "checked_at": "2026-09-01T15:00:06+00:00",
     "url": "https://www.spensiones.cl/portal/institucional/594/w3-propertyvalue-5901.html",
     "http_status": 200,
     "fetch_status": "ok",
