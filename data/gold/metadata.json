@@ -1,11 +1,11 @@
 {
   "version": "0.8.0",
-  "generated_at": "2026-09-04T14:26:22+00:00",
+  "generated_at": "2026-09-07T15:56:27+00:00",
   "target_from_year": 2020,
   "bootstrap_pending": false,
-  "event_count": 987,
+  "event_count": 988,
   "note": "Instalación inicial. El workflow bootstrap-live materializa la primera captura OSINT antes de considerar completa la publicación.",
   "entity_count": 196,
   "current_data_from_year": 2020,
-  "latest_event_date": "2026-08-25"
+  "latest_event_date": "2026-09-01"
 }
