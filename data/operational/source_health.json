@@ -1,7 +1,7 @@
 [
   {
     "source": "CMF",
-    "checked_at": "2026-09-10T14:32:13+00:00",
+    "checked_at": "2026-09-11T14:31:02+00:00",
     "fetch_status": "ok",
     "parse_status": "ok",
     "rows_seen": 39,
@@ -15,12 +15,12 @@
   },
   {
     "source": "SCJ",
-    "checked_at": "2026-09-10T14:32:14+00:00",
+    "checked_at": "2026-09-11T14:31:06+00:00",
     "fetch_status": "ok",
     "parse_status": "ok",
-    "rows_seen": 6,
-    "events_emitted": 4,
-    "latest_event_date": "2026-07-31",
+    "rows_seen": 12,
+    "events_emitted": 8,
+    "latest_event_date": "2026-08-26",
     "documents_read": 0,
     "documents_cache_hit": 0,
     "documents_failed": 0,
@@ -29,7 +29,7 @@
   },
   {
     "source": "SP",
-    "checked_at": "2026-09-10T14:32:16+00:00",
+    "checked_at": "2026-09-11T14:31:08+00:00",
     "fetch_status": "ok",
     "parse_status": "degraded",
     "rows_seen": 6,
@@ -43,7 +43,7 @@
   },
   {
     "source": "SUSESO",
-    "checked_at": "2026-09-10T14:32:15+00:00",
+    "checked_at": "2026-09-11T14:31:07+00:00",
     "fetch_status": "ok",
     "parse_status": "degraded",
     "rows_seen": 0,
@@ -57,7 +57,7 @@
   },
   {
     "source": "UAF",
-    "checked_at": "2026-09-10T14:32:11+00:00",
+    "checked_at": "2026-09-11T14:31:00+00:00",
     "fetch_status": "ok",
     "parse_status": "degraded",
     "rows_seen": 0,
