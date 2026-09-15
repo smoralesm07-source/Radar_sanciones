@@ -6075,5 +6075,52 @@
       "subjects": [],
       "pdf_sha256": "56ae1ffc78c899c09ff498a572da9fc80116b5ee15b22afc6f453da1a46dd7f6"
     }
+  },
+  "9559": {
+    "resolution": "9559",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=35ba8f8ef8a1ef8fbd79fe8a7f2a9974VFdwQmVVNXFRVFZOUkZVelQwUlZORTlCUFQwPQ==&secuencia=-1&t=1789484844",
+    "checked_at": "2026-09-15T15:07:29+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "failed",
+      "page_count": 12,
+      "subject_count": 0,
+      "legal_entity_count": 0,
+      "confidence": 0.0,
+      "subjects": [],
+      "pdf_sha256": "92ce1913f55e2c54331b7646ea86bd89e5ef6a8d3cc6b1c7ccc414cd7268e428"
+    }
+  },
+  "9558": {
+    "resolution": "9558",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=2c303f2b7f57d868774a92cb68d322b7VFdwQmVVNXFRVFZOUkZVelQwUlZORTFCUFQwPQ==&secuencia=-1&t=1789484844",
+    "checked_at": "2026-09-15T15:07:33+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "partial",
+      "page_count": 26,
+      "subject_count": 1,
+      "legal_entity_count": 1,
+      "confidence": 0.78,
+      "subjects": [
+        {
+          "name": "COOPERATIVA DE AHORRO Y CRÉDITO UNIÓN AÉREA LIMITADA",
+          "rut": "84156800-1",
+          "page_entity": 1,
+          "subject_kind": "legal_entity",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "En el marco de un proceso de recopilación de anteced entes, la Unidad de Investigación, constató posibles incumplimientos por parte de CAPUAL derivados de la falta de envío a sus titulares de los avisos de renovación de los depósitos a plazo y del estado con los movimientos, y de saldos de la cuenta de ahorro a plazo de los œltimos doce meses; y el uso de un mecanismo de reajuste de las cuotas de participación de socios, aplic ado desde el cierre de los estados financieros del ejercicio 2022.",
+          "page_infraction": 1,
+          "category": "Cumplimiento regulatorio",
+          "laft_directo": false,
+          "confidence": 0.78
+        }
+      ],
+      "pdf_sha256": "3f6a9cd95efd75e5a3ba322279d9c82d14640ac6ce377d1f3583c707bf79c998"
+    }
   }
 }

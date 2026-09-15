@@ -1,5 +1,26 @@
 [
   {
+    "entity_id": "ENT-RUT-841568001",
+    "rut": "84156800-1",
+    "nombre_uaf": "COOPERATIVA DE AHORRO Y CRÉDITO UNIÓN AÉREA LIMITADA",
+    "actividad_uaf": "",
+    "n_eventos": 1,
+    "supervisores": "CMF",
+    "n_supervisores": 1,
+    "fecha_ultimo_evento": "2026-09-07",
+    "eventos_laft_directo": 0,
+    "uf_conocidas": 0,
+    "utm_conocidas": 0,
+    "senal_inicial": "",
+    "categorias": "Cumplimiento regulatorio",
+    "sii_estado_enriquecimiento": "Pendiente carga masiva TXT SII",
+    "sii_actividades_vigentes": [],
+    "sii_nombre_raw": [],
+    "sii_empresas_raw": [],
+    "prioridad_provisional": 0,
+    "banda_prioridad": "Baja"
+  },
+  {
     "entity_id": "ENT-RUT-97036000K",
     "rut": "97036000-K",
     "nombre_uaf": "Entre los meses de mayo y octubre de 2024 , Banco Santander-Chile",
