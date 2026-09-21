@@ -1,7 +1,7 @@
 [
   {
     "source": "UAF",
-    "checked_at": "2026-09-18T14:34:04+00:00",
+    "checked_at": "2026-09-21T16:31:29+00:00",
     "url": "https://www.uaf.cl/es-cl/publicaciones-uaf/sanciones-ejecutoriadas",
     "http_status": 200,
     "fetch_status": "ok",
@@ -20,7 +20,7 @@
   },
   {
     "source": "CMF",
-    "checked_at": "2026-09-18T14:34:06+00:00",
+    "checked_at": "2026-09-21T16:31:30+00:00",
     "url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
     "http_status": 200,
     "fetch_status": "ok",
@@ -28,7 +28,7 @@
     "rows_seen": 41,
     "events_emitted": 65,
     "latest_event_date": "2026-09-07",
-    "content_sha256": "90d17334eb89b02a3abe7c9f9a36fbb37335726e9ef60e9d078a9dcd1187e166",
+    "content_sha256": "9b20a35f306fecf1248cd42409b03fe181f15b2891525b0878474766b5a82a2e",
     "message": "Agente documental CMF activo: 0 PDF nuevos leídos, 41 desde cache, 0 fallidos; 49 eventos individualizados desde documentos.",
     "mode": "live",
     "documents_requested": 41,
@@ -39,7 +39,7 @@
   },
   {
     "source": "SCJ",
-    "checked_at": "2026-09-18T14:34:09+00:00",
+    "checked_at": "2026-09-21T16:31:32+00:00",
     "url": "https://www.scj.gob.cl/proceso-sancionatorio/",
     "http_status": 200,
     "fetch_status": "ok",
@@ -47,7 +47,7 @@
     "rows_seen": 6,
     "events_emitted": 6,
     "latest_event_date": "2026-08-26",
-    "content_sha256": "2d4b0b1e5e666f9ed69a3fb33a90662af75ca919e52285cd1e78bdbf0e7d048b",
+    "content_sha256": "8c1cc01908a830c9ebfe183a7ba316e98a9472facb508491fbd9e8e11f576ac7",
     "message": "",
     "mode": "live",
     "documents_requested": 0,
@@ -58,7 +58,7 @@
   },
   {
     "source": "SCJ",
-    "checked_at": "2026-09-18T14:34:10+00:00",
+    "checked_at": "2026-09-21T16:31:33+00:00",
     "url": "https://www.scj.gob.cl/proceso-sancionatorio/page/2/",
     "http_status": 200,
     "fetch_status": "ok",
@@ -66,7 +66,7 @@
     "rows_seen": 6,
     "events_emitted": 2,
     "latest_event_date": "2026-08-26",
-    "content_sha256": "f44f2f1e7f374f876888b29d4baf45b66e3ca4a23423a6b1281eed41fe7c3070",
+    "content_sha256": "60c41e22723b965cc2674a044624023f470a467f944ef76caf9f1b8958fd43c9",
     "message": "",
     "mode": "live",
     "documents_requested": 0,
@@ -77,7 +77,7 @@
   },
   {
     "source": "SUSESO",
-    "checked_at": "2026-09-18T14:34:10+00:00",
+    "checked_at": "2026-09-21T16:31:34+00:00",
     "url": "https://www.suseso.gob.cl/609/w3-propertyvalue-806511.html",
     "http_status": 200,
     "fetch_status": "ok",
@@ -96,7 +96,7 @@
   },
   {
     "source": "SP",
-    "checked_at": "2026-09-18T14:34:11+00:00",
+    "checked_at": "2026-09-21T16:31:34+00:00",
     "url": "https://www.spensiones.cl/portal/institucional/594/w3-propertyvalue-5901.html",
     "http_status": 200,
     "fetch_status": "ok",
