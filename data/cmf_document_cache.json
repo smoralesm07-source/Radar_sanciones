@@ -6137,5 +6137,37 @@
       "subjects": [],
       "pdf_sha256": "f8201d3992feab7fb2c913bf3476240ffbc12b5bb08aea34dd796d9fa04f0d1f"
     }
+  },
+  "9913": {
+    "resolution": "9913",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f6b21eb89f0835f012661d0ffc3c443VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFSUFQwPQ==&secuencia=-1&t=1790176042",
+    "checked_at": "2026-09-23T15:07:29+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "partial",
+      "page_count": 82,
+      "subject_count": 1,
+      "legal_entity_count": 1,
+      "confidence": 0.65,
+      "subjects": [
+        {
+          "name": "Inversiones A&C SpA",
+          "rut": "76775071-4",
+          "page_entity": 14,
+          "subject_kind": "legal_entity",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "",
+          "page_infraction": null,
+          "category": "Inversiones / custodia / mercado de valores",
+          "laft_directo": false,
+          "confidence": 0.65
+        }
+      ],
+      "pdf_sha256": "7e2457d1fa9d0db3118789da54021b3a4e5779fd7488228acdd9c3f0aa87ee51"
+    }
   }
 }
