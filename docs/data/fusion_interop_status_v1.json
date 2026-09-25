@@ -2,9 +2,9 @@
   "interop_version": "1.0",
   "radar_id": "RADAR_SANCIONES",
   "status": "FUSION_EXPORT_READY",
-  "evidence": 997,
-  "entities": 196,
-  "events": 997,
+  "evidence": 998,
+  "entities": 197,
+  "events": 998,
   "source_failure_is_zero": false,
   "name_only_entities_promoted": false
 }

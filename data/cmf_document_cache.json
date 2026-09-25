@@ -6169,5 +6169,37 @@
       ],
       "pdf_sha256": "7e2457d1fa9d0db3118789da54021b3a4e5779fd7488228acdd9c3f0aa87ee51"
     }
+  },
+  "10269": {
+    "resolution": "10269",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=944dfebc1e99b4c9de8fccf2b467b9e1VFdwQmVVNXFRVFZOUkZsM1RrUlpNMDVSUFQwPQ==&secuencia=-1&t=1790349728",
+    "checked_at": "2026-09-25T15:22:12+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "partial",
+      "page_count": 22,
+      "subject_count": 1,
+      "legal_entity_count": 1,
+      "confidence": 0.78,
+      "subjects": [
+        {
+          "name": "Vulion Capital S.A",
+          "rut": "77916171-4",
+          "page_entity": 1,
+          "subject_kind": "legal_entity",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "Que, mediante Oficio Reservado N°247.481, de 29 de diciembre de 2025 ;͞DĞŶƵŶĐŝĂ͟Ϳ͕ ůĂ DŝƌĞĐĐŝſŶ GĞŶĞƌĂů ĚĞ “ƵƉĞƌǀŝƐŝſŶ ĚĞ CŽŶĚƵĐƚĂ ĚĞ MĞƌĐĂĚŽ ;͞DG“CM͟Ϳ ƉƌĞƐĞŶƚſ una denuncia ĂŶƚĞ Ğů FŝƐĐĂů ĚĞ ůĂ UŶŝĚĂĚ ĚĞ IŶǀĞƐƚŝŐĂĐŝſŶ ;͞FŝƐĐĂů͟ Ž ͞UI͟Ϳ͕ en contra de Vulion Capital S.A., RUT N° 77.916.171-4 ;͞IŶǀĞƐƚŝŐĂĚĂ͟ o ͞Vulion͟Ϳ por incumplimientos detectados a los deberes de información establecidos en el artículo 94 de la LUF y la NCG 475. Que, de acuerdo con los antecedentes recabados por el Fis cal durante la investigación, se determinaron los siguientes hechos: ͞Vulion Capital S.A., infringió su obligación de entrega de información continua, de acuerdo con lo dispuesto en la forma y plazos exigidos en la Norma de CarÆcter General 475 de 2022, a saber:",
+          "page_infraction": 1,
+          "category": "Deberes de información / reportabilidad",
+          "laft_directo": false,
+          "confidence": 0.78
+        }
+      ],
+      "pdf_sha256": "196fbaa1c1278db12fe52290e9118a0aad87ba04b4f3054f6c55aadb2a56dead"
+    }
   }
 }
