@@ -1,28 +1,5 @@
 [
   {
-    "run_at": "2026-08-25T10:57:22+00:00",
-    "status": "changed",
-    "from_year": 2026,
-    "to_year": 2026,
-    "sources": [
-      "UAF",
-      "CMF",
-      "SCJ",
-      "SUSESO",
-      "SP"
-    ],
-    "events_total": 977,
-    "new_events": 0,
-    "updated_events": 51,
-    "source_health": {
-      "CMF": "ok",
-      "SCJ": "ok",
-      "SP": "degraded",
-      "SUSESO": "degraded",
-      "UAF": "degraded"
-    }
-  },
-  {
     "run_at": "2026-08-26T10:58:34+00:00",
     "status": "changed",
     "from_year": 2026,
@@ -680,6 +657,29 @@
     ],
     "events_total": 998,
     "new_events": 0,
+    "updated_events": 67,
+    "source_health": {
+      "CMF": "ok",
+      "SCJ": "ok",
+      "SP": "degraded",
+      "SUSESO": "degraded",
+      "UAF": "degraded"
+    }
+  },
+  {
+    "run_at": "2026-10-06T16:52:42+00:00",
+    "status": "changed",
+    "from_year": 2026,
+    "to_year": 2026,
+    "sources": [
+      "UAF",
+      "CMF",
+      "SCJ",
+      "SUSESO",
+      "SP"
+    ],
+    "events_total": 1000,
+    "new_events": 2,
     "updated_events": 67,
     "source_health": {
       "CMF": "ok",

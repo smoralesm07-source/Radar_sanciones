@@ -6201,5 +6201,69 @@
       ],
       "pdf_sha256": "196fbaa1c1278db12fe52290e9118a0aad87ba04b4f3054f6c55aadb2a56dead"
     }
+  },
+  "10680": {
+    "resolution": "10680",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=4ac786ba8751797e689d48fc8e449a8bVFdwQmVVNXFRVFZOUkZsNVRrUmpOVTlCUFQwPQ==&secuencia=-1&t=1791305538",
+    "checked_at": "2026-10-06T16:52:22+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "partial",
+      "page_count": 49,
+      "subject_count": 1,
+      "legal_entity_count": 1,
+      "confidence": 0.78,
+      "subjects": [
+        {
+          "name": "Corredores de Bolsa Limitada",
+          "rut": "96665450-3",
+          "page_entity": 2,
+          "subject_kind": "legal_entity",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "De acuerdo con la información proporcionada por Itaœ, e ntre noviembre de 2023 y enero de 2024, la Corredora ofertó e intermedió instrumentos fin ancieros dirigidos a inversionistas calificados, a 18 de sus clientes que no tenían tal calidad, quienes realizaron operaciones respecto de tales instrumentos, segœn el siguiente detalle: De acuerdo con la información proporcionada por Itaœ, entre enero de 2024 y enero de 2026, la Corredora ofertó e intermedió instrumentos financieros dirigidos a inversionistas calificados, a 17 de sus clientes que no tenían tal calidad, quienes real izaron operaciones respecto de tales instrumentos, segœn el siguiente detalle:",
+          "page_infraction": 2,
+          "category": "Control interno / gestión de riesgos",
+          "laft_directo": false,
+          "confidence": 0.78
+        }
+      ],
+      "pdf_sha256": "a52aac760e102d6ead9ef62af2dc97ad8bfeead768a87261441e4cb150293e59"
+    }
+  },
+  "10681": {
+    "resolution": "10681",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=9b2c1da06997b34f3177f936642545a7VFdwQmVVNXFRVFZOUkZsNVRrUm5kMDFCUFQwPQ==&secuencia=-1&t=1791305538",
+    "checked_at": "2026-10-06T16:52:26+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "partial",
+      "page_count": 37,
+      "subject_count": 1,
+      "legal_entity_count": 1,
+      "confidence": 0.78,
+      "subjects": [
+        {
+          "name": "Seguros de Vida Suramericana S.A",
+          "rut": "76263414-7",
+          "page_entity": 2,
+          "subject_kind": "legal_entity",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "Segœn la información proporcionada por la misma Sociedad, entre junio de 2022 y febrero de 2026, Seguros de Vida Suramericana S.A. comercializó, al menos, 81 pólizas a travØs de, al menos, 18 agentes de ventas que, o habían sido eliminados o no habían sido incorporados en las nóminas correspondientes a los meses en que tales seguros fueron colocados y que la Compaæía remitió a este Servicio en el período mencionado y, por ende, no formaban parte del Registro de Agentes de Ventas de Seguros.",
+          "page_infraction": 2,
+          "category": "Conducta de mercado / seguros",
+          "laft_directo": false,
+          "confidence": 0.78
+        }
+      ],
+      "pdf_sha256": "daae38f5594c54675b8f297779b001b3fa461e2bb3140a9db7a4602877b14ab6"
+    }
   }
 }
