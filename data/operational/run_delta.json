@@ -1,93 +1,108 @@
 {
   "version": "0.8",
-  "run_at": "2026-10-06T16:52:42+00:00",
+  "run_at": "2026-10-07T17:28:58+00:00",
   "status": "changed",
   "counts": {
-    "new_events": 2,
-    "updated_events": 67,
+    "new_events": 0,
+    "updated_events": 69,
     "entity_changes": 0,
-    "new_entities": 2,
+    "new_entities": 0,
     "new_multisupervisor": 0
   },
-  "new_events": [
+  "new_events": [],
+  "updated_events": [
     {
-      "supervisor": "CMF",
-      "fecha": "2026-09-28",
-      "resolucion": "10681",
-      "sujeto_fuente": "Seguros de Vida Suramericana S.A",
-      "tipo_evento": "Sanción",
-      "estado": "Publicado",
-      "monto": null,
-      "unidad": "",
-      "categoria": "Conducta de mercado / seguros",
-      "laft_directo": false,
-      "resumen": "La resolución CMF N°10681 individualiza a Seguros de Vida Suramericana S.A (RUT 76263414-7). Sanción: sanción no extraída. Hecho/cargo extraído: Segœn la información proporcionada por la misma Sociedad, entre junio de 2022 y febrero de 2026, Seguros de Vida Suramericana S.A. comercializó, al menos, 81 pólizas a travØs de, al menos, 18 agentes de ventas que, o habían sido eliminados o no habían sido incorporados en las nóminas correspondientes a los meses en que tales seguros fueron colocados y que…",
-      "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-      "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=9b2c1da06997b34f3177f936642545a7VFdwQmVVNXFRVFZOUkZsNVRrUm5kMDFCUFQwPQ==&secuencia=-1&t=1791305538",
-      "event_group": "CMF resoluciones sancionatorias",
-      "source_title": "APLICA SANCIÓN A SEGUROS DE VIDA SURAMERICANA S.A.",
-      "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.2, hecho/cargo p.2).",
-      "needs_pdf_enrichment": true,
-      "rut_fuente": "76263414-7",
-      "uaf_registro_actual": "No encontrado / revisar",
-      "document_status": "partial",
-      "document_confidence": 0.78,
-      "document_subject_count": 1,
-      "document_entity_count": 1,
-      "document_page_entity": 2,
-      "document_page_sanction": null,
-      "document_page_infraction": 2,
-      "document_analysis_version": "cmf-doc-agent-1.0",
-      "document_pdf_sha256": "daae38f5594c54675b8f297779b001b3fa461e2bb3140a9db7a4602877b14ab6",
-      "other_entities_in_resolution": [],
-      "related_subjects": [],
-      "id": "EVT-0001",
-      "entity_id": "ENT-RUT-762634147",
-      "source_record_id": "CMF:10681:2026-09-28:76263414-7",
-      "evidence_id": "EVD-B30352494EAC3A35",
-      "decision_year": 2026,
-      "is_2020_plus": true
+      "event": {
+        "supervisor": "CMF",
+        "fecha": "2026-09-28",
+        "resolucion": "10681",
+        "sujeto_fuente": "Seguros de Vida Suramericana S.A",
+        "tipo_evento": "Sanción",
+        "estado": "Publicado",
+        "monto": null,
+        "unidad": "",
+        "categoria": "Conducta de mercado / seguros",
+        "laft_directo": false,
+        "resumen": "La resolución CMF N°10681 individualiza a Seguros de Vida Suramericana S.A (RUT 76263414-7). Sanción: sanción no extraída. Hecho/cargo extraído: Segœn la información proporcionada por la misma Sociedad, entre junio de 2022 y febrero de 2026, Seguros de Vida Suramericana S.A. comercializó, al menos, 81 pólizas a travØs de, al menos, 18 agentes de ventas que, o habían sido eliminados o no habían sido incorporados en las nóminas correspondientes a los meses en que tales seguros fueron colocados y que…",
+        "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=9b2c1da06997b34f3177f936642545a7VFdwQmVVNXFRVFZOUkZsNVRrUm5kMDFCUFQwPQ==&secuencia=-1&t=1791394129",
+        "event_group": "CMF resoluciones sancionatorias",
+        "source_title": "APLICA SANCIÓN A SEGUROS DE VIDA SURAMERICANA S.A.",
+        "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.2, hecho/cargo p.2).",
+        "needs_pdf_enrichment": true,
+        "rut_fuente": "76263414-7",
+        "uaf_registro_actual": "No encontrado / revisar",
+        "document_status": "partial",
+        "document_confidence": 0.78,
+        "document_subject_count": 1,
+        "document_entity_count": 1,
+        "document_page_entity": 2,
+        "document_page_sanction": null,
+        "document_page_infraction": 2,
+        "document_analysis_version": "cmf-doc-agent-1.0",
+        "document_pdf_sha256": "daae38f5594c54675b8f297779b001b3fa461e2bb3140a9db7a4602877b14ab6",
+        "other_entities_in_resolution": [],
+        "related_subjects": [],
+        "id": "EVT-0001",
+        "entity_id": "ENT-RUT-762634147",
+        "source_record_id": "CMF:10681:2026-09-28:76263414-7",
+        "evidence_id": "EVD-B30352494EAC3A35",
+        "decision_year": 2026,
+        "is_2020_plus": true
+      },
+      "changes": {
+        "resolution_url": {
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=9b2c1da06997b34f3177f936642545a7VFdwQmVVNXFRVFZOUkZsNVRrUm5kMDFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=9b2c1da06997b34f3177f936642545a7VFdwQmVVNXFRVFZOUkZsNVRrUm5kMDFCUFQwPQ==&secuencia=-1&t=1791394129"
+        }
+      }
     },
     {
-      "supervisor": "CMF",
-      "fecha": "2026-09-28",
-      "resolucion": "10680",
-      "sujeto_fuente": "Corredores de Bolsa Limitada",
-      "tipo_evento": "Sanción",
-      "estado": "Publicado",
-      "monto": null,
-      "unidad": "",
-      "categoria": "Control interno / gestión de riesgos",
-      "laft_directo": false,
-      "resumen": "La resolución CMF N°10680 individualiza a Corredores de Bolsa Limitada (RUT 96665450-3). Sanción: sanción no extraída. Hecho/cargo extraído: De acuerdo con la información proporcionada por Itaœ, e ntre noviembre de 2023 y enero de 2024, la Corredora ofertó e intermedió instrumentos fin ancieros dirigidos a inversionistas calificados, a 18 de sus clientes que no tenían tal calidad, quienes realizaron operaciones respecto de tales instrumentos, segœn el siguiente detalle: De acuerdo con la infor…",
-      "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-      "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=4ac786ba8751797e689d48fc8e449a8bVFdwQmVVNXFRVFZOUkZsNVRrUmpOVTlCUFQwPQ==&secuencia=-1&t=1791305538",
-      "event_group": "CMF resoluciones sancionatorias",
-      "source_title": "APLICA SANCIÓN A ITAÚ CORREDORES DE BOLSA LIMITADA",
-      "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.2, hecho/cargo p.2).",
-      "needs_pdf_enrichment": true,
-      "rut_fuente": "96665450-3",
-      "uaf_registro_actual": "No encontrado / revisar",
-      "document_status": "partial",
-      "document_confidence": 0.78,
-      "document_subject_count": 1,
-      "document_entity_count": 1,
-      "document_page_entity": 2,
-      "document_page_sanction": null,
-      "document_page_infraction": 2,
-      "document_analysis_version": "cmf-doc-agent-1.0",
-      "document_pdf_sha256": "a52aac760e102d6ead9ef62af2dc97ad8bfeead768a87261441e4cb150293e59",
-      "other_entities_in_resolution": [],
-      "related_subjects": [],
-      "id": "EVT-0002",
-      "entity_id": "ENT-RUT-966654503",
-      "source_record_id": "CMF:10680:2026-09-28:96665450-3",
-      "evidence_id": "EVD-2E0006CF33C17F31",
-      "decision_year": 2026,
-      "is_2020_plus": true
-    }
-  ],
-  "updated_events": [
+      "event": {
+        "supervisor": "CMF",
+        "fecha": "2026-09-28",
+        "resolucion": "10680",
+        "sujeto_fuente": "Corredores de Bolsa Limitada",
+        "tipo_evento": "Sanción",
+        "estado": "Publicado",
+        "monto": null,
+        "unidad": "",
+        "categoria": "Control interno / gestión de riesgos",
+        "laft_directo": false,
+        "resumen": "La resolución CMF N°10680 individualiza a Corredores de Bolsa Limitada (RUT 96665450-3). Sanción: sanción no extraída. Hecho/cargo extraído: De acuerdo con la información proporcionada por Itaœ, e ntre noviembre de 2023 y enero de 2024, la Corredora ofertó e intermedió instrumentos fin ancieros dirigidos a inversionistas calificados, a 18 de sus clientes que no tenían tal calidad, quienes realizaron operaciones respecto de tales instrumentos, segœn el siguiente detalle: De acuerdo con la infor…",
+        "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=4ac786ba8751797e689d48fc8e449a8bVFdwQmVVNXFRVFZOUkZsNVRrUmpOVTlCUFQwPQ==&secuencia=-1&t=1791394129",
+        "event_group": "CMF resoluciones sancionatorias",
+        "source_title": "APLICA SANCIÓN A ITAÚ CORREDORES DE BOLSA LIMITADA",
+        "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.2, hecho/cargo p.2).",
+        "needs_pdf_enrichment": true,
+        "rut_fuente": "96665450-3",
+        "uaf_registro_actual": "No encontrado / revisar",
+        "document_status": "partial",
+        "document_confidence": 0.78,
+        "document_subject_count": 1,
+        "document_entity_count": 1,
+        "document_page_entity": 2,
+        "document_page_sanction": null,
+        "document_page_infraction": 2,
+        "document_analysis_version": "cmf-doc-agent-1.0",
+        "document_pdf_sha256": "a52aac760e102d6ead9ef62af2dc97ad8bfeead768a87261441e4cb150293e59",
+        "other_entities_in_resolution": [],
+        "related_subjects": [],
+        "id": "EVT-0002",
+        "entity_id": "ENT-RUT-966654503",
+        "source_record_id": "CMF:10680:2026-09-28:96665450-3",
+        "evidence_id": "EVD-2E0006CF33C17F31",
+        "decision_year": 2026,
+        "is_2020_plus": true
+      },
+      "changes": {
+        "resolution_url": {
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=4ac786ba8751797e689d48fc8e449a8bVFdwQmVVNXFRVFZOUkZsNVRrUmpOVTlCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=4ac786ba8751797e689d48fc8e449a8bVFdwQmVVNXFRVFZOUkZsNVRrUmpOVTlCUFQwPQ==&secuencia=-1&t=1791394129"
+        }
+      }
+    },
     {
       "event": {
         "supervisor": "CMF",
@@ -102,7 +117,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°10269 individualiza a Vulion Capital S.A (RUT 77916171-4). Sanción: sanción no extraída. Hecho/cargo extraído: Que, mediante Oficio Reservado N°247.481, de 29 de diciembre de 2025 ;͞DĞŶƵŶĐŝĂ͟Ϳ͕ ůĂ DŝƌĞĐĐŝſŶ GĞŶĞƌĂů ĚĞ “ƵƉĞƌǀŝƐŝſŶ ĚĞ CŽŶĚƵĐƚĂ ĚĞ MĞƌĐĂĚŽ ;͞DG“CM͟Ϳ ƉƌĞƐĞŶƚſ una denuncia ĂŶƚĞ Ğů FŝƐĐĂů ĚĞ ůĂ UŶŝĚĂĚ ĚĞ IŶǀĞƐƚŝŐĂĐŝſŶ ;͞FŝƐĐĂů͟ Ž ͞UI͟Ϳ͕ en contra de Vulion Capital S.A., RUT N° 77.916.171-4 ;͞IŶǀĞƐƚŝŐĂĚĂ͟ o ͞Vulion͟Ϳ por incumplimientos detectados a los d…",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=944dfebc1e99b4c9de8fccf2b467b9e1VFdwQmVVNXFRVFZOUkZsM1RrUlpNMDVSUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=944dfebc1e99b4c9de8fccf2b467b9e1VFdwQmVVNXFRVFZOUkZsM1RrUlpNMDVSUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A VULION CAPITAL S.A.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.1, hecho/cargo p.1).",
@@ -129,8 +144,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=944dfebc1e99b4c9de8fccf2b467b9e1VFdwQmVVNXFRVFZOUkZsM1RrUlpNMDVSUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=944dfebc1e99b4c9de8fccf2b467b9e1VFdwQmVVNXFRVFZOUkZsM1RrUlpNMDVSUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=944dfebc1e99b4c9de8fccf2b467b9e1VFdwQmVVNXFRVFZOUkZsM1RrUlpNMDVSUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=944dfebc1e99b4c9de8fccf2b467b9e1VFdwQmVVNXFRVFZOUkZsM1RrUlpNMDVSUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -148,7 +163,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°9913 individualiza a Inversiones A&C SpA (RUT 76775071-4). Sanción: sanción no extraída. Materia clasificada: Inversiones / custodia / mercado de valores.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f6b21eb89f0835f012661d0ffc3c443VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFSUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f6b21eb89f0835f012661d0ffc3c443VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFSUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A ASESORÍAS E INVERSIONES A&C SPA",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.14).",
@@ -175,8 +190,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f6b21eb89f0835f012661d0ffc3c443VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFSUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f6b21eb89f0835f012661d0ffc3c443VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFSUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f6b21eb89f0835f012661d0ffc3c443VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFSUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f6b21eb89f0835f012661d0ffc3c443VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFSUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -194,7 +209,7 @@
         "laft_directo": false,
         "resumen": "RESUELVE REPOSICIÓN DEDUCIDA POR NEVASA S.A. CORREDORES DE BOLSA",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=329b1be8c478604e31b44f72709bdeb5VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFuUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=329b1be8c478604e31b44f72709bdeb5VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFuUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "RESUELVE REPOSICIÓN DEDUCIDA POR NEVASA S.A. CORREDORES DE BOLSA",
         "notes": "Captura automática de índice CMF. cmf-doc-agent-1.0: documento leído, pero no se individualizó una entidad jurídica emitible.",
@@ -213,8 +228,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=329b1be8c478604e31b44f72709bdeb5VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFuUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=329b1be8c478604e31b44f72709bdeb5VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFuUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=329b1be8c478604e31b44f72709bdeb5VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFuUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=329b1be8c478604e31b44f72709bdeb5VFdwQmVVNXFRVFZOUkZVMVRYcFZNVTFuUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -232,7 +247,7 @@
         "laft_directo": false,
         "resumen": "APLICA SANCIÓN AL SEÑOR FRANCISCO GARDEWEG OSSA",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=35ba8f8ef8a1ef8fbd79fe8a7f2a9974VFdwQmVVNXFRVFZOUkZVelQwUlZORTlCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=35ba8f8ef8a1ef8fbd79fe8a7f2a9974VFdwQmVVNXFRVFZOUkZVelQwUlZORTlCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN AL SEÑOR FRANCISCO GARDEWEG OSSA",
         "notes": "Captura automática de índice CMF. cmf-doc-agent-1.0: documento leído, pero no se individualizó una entidad jurídica emitible.",
@@ -251,8 +266,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=35ba8f8ef8a1ef8fbd79fe8a7f2a9974VFdwQmVVNXFRVFZOUkZVelQwUlZORTlCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=35ba8f8ef8a1ef8fbd79fe8a7f2a9974VFdwQmVVNXFRVFZOUkZVelQwUlZORTlCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=35ba8f8ef8a1ef8fbd79fe8a7f2a9974VFdwQmVVNXFRVFZOUkZVelQwUlZORTlCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=35ba8f8ef8a1ef8fbd79fe8a7f2a9974VFdwQmVVNXFRVFZOUkZVelQwUlZORTlCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -270,7 +285,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°9558 individualiza a COOPERATIVA DE AHORRO Y CRÉDITO UNIÓN AÉREA LIMITADA (RUT 84156800-1). Sanción: sanción no extraída. Hecho/cargo extraído: En el marco de un proceso de recopilación de anteced entes, la Unidad de Investigación, constató posibles incumplimientos por parte de CAPUAL derivados de la falta de envío a sus titulares de los avisos de renovación de los depósitos a plazo y del estado con los movimientos, y de saldos de la cuenta de ahorro a plazo de los œltimos doce meses; y el uso de…",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=2c303f2b7f57d868774a92cb68d322b7VFdwQmVVNXFRVFZOUkZVelQwUlZORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=2c303f2b7f57d868774a92cb68d322b7VFdwQmVVNXFRVFZOUkZVelQwUlZORTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A COOPERATIVA DE AHORRO Y CRÉDITO UNIÓN AÉREA LIMITADA",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.1, hecho/cargo p.1).",
@@ -297,8 +312,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=2c303f2b7f57d868774a92cb68d322b7VFdwQmVVNXFRVFZOUkZVelQwUlZORTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=2c303f2b7f57d868774a92cb68d322b7VFdwQmVVNXFRVFZOUkZVelQwUlZORTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=2c303f2b7f57d868774a92cb68d322b7VFdwQmVVNXFRVFZOUkZVelQwUlZORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=2c303f2b7f57d868774a92cb68d322b7VFdwQmVVNXFRVFZOUkZVelQwUlZORTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -316,7 +331,7 @@
         "laft_directo": false,
         "resumen": "RESUELVE REPOSICIÓN DEDUCIDA POR MBI CORREDORES DE BOLSA S.A.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7acf77b19dda103fbeff7bb85b704a91VFdwQmVVNXFRVFZOUkZVeVQxUk5ORTVCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7acf77b19dda103fbeff7bb85b704a91VFdwQmVVNXFRVFZOUkZVeVQxUk5ORTVCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "RESUELVE REPOSICIÓN DEDUCIDA POR MBI CORREDORES DE BOLSA S.A.",
         "notes": "Captura automática de índice CMF. cmf-doc-agent-1.0: documento leído, pero no se individualizó una entidad jurídica emitible.",
@@ -335,8 +350,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7acf77b19dda103fbeff7bb85b704a91VFdwQmVVNXFRVFZOUkZVeVQxUk5ORTVCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7acf77b19dda103fbeff7bb85b704a91VFdwQmVVNXFRVFZOUkZVeVQxUk5ORTVCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7acf77b19dda103fbeff7bb85b704a91VFdwQmVVNXFRVFZOUkZVeVQxUk5ORTVCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7acf77b19dda103fbeff7bb85b704a91VFdwQmVVNXFRVFZOUkZVeVQxUk5ORTVCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -354,7 +369,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°8942 individualiza a Entre los meses de mayo y octubre de 2024 , Banco Santander-Chile (RUT 97036000-K). Sanción: sanción no extraída. Materia clasificada: Cumplimiento regulatorio.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=ec8635d2bd2e86ce15fbd6676f413143VFdwQmVVNXFRVFJOUkZVd1RucEJlVTFSUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=ec8635d2bd2e86ce15fbd6676f413143VFdwQmVVNXFRVFJOUkZVd1RucEJlVTFSUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN DE MULTA A BANCO SANTANDER-CHILE",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.3).",
@@ -381,8 +396,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=ec8635d2bd2e86ce15fbd6676f413143VFdwQmVVNXFRVFJOUkZVd1RucEJlVTFSUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=ec8635d2bd2e86ce15fbd6676f413143VFdwQmVVNXFRVFJOUkZVd1RucEJlVTFSUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=ec8635d2bd2e86ce15fbd6676f413143VFdwQmVVNXFRVFJOUkZVd1RucEJlVTFSUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=ec8635d2bd2e86ce15fbd6676f413143VFdwQmVVNXFRVFJOUkZVd1RucEJlVTFSUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -400,7 +415,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°8941 individualiza a Durante los meses de mayo, junio y septiembre, todos d e 2024 , Banco de Chile (RUT 97004000-5). Sanción: sanción no extraída. Materia clasificada: Cumplimiento regulatorio.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=447e7983068e87151a1aafea66f4a272VFdwQmVVNXFRVFJOUkZVd1RucEJlRTlSUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=447e7983068e87151a1aafea66f4a272VFdwQmVVNXFRVFJOUkZVd1RucEJlRTlSUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN DE MULTA A BANCO DE CHILE",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.4).",
@@ -427,8 +442,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=447e7983068e87151a1aafea66f4a272VFdwQmVVNXFRVFJOUkZVd1RucEJlRTlSUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=447e7983068e87151a1aafea66f4a272VFdwQmVVNXFRVFJOUkZVd1RucEJlRTlSUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=447e7983068e87151a1aafea66f4a272VFdwQmVVNXFRVFJOUkZVd1RucEJlRTlSUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=447e7983068e87151a1aafea66f4a272VFdwQmVVNXFRVFJOUkZVd1RucEJlRTlSUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -446,7 +461,7 @@
         "laft_directo": false,
         "resumen": "RESUELVE REPOSICIÓN DEDUCIDA POR LIQUITECH SpA",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=afe95948f08d01ba44993b77214955ccVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTlSUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=afe95948f08d01ba44993b77214955ccVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTlSUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "RESUELVE REPOSICIÓN DEDUCIDA POR LIQUITECH SpA",
         "notes": "Captura automática de índice CMF. cmf-doc-agent-1.0: documento leído, pero no se individualizó una entidad jurídica emitible.",
@@ -465,8 +480,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=afe95948f08d01ba44993b77214955ccVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTlSUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=afe95948f08d01ba44993b77214955ccVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTlSUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=afe95948f08d01ba44993b77214955ccVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTlSUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=afe95948f08d01ba44993b77214955ccVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTlSUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -484,7 +499,7 @@
         "laft_directo": false,
         "resumen": "APLICA SANCIÓN A VALORES SECURITY S.A., CORREDORES DE BOLSA",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=389abb8d516ede665faaf5d8413044ebVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTEzUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=389abb8d516ede665faaf5d8413044ebVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTEzUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A VALORES SECURITY S.A., CORREDORES DE BOLSA",
         "notes": "Captura automática de índice CMF. cmf-doc-agent-1.0: documento leído, pero no se individualizó una entidad jurídica emitible.",
@@ -503,8 +518,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=389abb8d516ede665faaf5d8413044ebVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTEzUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=389abb8d516ede665faaf5d8413044ebVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTEzUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=389abb8d516ede665faaf5d8413044ebVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTEzUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=389abb8d516ede665faaf5d8413044ebVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTEzUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -522,7 +537,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°8641 individualiza a Respecto del cliente Sociedad Radiodifusora Prema Limitada (RUT 78767690-1). Sanción: sanción no extraída. Hecho/cargo extraído: Reporte de inversiones de Reni Müller Knoop de febrer o de 2024, emitido por Credicorp Capital; Reporte de inversiones de Reni Müller Knoop de marzo d e 2024, emitido por Credicorp Capital;",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A LARRAÍN VIAL S.A. CORREDORA DE BOLSA.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.17, hecho/cargo p.17).",
@@ -686,8 +701,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -705,7 +720,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°8641 individualiza a Cartola patrimonial de Transportes Lmora Ltda. ( (RUT 79695460-4). Sanción: sanción no extraída. Hecho/cargo extraído: Corredora de Bolsa , en los siguientes tØrminos: ͞Infracción reiterada a lo dispuesto en el inciso primero del nœmero 3 de la Norma de CarÆcter General N°380, con relación a la Norma de CarÆcter General N°216 y el inciso segundo del artículo 8° de la Ley N°18.045, toda vez que, entre marzo y mayo de 2024, la Corredora ofertó e intermedió instrumentos diri…",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A LARRAÍN VIAL S.A. CORREDORA DE BOLSA.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.17, hecho/cargo p.10).",
@@ -869,8 +884,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -888,7 +903,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°8641 individualiza a Carta enviada por BPH S.A. ( (RUT 96519830-K). Sanción: sanción no extraída. Hecho/cargo extraído: Corredora de Bolsa , en los siguientes tØrminos: ͞Infracción reiterada a lo dispuesto en el inciso primero del nœmero 3 de la Norma de CarÆcter General N°380, con relación a la Norma de CarÆcter General N°216 y el inciso segundo del artículo 8° de la Ley N°18.045, toda vez que, entre marzo y mayo de 2024, la Corredora ofertó e intermedió instrumentos diri…",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A LARRAÍN VIAL S.A. CORREDORA DE BOLSA.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.17, hecho/cargo p.9).",
@@ -1052,8 +1067,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -1071,7 +1086,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°8641 individualiza a Declaración jurada de inversionista calificado de Gather Consultores SpA ( (RUT 76216210-5). Sanción: sanción no extraída. Materia clasificada: Conducta de mercado / seguros.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A LARRAÍN VIAL S.A. CORREDORA DE BOLSA.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.18).",
@@ -1235,8 +1250,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -1254,7 +1269,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°8641 individualiza a Carta enviada por Inversiones Transportes y Servicio Ltda. ( (RUT 78764410-4). Sanción: sanción no extraída. Materia clasificada: Conducta de mercado / seguros.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A LARRAÍN VIAL S.A. CORREDORA DE BOLSA.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.19).",
@@ -1418,8 +1433,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -1437,7 +1452,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°8641 individualiza a Carta enviada por Its Reciclaje Ltda. ( (RUT 76865295-3). Sanción: sanción no extraída. Materia clasificada: Conducta de mercado / seguros.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A LARRAÍN VIAL S.A. CORREDORA DE BOLSA.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.20).",
@@ -1601,8 +1616,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=729f15f690f1d3078750afe46c2679aaVFdwQmVVNXFRVFJOUkZWNlRVUlZOVTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -1620,7 +1635,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°8401 individualiza a UNIDAD MUTUOS HIPOTECARIOS S.A (RUT 77342206-0). Sanción: sanción no extraída. Materia clasificada: Cumplimiento regulatorio.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d8f6d2664faa8016bb7a7d0202ac7e12VFdwQmVVNXFRVFJOUkZWNVRYcEZNMDVuUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d8f6d2664faa8016bb7a7d0202ac7e12VFdwQmVVNXFRVFJOUkZWNVRYcEZNMDVuUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A UNIDAD MUTUOS HIPOTECARIOS S.A.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.1).",
@@ -1647,8 +1662,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d8f6d2664faa8016bb7a7d0202ac7e12VFdwQmVVNXFRVFJOUkZWNVRYcEZNMDVuUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d8f6d2664faa8016bb7a7d0202ac7e12VFdwQmVVNXFRVFJOUkZWNVRYcEZNMDVuUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d8f6d2664faa8016bb7a7d0202ac7e12VFdwQmVVNXFRVFJOUkZWNVRYcEZNMDVuUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d8f6d2664faa8016bb7a7d0202ac7e12VFdwQmVVNXFRVFJOUkZWNVRYcEZNMDVuUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -1666,7 +1681,7 @@
         "laft_directo": false,
         "resumen": "APLICA SANCIÓN A NEVASA S.A. CORREDORES DE BOLSA",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cabef5a30836424b559c957a07eb6cfdVFdwQmVVNXFRVFJOUkZWNFRucEJlVTVuUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cabef5a30836424b559c957a07eb6cfdVFdwQmVVNXFRVFJOUkZWNFRucEJlVTVuUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A NEVASA S.A. CORREDORES DE BOLSA",
         "notes": "Captura automática de índice CMF. cmf-doc-agent-1.0: documento leído, pero no se individualizó una entidad jurídica emitible.",
@@ -1685,8 +1700,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cabef5a30836424b559c957a07eb6cfdVFdwQmVVNXFRVFJOUkZWNFRucEJlVTVuUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cabef5a30836424b559c957a07eb6cfdVFdwQmVVNXFRVFJOUkZWNFRucEJlVTVuUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cabef5a30836424b559c957a07eb6cfdVFdwQmVVNXFRVFJOUkZWNFRucEJlVTVuUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cabef5a30836424b559c957a07eb6cfdVFdwQmVVNXFRVFJOUkZWNFRucEJlVTVuUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -1704,7 +1719,7 @@
         "laft_directo": false,
         "resumen": "APLICA SANCIÓN A ANDRÉS FELIPE ROJAS FIGUEROA",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f1e255d0977c187f6c00a69ade4fed3VFdwQmVVNXFRVE5OUkZWM1RXcEZNMDVCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f1e255d0977c187f6c00a69ade4fed3VFdwQmVVNXFRVE5OUkZWM1RXcEZNMDVCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A ANDRÉS FELIPE ROJAS FIGUEROA",
         "notes": "Captura automática de índice CMF. cmf-doc-agent-1.0: documento leído, pero no se individualizó una entidad jurídica emitible.",
@@ -1723,8 +1738,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f1e255d0977c187f6c00a69ade4fed3VFdwQmVVNXFRVE5OUkZWM1RXcEZNMDVCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f1e255d0977c187f6c00a69ade4fed3VFdwQmVVNXFRVE5OUkZWM1RXcEZNMDVCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f1e255d0977c187f6c00a69ade4fed3VFdwQmVVNXFRVE5OUkZWM1RXcEZNMDVCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=0f1e255d0977c187f6c00a69ade4fed3VFdwQmVVNXFRVE5OUkZWM1RXcEZNMDVCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -1742,7 +1757,7 @@
         "laft_directo": true,
         "resumen": "La resolución CMF N°8062 individualiza a MBI Corredores de Bolsa S.A (RUT 96921130-0). Sanción: sanción no extraída. Hecho/cargo extraído: De acuerdo con la información proporcionada por MBI, entre los meses de junio y agosto de 2024, la Corredora ofertó e intermedió instrumentos financieros dirigidos a inversionistas calificados, a 123 de sus clientes que no tenían tal cali dad, quienes realizaron operaciones respecto de tales instrumentos, de acuerdo con el detalle contenido en el anexo al…",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3ca70b057f2d3b58c43d9eee1611ab90VFdwQmVVNXFRVE5OUkZWM1RWUm5NMDVuUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3ca70b057f2d3b58c43d9eee1611ab90VFdwQmVVNXFRVE5OUkZWM1RWUm5NMDVuUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A MBI CORREDORES DE BOLSA S.A.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.2, hecho/cargo p.2).",
@@ -1775,8 +1790,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3ca70b057f2d3b58c43d9eee1611ab90VFdwQmVVNXFRVE5OUkZWM1RWUm5NMDVuUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3ca70b057f2d3b58c43d9eee1611ab90VFdwQmVVNXFRVE5OUkZWM1RWUm5NMDVuUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3ca70b057f2d3b58c43d9eee1611ab90VFdwQmVVNXFRVE5OUkZWM1RWUm5NMDVuUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3ca70b057f2d3b58c43d9eee1611ab90VFdwQmVVNXFRVE5OUkZWM1RWUm5NMDVuUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -1794,7 +1809,7 @@
         "laft_directo": true,
         "resumen": "La resolución CMF N°8062 individualiza a mandato de administración de cartera a MBI Inversiones S .A. ( (RUT 76023608-K). Sanción: sanción no extraída. Hecho/cargo extraído: No obstante, la Corredora, en cumplimiento de sus políticas internas y de las normativas vigentes, procedió a llevar a cabo un exhaustivo proc eso de debida diligencia sobre dichos clientes al momento de detectar transacciones sobre este tipo de fondos. Una vez confirmada su elegibilidad a través de este pr oceso de debida diligencia, la Corredora procedi…",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3ca70b057f2d3b58c43d9eee1611ab90VFdwQmVVNXFRVE5OUkZWM1RWUm5NMDVuUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3ca70b057f2d3b58c43d9eee1611ab90VFdwQmVVNXFRVE5OUkZWM1RWUm5NMDVuUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A MBI CORREDORES DE BOLSA S.A.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.6, hecho/cargo p.4).",
@@ -1827,8 +1842,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3ca70b057f2d3b58c43d9eee1611ab90VFdwQmVVNXFRVE5OUkZWM1RWUm5NMDVuUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3ca70b057f2d3b58c43d9eee1611ab90VFdwQmVVNXFRVE5OUkZWM1RWUm5NMDVuUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3ca70b057f2d3b58c43d9eee1611ab90VFdwQmVVNXFRVE5OUkZWM1RWUm5NMDVuUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=3ca70b057f2d3b58c43d9eee1611ab90VFdwQmVVNXFRVE5OUkZWM1RWUm5NMDVuUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -1846,7 +1861,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°7873 individualiza a CAMERON PARTNERS ADMINISTRADORA DE FONDOS S.A. 210 UF (RUT 77009274-4). Sanción: Multa UF 210. Hecho/cargo extraído: INFRACCIONES A LOS DEBERES DE INFORMACIÓN CONTINUA III.1.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A SOCIEDADES QUE INDICA",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.3, sanción p.29, hecho/cargo p.3).",
@@ -1904,8 +1919,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -1923,7 +1938,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°7873 individualiza a SOCIEDAD ADMINISTRADORA RÍO PUELO S.A. 120 UF (RUT 77878812-8). Sanción: Multa UF 120. Materia clasificada: Deberes de información / reportabilidad.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A SOCIEDADES QUE INDICA",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.5, sanción p.29).",
@@ -1981,8 +1996,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2000,7 +2015,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°7873 individualiza a ADMINISTRADORA SOUTH-NORTH VENTURES S.A. 90 UF (RUT 77252801-9). Sanción: Multa UF 90. Materia clasificada: Deberes de información / reportabilidad.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A SOCIEDADES QUE INDICA",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.7, sanción p.29).",
@@ -2058,8 +2073,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2077,7 +2092,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°7873 individualiza a AMPLO ADMINISTRADORA DE FONDOS DE INVERSIÓN PRIVADOS S.A. 90 UF (RUT 76585886-0). Sanción: Multa UF 90. Materia clasificada: Deberes de información / reportabilidad.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A SOCIEDADES QUE INDICA",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.9, sanción p.29).",
@@ -2135,8 +2150,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2154,7 +2169,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°7873 individualiza a KAPTURE CAPITAL S.A. (RUT 77139519-8). Sanción: Censura. Materia clasificada: Deberes de información / reportabilidad.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A SOCIEDADES QUE INDICA",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.12, sanción p.29).",
@@ -2212,8 +2227,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2231,7 +2246,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°7873 individualiza a SARTOR ADMINISTRADORA DE FONDOS DE INVERSIÓN PRIVADOS S.A. (RUT 76266326-0). Sanción: Censura. Materia clasificada: Deberes de información / reportabilidad.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A SOCIEDADES QUE INDICA",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.15, sanción p.29).",
@@ -2289,8 +2304,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2308,7 +2323,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°7873 individualiza a ADMINISTRADORA DE PROYECTOS INMOBILIARIOS S.A. 210 UF (RUT 76670250-3). Sanción: Multa UF 210. Materia clasificada: Deberes de información / reportabilidad.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A SOCIEDADES QUE INDICA",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.18, sanción p.29).",
@@ -2366,8 +2381,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=f968139d9c62d7604ae09e3605534c0cVFdwQmVVNXFRVE5OUkZFMFRucGpORTFCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2385,7 +2400,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°7352 individualiza a LIQUITECH SpA (RUT 76933833-0). Sanción: sanción no extraída. Hecho/cargo extraído: De acuerdo con los antecedentes recabados por la Unidad de Investigación mediante Oficio Reservado UI N° 1.026, la estimación efectuada re specto del diferencial entre el monto de ͞Intereses con la tasa de interés recalculada ($) ͟, en que se agregan las partidas que no califican como comisiones, y el monto de intereses pactado de haberse utilizado la Tas…",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d31a33d97863a2bab626be2d17aa99f7VFdwQmVVNXFRVE5OUkZFeFRtcEplazUzUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d31a33d97863a2bab626be2d17aa99f7VFdwQmVVNXFRVE5OUkZFeFRtcEplazUzUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A LIQUITECH SPA.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.3, hecho/cargo p.3).",
@@ -2418,8 +2433,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d31a33d97863a2bab626be2d17aa99f7VFdwQmVVNXFRVE5OUkZFeFRtcEplazUzUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d31a33d97863a2bab626be2d17aa99f7VFdwQmVVNXFRVE5OUkZFeFRtcEplazUzUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d31a33d97863a2bab626be2d17aa99f7VFdwQmVVNXFRVE5OUkZFeFRtcEplazUzUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d31a33d97863a2bab626be2d17aa99f7VFdwQmVVNXFRVE5OUkZFeFRtcEplazUzUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2437,7 +2452,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°7352 individualiza a Pregunta 4b) Respecto a la sociedad de garantía recíproca INGE ( (RUT 77201957-2). Sanción: sanción no extraída. Materia clasificada: Crédito / tasa máxima convencional.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d31a33d97863a2bab626be2d17aa99f7VFdwQmVVNXFRVE5OUkZFeFRtcEplazUzUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d31a33d97863a2bab626be2d17aa99f7VFdwQmVVNXFRVE5OUkZFeFRtcEplazUzUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A LIQUITECH SPA.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.6).",
@@ -2470,8 +2485,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d31a33d97863a2bab626be2d17aa99f7VFdwQmVVNXFRVE5OUkZFeFRtcEplazUzUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d31a33d97863a2bab626be2d17aa99f7VFdwQmVVNXFRVE5OUkZFeFRtcEplazUzUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d31a33d97863a2bab626be2d17aa99f7VFdwQmVVNXFRVE5OUkZFeFRtcEplazUzUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d31a33d97863a2bab626be2d17aa99f7VFdwQmVVNXFRVE5OUkZFeFRtcEplazUzUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2489,7 +2504,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°7090 individualiza a BTG Pactual Chile S.A. Administradora General de Fondos (RUT 96966250-7). Sanción: sanción no extraída. Materia clasificada: Control interno / gestión de riesgos.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=48d378c386badf22f1dd009ab18ccd0eVFdwQmVVNXFRVE5OUkZGNlRucFpORTEzUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=48d378c386badf22f1dd009ab18ccd0eVFdwQmVVNXFRVE5OUkZGNlRucFpORTEzUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A BTG PACTUAL CHILE S.A. ADMINISTRADORA GENERAL DE FONDOS",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.2).",
@@ -2528,8 +2543,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=48d378c386badf22f1dd009ab18ccd0eVFdwQmVVNXFRVE5OUkZGNlRucFpORTEzUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=48d378c386badf22f1dd009ab18ccd0eVFdwQmVVNXFRVE5OUkZGNlRucFpORTEzUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=48d378c386badf22f1dd009ab18ccd0eVFdwQmVVNXFRVE5OUkZGNlRucFpORTEzUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=48d378c386badf22f1dd009ab18ccd0eVFdwQmVVNXFRVE5OUkZGNlRucFpORTEzUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2547,7 +2562,7 @@
         "laft_directo": true,
         "resumen": "La resolución CMF N°7090 individualiza a Remitir copia del acuerdo suscrito entre Fondo de Inversión Privada Facturas I (RUT 76877009-3). Sanción: sanción no extraída. Hecho/cargo extraído: Remitir los documentos y procedimientos asociados a la prevención de lavado de activos (AML) del FIP Facturas I.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=48d378c386badf22f1dd009ab18ccd0eVFdwQmVVNXFRVE5OUkZGNlRucFpORTEzUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=48d378c386badf22f1dd009ab18ccd0eVFdwQmVVNXFRVE5OUkZGNlRucFpORTEzUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A BTG PACTUAL CHILE S.A. ADMINISTRADORA GENERAL DE FONDOS",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.37, hecho/cargo p.37).",
@@ -2586,8 +2601,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=48d378c386badf22f1dd009ab18ccd0eVFdwQmVVNXFRVE5OUkZGNlRucFpORTEzUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=48d378c386badf22f1dd009ab18ccd0eVFdwQmVVNXFRVE5OUkZGNlRucFpORTEzUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=48d378c386badf22f1dd009ab18ccd0eVFdwQmVVNXFRVE5OUkZGNlRucFpORTEzUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=48d378c386badf22f1dd009ab18ccd0eVFdwQmVVNXFRVE5OUkZGNlRucFpORTEzUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2605,7 +2620,7 @@
         "laft_directo": true,
         "resumen": "La resolución CMF N°7089 individualiza a In versiones Guayasamín SpA (RUT 76520458-5). Sanción: sanción no extraída. Hecho/cargo extraído: Se realizaba un análisis diario de las facturas vencidas para identificar morosidades, aplicar castigos conforme al Acuerdo y evitar el incumplimiento del ratio de 1,2 veces. - Control de Cumplimiento del Contrato Marco: Se supervisaba que su monto cumpliera con el saldo de capital de los pagarés multiplicado por 1,2, además de monitorear límites de conce…",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A ZURICH CHILE ASSET MANAGEMENT ADMINISTRADORA GENERAL DE FONDOS S.A.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.77, hecho/cargo p.11).",
@@ -2659,8 +2674,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2678,7 +2693,7 @@
         "laft_directo": true,
         "resumen": "La resolución CMF N°7089 individualiza a En el caso de Comercial Textil Ziko Limitada ( (RUT 77831110-6). Sanción: sanción no extraída. Hecho/cargo extraído: No obstante, con el tiempo comenzaron a acumularse incumplimientos graves por parte de Factop. Esta omisión refleja la ausenci a de procesos internos sólidos de gestión de riesgos, lo que facilitó la acumulación de op eraciones altamente deterioradas y con vínculos cruzados entre clientes y deudores. Se identif icaron sociedades relacionadas con los dueño…",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A ZURICH CHILE ASSET MANAGEMENT ADMINISTRADORA GENERAL DE FONDOS S.A.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.94, hecho/cargo p.94).",
@@ -2732,8 +2747,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2751,7 +2766,7 @@
         "laft_directo": true,
         "resumen": "La resolución CMF N°7089 individualiza a Limitada ( (RUT 76035294-2). Sanción: sanción no extraída. Hecho/cargo extraído: La ausencia de una regulación explícita respecto de este tipo de con flictos de interés no solo implicó el incumplimiento del deber fiduciario de actuar en el mejor i nterés del FIP Ͷy, por extensión, del Fondo de InversiónͶ, sino que también expuso a riesgo la integridad del mercado financiero, al permitir que situaciones de potencial abuso quedaran sin…",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A ZURICH CHILE ASSET MANAGEMENT ADMINISTRADORA GENERAL DE FONDOS S.A.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.77, hecho/cargo p.77).",
@@ -2805,8 +2820,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cb15dcbb99cf9ac5c82fa2a7ce57bd8eVFdwQmVVNXFRVE5OUkZGNlRucFpNazlSUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2824,7 +2839,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°6791 individualiza a LarrainVial Asset Management Administradora General d e Fondos S.A (RUT 96955500-K). Sanción: sanción no extraída. Materia clasificada: Control interno / gestión de riesgos.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=569c537d7104751b7bdfd88a7077d2d7VFdwQmVVNXFRVEpOUkZGNVRXcHJlVTVCUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=569c537d7104751b7bdfd88a7077d2d7VFdwQmVVNXFRVEpOUkZGNVRXcHJlVTVCUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN A LARRAIN VIAL ASSET MANAGEMENT ADMINISTRADORA GENERAL DE FONDOS S.A.",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.2).",
@@ -2851,8 +2866,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=569c537d7104751b7bdfd88a7077d2d7VFdwQmVVNXFRVEpOUkZGNVRXcHJlVTVCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=569c537d7104751b7bdfd88a7077d2d7VFdwQmVVNXFRVEpOUkZGNVRXcHJlVTVCUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=569c537d7104751b7bdfd88a7077d2d7VFdwQmVVNXFRVEpOUkZGNVRXcHJlVTVCUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=569c537d7104751b7bdfd88a7077d2d7VFdwQmVVNXFRVEpOUkZGNVRXcHJlVTVCUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2870,7 +2885,7 @@
         "laft_directo": false,
         "resumen": "La resolución CMF N°6790 individualiza a noviembre, todos de 2024, Banco Falabella (RUT 96509660-4). Sanción: sanción no extraída. Materia clasificada: Cumplimiento regulatorio.",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=69e71572b83eaa6d6ab0b4fe7e8244d4VFdwQmVVNXFRVEpOUkZGNVRXcHJlRTlSUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=69e71572b83eaa6d6ab0b4fe7e8244d4VFdwQmVVNXFRVEpOUkZGNVRXcHJlRTlSUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN DE MULTA A BANCO FALABELLA",
         "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.4).",
@@ -2897,8 +2912,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=69e71572b83eaa6d6ab0b4fe7e8244d4VFdwQmVVNXFRVEpOUkZGNVRXcHJlRTlSUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=69e71572b83eaa6d6ab0b4fe7e8244d4VFdwQmVVNXFRVEpOUkZGNVRXcHJlRTlSUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=69e71572b83eaa6d6ab0b4fe7e8244d4VFdwQmVVNXFRVEpOUkZGNVRXcHJlRTlSUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=69e71572b83eaa6d6ab0b4fe7e8244d4VFdwQmVVNXFRVEpOUkZGNVRXcHJlRTlSUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     },
@@ -2916,7 +2931,7 @@
         "laft_directo": false,
         "resumen": "APLICA SANCIÓN DE MULTA A BANCO DEL ESTADO DE CHILE",
         "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b93f652f28a84eeecc74250bc185373aVFdwQmVVNXFRVEpOUkZGNVRXcHJlRTVSUFQwPQ==&secuencia=-1&t=1791305538",
+        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b93f652f28a84eeecc74250bc185373aVFdwQmVVNXFRVEpOUkZGNVRXcHJlRTVSUFQwPQ==&secuencia=-1&t=1791394129",
         "event_group": "CMF resoluciones sancionatorias",
         "source_title": "APLICA SANCIÓN DE MULTA A BANCO DEL ESTADO DE CHILE",
         "notes": "Captura automática de índice CMF. cmf-doc-agent-1.0: documento leído, pero no se individualizó una entidad jurídica emitible.",
@@ -2935,100 +2950,8 @@
       },
       "changes": {
         "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b93f652f28a84eeecc74250bc185373aVFdwQmVVNXFRVEpOUkZGNVRXcHJlRTVSUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b93f652f28a84eeecc74250bc185373aVFdwQmVVNXFRVEpOUkZGNVRXcHJlRTVSUFQwPQ==&secuencia=-1&t=1791305538"
-        }
-      }
-    },
-    {
-      "event": {
-        "supervisor": "CMF",
-        "fecha": "2026-06-26",
-        "resolucion": "6787",
-        "sujeto_fuente": "2025, Banco Ripley",
-        "tipo_evento": "Sanción",
-        "estado": "Publicado",
-        "monto": null,
-        "unidad": "",
-        "categoria": "Cumplimiento regulatorio",
-        "laft_directo": false,
-        "resumen": "La resolución CMF N°6787 individualiza a 2025, Banco Ripley (RUT 97947000-2). Sanción: sanción no extraída. Materia clasificada: Cumplimiento regulatorio.",
-        "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7f07dd941a8df5e4da26b6a3ad07e4e0VFdwQmVVNXFRVEpOUkZGNVRXcHJkMDlCUFQwPQ==&secuencia=-1&t=1791305538",
-        "event_group": "CMF resoluciones sancionatorias",
-        "source_title": "APLICA SANCIÓN DE MULTA A BANCO RIPLEY",
-        "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.4).",
-        "needs_pdf_enrichment": true,
-        "rut_fuente": "97947000-2",
-        "uaf_registro_actual": "No encontrado / revisar",
-        "document_status": "partial",
-        "document_confidence": 0.65,
-        "document_subject_count": 1,
-        "document_entity_count": 1,
-        "document_page_entity": 4,
-        "document_page_sanction": null,
-        "document_page_infraction": null,
-        "document_analysis_version": "cmf-doc-agent-1.0",
-        "document_pdf_sha256": "24e487d6f4304002986f3900cfe05cf0a124eff10f1f438285e2f3c2ea24c132",
-        "other_entities_in_resolution": [],
-        "related_subjects": [],
-        "id": "EVT-0047",
-        "entity_id": "ENT-RUT-979470002",
-        "source_record_id": "CMF:6787:2026-06-26:97947000-2",
-        "evidence_id": "EVD-1A678091B3F7346C",
-        "decision_year": 2026,
-        "is_2020_plus": true
-      },
-      "changes": {
-        "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7f07dd941a8df5e4da26b6a3ad07e4e0VFdwQmVVNXFRVEpOUkZGNVRXcHJkMDlCUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=7f07dd941a8df5e4da26b6a3ad07e4e0VFdwQmVVNXFRVEpOUkZGNVRXcHJkMDlCUFQwPQ==&secuencia=-1&t=1791305538"
-        }
-      }
-    },
-    {
-      "event": {
-        "supervisor": "CMF",
-        "fecha": "2026-06-26",
-        "resolucion": "6786",
-        "sujeto_fuente": "enero de 2025, Banco Itaú Chile",
-        "tipo_evento": "Sanción",
-        "estado": "Publicado",
-        "monto": null,
-        "unidad": "",
-        "categoria": "Cumplimiento regulatorio",
-        "laft_directo": false,
-        "resumen": "La resolución CMF N°6786 individualiza a enero de 2025, Banco Itaú Chile (RUT 97023000-9). Sanción: sanción no extraída. Materia clasificada: Cumplimiento regulatorio.",
-        "source_url": "https://www.cmfchile.cl/institucional/sanciones/sanciones_mercados_entidad.php",
-        "resolution_url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=e6d990eda10ee57163048e5fc4d66095VFdwQmVVNXFRVEpOUkZGNVRXcHJkMDVuUFQwPQ==&secuencia=-1&t=1791305538",
-        "event_group": "CMF resoluciones sancionatorias",
-        "source_title": "APLICA SANCIÓN DE MULTA A BANCO ITAÚ CHILE.",
-        "notes": "cmf-doc-agent-1.0: resolución oficial leída automáticamente (entidad p.4).",
-        "needs_pdf_enrichment": true,
-        "rut_fuente": "97023000-9",
-        "uaf_registro_actual": "No encontrado / revisar",
-        "document_status": "partial",
-        "document_confidence": 0.65,
-        "document_subject_count": 1,
-        "document_entity_count": 1,
-        "document_page_entity": 4,
-        "document_page_sanction": null,
-        "document_page_infraction": null,
-        "document_analysis_version": "cmf-doc-agent-1.0",
-        "document_pdf_sha256": "193ef555155185f6749f694890b2eeb3490d4524259d50e918de4d6641cc5236",
-        "other_entities_in_resolution": [],
-        "related_subjects": [],
-        "id": "EVT-0048",
-        "entity_id": "ENT-RUT-970230009",
-        "source_record_id": "CMF:6786:2026-06-26:97023000-9",
-        "evidence_id": "EVD-DACFCC5468AC692E",
-        "decision_year": 2026,
-        "is_2020_plus": true
-      },
-      "changes": {
-        "resolution_url": {
-          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=e6d990eda10ee57163048e5fc4d66095VFdwQmVVNXFRVEpOUkZGNVRXcHJkMDVuUFQwPQ==&secuencia=-1&t=1791228022",
-          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=e6d990eda10ee57163048e5fc4d66095VFdwQmVVNXFRVEpOUkZGNVRXcHJkMDVuUFQwPQ==&secuencia=-1&t=1791305538"
+          "before": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b93f652f28a84eeecc74250bc185373aVFdwQmVVNXFRVEpOUkZGNVRXcHJlRTVSUFQwPQ==&secuencia=-1&t=1791305538",
+          "after": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=b93f652f28a84eeecc74250bc185373aVFdwQmVVNXFRVEpOUkZGNVRXcHJlRTVSUFQwPQ==&secuencia=-1&t=1791394129"
         }
       }
     }
@@ -3037,21 +2960,21 @@
   "source_status": [
     {
       "source": "CMF",
-      "checked_at": "2026-10-06T16:52:17+00:00",
+      "checked_at": "2026-10-07T17:28:49+00:00",
       "fetch_status": "ok",
       "parse_status": "ok",
       "rows_seen": 46,
       "events_emitted": 70,
       "latest_event_date": "2026-09-28",
-      "documents_read": 2,
-      "documents_cache_hit": 44,
+      "documents_read": 0,
+      "documents_cache_hit": 46,
       "documents_failed": 0,
       "document_entities_emitted": 53,
-      "message": "Agente documental CMF activo: 2 PDF nuevos leídos, 44 desde cache, 0 fallidos; 53 eventos individualizados desde documentos."
+      "message": "Agente documental CMF activo: 0 PDF nuevos leídos, 46 desde cache, 0 fallidos; 53 eventos individualizados desde documentos."
     },
     {
       "source": "SCJ",
-      "checked_at": "2026-10-06T16:52:27+00:00",
+      "checked_at": "2026-10-07T17:28:51+00:00",
       "fetch_status": "ok",
       "parse_status": "ok",
       "rows_seen": 12,
@@ -3065,7 +2988,7 @@
     },
     {
       "source": "SP",
-      "checked_at": "2026-10-06T16:52:29+00:00",
+      "checked_at": "2026-10-07T17:28:53+00:00",
       "fetch_status": "ok",
       "parse_status": "degraded",
       "rows_seen": 6,
@@ -3079,7 +3002,7 @@
     },
     {
       "source": "SUSESO",
-      "checked_at": "2026-10-06T16:52:28+00:00",
+      "checked_at": "2026-10-07T17:28:52+00:00",
       "fetch_status": "ok",
       "parse_status": "degraded",
       "rows_seen": 0,
@@ -3093,7 +3016,7 @@
     },
     {
       "source": "UAF",
-      "checked_at": "2026-10-06T16:52:15+00:00",
+      "checked_at": "2026-10-07T17:28:47+00:00",
       "fetch_status": "ok",
       "parse_status": "degraded",
       "rows_seen": 0,
