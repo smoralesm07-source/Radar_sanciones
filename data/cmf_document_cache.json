@@ -6265,5 +6265,53 @@
       ],
       "pdf_sha256": "daae38f5594c54675b8f297779b001b3fa461e2bb3140a9db7a4602877b14ab6"
     }
+  },
+  "10995": {
+    "resolution": "10995",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=8fc3e7db78dad9e96084a2c4c62e5078VFdwQmVVNXFSWGROUkZrd1RYcFZkMDFuUFQwPQ==&secuencia=-1&t=1792076978",
+    "checked_at": "2026-10-15T15:09:45+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "partial",
+      "page_count": 64,
+      "subject_count": 2,
+      "legal_entity_count": 1,
+      "confidence": 0.65,
+      "subjects": [
+        {
+          "name": "confirmación definitiva (",
+          "rut": "12614344-3",
+          "page_entity": 11,
+          "subject_kind": "person",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "",
+          "page_infraction": null,
+          "category": "Control interno / gestión de riesgos",
+          "laft_directo": false,
+          "confidence": 0.6
+        },
+        {
+          "name": "Inversiones Odisea Limitada (",
+          "rut": "76048378-8",
+          "page_entity": 13,
+          "subject_kind": "legal_entity",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "",
+          "page_infraction": null,
+          "category": "Control interno / gestión de riesgos",
+          "laft_directo": false,
+          "confidence": 0.65
+        }
+      ],
+      "pdf_sha256": "c0d4b2823ac801da6dba85c16235a7f9d6d3d6fb38a6e042e54727f1ccf1625d"
+    }
   }
 }
