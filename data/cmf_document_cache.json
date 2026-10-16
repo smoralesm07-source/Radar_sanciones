@@ -6313,5 +6313,20 @@
       ],
       "pdf_sha256": "c0d4b2823ac801da6dba85c16235a7f9d6d3d6fb38a6e042e54727f1ccf1625d"
     }
+  },
+  "11220": {
+    "resolution": "11220",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=928efd921301af1f0fc2c0304824e2f7VFdwQmVVNXFSWGROUkZreFRXcEJNMDFSUFQwPQ==&secuencia=-1&t=1792162589",
+    "checked_at": "2026-10-16T14:56:33+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "failed",
+      "page_count": 30,
+      "subject_count": 0,
+      "legal_entity_count": 0,
+      "confidence": 0.0,
+      "subjects": [],
+      "pdf_sha256": "10e905f193f188e7e3ba087c44ba13f402bf4497eae11d734fb2d1dc2c470d34"
+    }
   }
 }
