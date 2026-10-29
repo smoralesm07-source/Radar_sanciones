@@ -6358,5 +6358,53 @@
       "subjects": [],
       "pdf_sha256": "d268c40920e752650f579cf968de71e8f644a91e6cac0ce54e59ade9a21c2369"
     }
+  },
+  "11718": {
+    "resolution": "11718",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d3dab4782a6ffe940b9196a13d6ae1dbVFdwQmVVNXFSWGROUkZrelQxUmplRTlSUFQwPQ==&secuencia=-1&t=1793293198",
+    "checked_at": "2026-10-29T17:00:01+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "partial",
+      "page_count": 24,
+      "subject_count": 2,
+      "legal_entity_count": 1,
+      "confidence": 0.65,
+      "subjects": [
+        {
+          "name": "CROWE AUDITORES CONSULTORES SpA",
+          "rut": "78120780-2",
+          "page_entity": 1,
+          "subject_kind": "legal_entity",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "",
+          "page_infraction": null,
+          "category": "Inversiones / custodia / mercado de valores",
+          "laft_directo": false,
+          "confidence": 0.65
+        },
+        {
+          "name": "n Rivera",
+          "rut": "6521673-6",
+          "page_entity": 1,
+          "subject_kind": "person",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "",
+          "page_infraction": null,
+          "category": "Inversiones / custodia / mercado de valores",
+          "laft_directo": false,
+          "confidence": 0.6
+        }
+      ],
+      "pdf_sha256": "3b19da5d97935a080e976b68f695e558494506a7213249be7e783399c20d9ed3"
+    }
   }
 }
