@@ -6406,5 +6406,69 @@
       ],
       "pdf_sha256": "3b19da5d97935a080e976b68f695e558494506a7213249be7e783399c20d9ed3"
     }
+  },
+  "12263": {
+    "resolution": "12263",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=d7483bca8bc46432962f92b8fd6782f4VFdwQmVVNXFSWGhOUkdOM1QxUlZNazUzUFQwPQ==&secuencia=-1&t=1794861329",
+    "checked_at": "2026-11-16T20:35:32+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "failed",
+      "page_count": 9,
+      "subject_count": 1,
+      "legal_entity_count": 0,
+      "confidence": 0.0,
+      "subjects": [
+        {
+          "name": "JUAN ENRIQUE CONCHA URETA",
+          "rut": "4774258-7",
+          "page_entity": 8,
+          "subject_kind": "person",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "",
+          "page_infraction": null,
+          "category": "Deberes de información / reportabilidad",
+          "laft_directo": false,
+          "confidence": 0.6
+        }
+      ],
+      "pdf_sha256": "e96f682086cfb110c745698d8bb221628194002cf6f004eb3a6e5dc9dcc57425"
+    }
+  },
+  "12262": {
+    "resolution": "12262",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=4a4049baae8aa1ca31f8c5fec8ceaa66VFdwQmVVNXFSWGhOUkdOM1QxUlZNazVuUFQwPQ==&secuencia=-1&t=1794861329",
+    "checked_at": "2026-11-16T20:35:41+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "partial",
+      "page_count": 117,
+      "subject_count": 1,
+      "legal_entity_count": 1,
+      "confidence": 0.65,
+      "subjects": [
+        {
+          "name": "Hipotecaria es una sociedad anónima",
+          "rut": "96546470-0",
+          "page_entity": 2,
+          "subject_kind": "legal_entity",
+          "sanction_text": "",
+          "sanction_kind": "",
+          "monto": null,
+          "unidad": "",
+          "page_sanction": null,
+          "infraction_excerpt": "",
+          "page_infraction": null,
+          "category": "Cumplimiento regulatorio",
+          "laft_directo": false,
+          "confidence": 0.65
+        }
+      ],
+      "pdf_sha256": "7500862cf81307dabdd8ff027e7175d875783e3181cc04abc421699a72066f40"
+    }
   }
 }
