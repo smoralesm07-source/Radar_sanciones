@@ -6470,5 +6470,35 @@
       ],
       "pdf_sha256": "7500862cf81307dabdd8ff027e7175d875783e3181cc04abc421699a72066f40"
     }
+  },
+  "12519": {
+    "resolution": "12519",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cbaec5907d874958995161549d5a7d31VFdwQmVVNXFSWGhOUkdONFQxUlZNVTEzUFQwPQ==&secuencia=-1&t=1795200050",
+    "checked_at": "2026-11-20T18:40:55+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "failed",
+      "page_count": 39,
+      "subject_count": 0,
+      "legal_entity_count": 0,
+      "confidence": 0.0,
+      "subjects": [],
+      "pdf_sha256": "1e7c155577ceea6acbdeb6d9789a96f23760eff38137304fa89bad09d45210a8"
+    }
+  },
+  "12518": {
+    "resolution": "12518",
+    "url": "https://www.cmfchile.cl/sitio/aplic/serdoc/ver_sgd.php?s567=cbbb38b7db1b6038aa49b869ea9026d3VFdwQmVVNXFSWGhOUkdONFQxUlZNVTFuUFQwPQ==&secuencia=-1&t=1795200050",
+    "checked_at": "2026-11-20T18:40:58+00:00",
+    "analysis": {
+      "agent_version": "cmf-doc-agent-1.0",
+      "status": "failed",
+      "page_count": 11,
+      "subject_count": 0,
+      "legal_entity_count": 0,
+      "confidence": 0.0,
+      "subjects": [],
+      "pdf_sha256": "6a371b0e8657610b0c5be592b1c89d5851dfb860744d7cf94e0761e72c0869e6"
+    }
   }
 }
